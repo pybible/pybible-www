@@ -9,25 +9,26 @@ export function PublicationsPage() {
   return (
     <>
       <InteriorHero
-        title="English–North Korean Bilingual Bibles"
-        intro="PBI publishes modern North Korean translations beside trusted English Bible texts, making Scripture and language learning available on the same page."
-        image="Gods Promises Side2.png"
+        title="English-North Korean Bilingual Bibles"
+        image="current/gods-promises-side2.webp"
         imageAlt="God’s Promises: New Testament bilingual Bible"
       />
 
       <StorySection
         title="God’s Promises: New Testament"
-        image="Gods_Promises_New_Testament_Bible_Cover.png"
-        imageAlt="Cover of God’s Promises: New Testament"
+        image="current/youversion-bible-icon.webp"
+        imageAlt="YouVersion Bible App icon"
       >
+        <p className="source-kicker">YouVersion Bible app</p>
         <p>
-          Published in 2017, this is our latest English–North Korean bilingual
-          Bible. PBI worked with Tyndale House Publishers to translate the
-          New Living Translation into modern North Korean.
+          <em>God’s Promises: New Testament</em> (2017) is our latest
+          English-North Korean Bilingual Bible. We have worked with Tyndale
+          House Publishers translate the beloved New Living Translation to
+          modern North Korean.
         </p>
         <p>
-          The work is freely available in digital format in YouVersion’s Bible
-          app as the NLT North Korean (NLTNK) translation.
+          This work is now freely available in digital format in YouVersion’s
+          Bible app as NLT North Korean (NLTNK) translation.
         </p>
         <LinkArrow href="https://www.bible.com/bible/3502/JHN.1.NLTNK" external>
           Read NLTNK on Bible.com
@@ -41,10 +42,11 @@ export function PublicationsPage() {
         reverse
       >
         <p>
-          Published in 2013, our first English–North Korean bilingual Bible
-          paired the NET Bible’s Book of John with a modern North Korean
-          translation. The work laid the foundation for the complete New
-          Testament translation that followed.
+          <em>God’s Promises: Book of John</em> (2013) is our first published
+          English-North Korean Bilingual Bible. We have worked with NET Bible
+          to translate the Book of John in modern North Korean. This process
+          laid the foundation for the subsequent translation of the entire
+          New Testament in North Korean.
         </p>
         <LinkArrow href="https://netbible.org" external>Visit the NET Bible</LinkArrow>
       </StorySection>
@@ -56,38 +58,34 @@ export function PublicationsPage() {
             <p>Print and digital editions published with PBI’s translation partners.</p>
           </div>
           <div className="publication-list">
-            <PublicationCard
-              image="Gods Promises Side v2.jpg"
-              title="God’s Promises: New Testament"
-            >
+            <PublicationCard image="current/gods-promises-side2.webp" title="God’s Promises: New Testament">
               <dl className="spec-list">
-                <div><dt>Translation</dt><dd>NLT English–North Korean</dd></div>
+                <div><dt>Translation</dt><dd>NLT English-North Korean bilingual Bible</dd></div>
+                <div><dt>Author</dt><dd>Pyongyang Bible Institute</dd></div>
                 <div><dt>Publisher</dt><dd>Hongsungsa</dd></div>
-                <div><dt>Published</dt><dd>2017</dd></div>
+                <div><dt>Publication Date</dt><dd>2017</dd></div>
                 <div><dt>ISBN</dt><dd>9788936512453</dd></div>
               </dl>
               <div className="inline-links">
                 <LinkArrow href="https://www.logos.com/product/161668/hananimyi-yagsog-yesu-hupyeon" external>
-                  Digital print edition
+                  Digital Print Edition Available
                 </LinkArrow>
                 <LinkArrow href="http://www.kyobobook.co.kr/product/detailViewKor.laf?barcode=9788936512453" external>
-                  Kyobo Store
+                  Buy at Kyobo Store
                 </LinkArrow>
               </div>
             </PublicationCard>
 
-            <PublicationCard
-              image="English-Korean Biligual Bible - Book of John.jpg"
-              title="God’s Promises: Book of John"
-            >
+            <PublicationCard image="current/book-of-john-reference.webp" title="God’s Promises: Book of John">
               <dl className="spec-list">
-                <div><dt>Translation</dt><dd>NET English–North Korean</dd></div>
+                <div><dt>Translation</dt><dd>NET English-North Korean bilingual Bible</dd></div>
+                <div><dt>Author</dt><dd>Pyongyang Bible Institute</dd></div>
                 <div><dt>Publisher</dt><dd>Hongsungsa</dd></div>
-                <div><dt>Published</dt><dd>2013</dd></div>
+                <div><dt>Publication Date</dt><dd>2013</dd></div>
                 <div><dt>ISBN</dt><dd>9788936510008</dd></div>
               </dl>
               <LinkArrow href="http://www.kyobobook.co.kr/product/detailViewKor.laf?barcode=9788936510008" external>
-                Kyobo Store
+                Buy at Kyobo Store
               </LinkArrow>
             </PublicationCard>
           </div>
@@ -97,9 +95,10 @@ export function PublicationsPage() {
       <section className="rights-note">
         <div className="shell">
           <p>
-            PBI provides its Bible content royalty-free to publishing partners
-            in physical print and digital forms. For printed Bibles, we ask
-            partners to keep the sale price reasonably aligned with material,
+            Pyongyang Bible Institute (PBI) provides its Bible content
+            royalty-free to our publishing partners in both physical print and
+            digital forms. For printed Bibles, we ask our publishing partners
+            to maintain sale price that reasonably reflect the material,
             operational, and distribution costs.
           </p>
         </div>
@@ -112,37 +111,47 @@ export function TeensPage() {
   return (
     <>
       <InteriorHero
-        title="Bible stories for children and teens"
-        intro="Twenty-five stories introduce the people and parables of the Bible in an English–North Korean bilingual format."
+        title="English-North Korean Bible Stories for Children"
         image="Childrens bible story-small.png"
         imageAlt="Bible Stories: South and North Together three-book set"
       />
-      <StorySection title="South and North Together" image="bible.jpg" imageAlt="An open Bible">
+      <StorySection
+        title="Bible Stories: South and North Together"
+        image="Childrens bible story-small.png"
+        imageAlt="Bible Stories: South and North Together three-book set"
+      >
         <p>
           <em>Bible Stories: South and North Together</em> is a collection of
           twenty-five short stories based on characters and parables from the
-          Bible. Each story appears in English and North Korean.
-        </p>
-        <p>
-          The set is currently out of print. PBI plans to update the material
-          and make it freely available in digital and audiobook formats.
+          Bible in English-North Korean Bilingual format. While currently
+          out of print, our plan is to update and make this material freely
+          available in digital and audiobook formats.
         </p>
       </StorySection>
+      <section className="video-section">
+        <div className="shell source-video-wrap">
+          <iframe
+            className="video-frame"
+            src="https://fast.wistia.net/embed/iframe/h5wa9okarf?wmode=opaque"
+            title="Bible Stories: South and North Together video"
+            allow="autoplay; fullscreen"
+            allowFullScreen
+            loading="lazy"
+          />
+        </div>
+      </section>
       <section className="reference-section">
         <div className="shell story-narrow">
           <div className="story-copy">
-            <h2>Publication reference</h2>
-            <PublicationCard
-              image="Childrens bible story-small.png"
-              title="Bible Stories: South and North Together"
-            >
+            <h2>Publication references</h2>
+            <PublicationCard image="Childrens bible story-small.png" title="Bible Stories: South and North Together (3 book set)">
               <dl className="spec-list">
                 <div><dt>Authors</dt><dd>Pyongyang Bible Institute, Marion Kim</dd></div>
                 <div><dt>Publisher</dt><dd>Love One Korea Foundation</dd></div>
-                <div><dt>Published</dt><dd>2004 · no longer in print</dd></div>
+                <div><dt>Publication Date</dt><dd>2004 · no longer in print</dd></div>
               </dl>
               <LinkArrow href="http://www.yes24.com/Product/goods/20036794" external>
-                Find a used copy
+                Buy It Used
               </LinkArrow>
             </PublicationCard>
           </div>
@@ -157,40 +166,40 @@ export function InProgressPage() {
     <>
       <InteriorHero
         title="Currently in progress"
-        intro="PBI is carrying its written translations into formats that more people can hear, study, and share."
         image="Gods Promises Side.png"
         imageAlt="God’s Promises bilingual New Testament"
       />
       <StorySection
         title="The New Testament, now digital"
-        image="Gods Promises.jpg"
-        imageAlt="God’s Promises New Testament"
+        image="current/youversion-bible-icon.webp"
+        imageAlt="YouVersion Bible App icon"
       >
         <p>
-          With help from staff and volunteers at YouVersion, the Digital Bible
-          Library, and Tyndale, <em>God’s Promises: New Testament</em> is
-          available in the Bible App as a free Korean translation.
+          With help from staff and volunteers at YouVersion, Digital Bible
+          Library (DBL), and Tyndale the digital version of <em>God’s
+          Promises: New Testament</em> is now available in Bible app as a
+          freely downloadable Korean translation.
         </p>
-        <LinkArrow href="https://www.youversion.com/the-bible-app/" external>
-          Get the Bible App
-        </LinkArrow>
-      </StorySection>
-      <StorySection title="Audio Scripture" image="Lecture2.png" imageAlt="Bible translation session" reverse>
         <p>
-          Our team is developing an audio version of the New Testament for
-          publication through the YouVersion Bible App. The source site
-          announced a 2024 hope for publication; no later release date has been
-          confirmed here.
+          Our team is currently working on developing an audio version of the
+          New Testament which we hope to publish by 2024 also through
+          YouVersion Bible app.
         </p>
-      </StorySection>
-      <StorySection title="Stories for younger listeners" image="Childrens bible story-small.png" imageAlt="Bible Stories book set">
         <p>
-          Work is also beginning on digital and audiobook versions of
-          <em> Bible Stories: South and North Together</em>, a collection of
-          twenty-five stories about notable people in the Bible and the ways
-          God meets regular people.
+          Please check out why we are publishing Bible in modern North Korean
+          diction and also why we feel strongly about presenting this Bible in
+          a bilingual format suitable for students learning English as a
+          second language (ESL).
+        </p>
+        <p>
+          We are also starting digital and audiobook version of <em>Bible
+          Stories: South and North Together</em>, which is a collection of 25
+          short stories about notable characters in the Bible. These powerful
+          stories demonstrate how God manifests in the lives of regular people
+          and paints colors to the message of Good News.
         </p>
         <div className="inline-links">
+          <LinkArrow href="https://www.youversion.com/the-bible-app/" external>Get the Bible App</LinkArrow>
           <LinkArrow href="/en/whynkbible/">Why modern North Korean diction?</LinkArrow>
           <LinkArrow href="/en/whybilingual/">Why a bilingual format?</LinkArrow>
         </div>
@@ -198,16 +207,17 @@ export function InProgressPage() {
       <section className="video-section">
         <div className="shell video-grid">
           <div>
-            <h2>A story in motion</h2>
-            <p>
-              This short Bible-story video is part of the teaching material
-              preserved from the original PBI website.
-            </p>
+            <h2>Bible stories in motion</h2>
+            <p>The original PBI Bible story video remains available here.</p>
           </div>
-          <video controls preload="metadata" poster="/assets/Childrens bible story-small.png">
-            <source src="/assets/bible_story.mp4" type="video/mp4" />
-            Your browser does not support embedded video.
-          </video>
+          <iframe
+            className="video-frame"
+            src="https://fast.wistia.net/embed/iframe/h5wa9okarf?wmode=opaque"
+            title="PBI Bible story video"
+            allow="autoplay; fullscreen"
+            allowFullScreen
+            loading="lazy"
+          />
         </div>
       </section>
     </>

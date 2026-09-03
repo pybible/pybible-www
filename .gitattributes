@@ -1,6 +1,6 @@
-* text=auto eol=lf
-*.jpg binary
-*.jpeg binary
-*.jfif binary
-*.png binary
-*.mp4 binary
+# Preserve the pre-disconnection capture byte-for-byte across Git checkouts.
+reference/** binary
+
+# These are captured third-party distribution files, not application source.
+public/assets/timeline/timeline.js binary linguist-vendored
+public/assets/timeline/timeline.css binary linguist-vendored

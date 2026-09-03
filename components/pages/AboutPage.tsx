@@ -1,59 +1,56 @@
 import { InteriorHero, LinkArrow, PublicationCard, StorySection } from '@/components/Interior';
 
 const timeline = [
-  ['1932', 'Taeyoung Kim is born in South Hamgyong, North Korea.'],
-  ['1954–1987', 'He teaches at Pyongyang Kim Hyong Jik University of Education.'],
-  ['1988–1991', 'He serves as an exchange professor at Russian National Education University.'],
-  ['2003–2006', 'He is a visiting professor at Yale University Divinity School.'],
-  ['2007', 'At the Reah International conference, Professor Kim presents the need for a modern North Korean Bible translation.'],
-  ['2008', 'Pyongyang Bible Institute is founded in Fairfax, Virginia.'],
-  ['2011', 'PBI receives permission from the NET Bible to translate and publish the Book of John.'],
-  ['2013 — license', 'PBI receives permission from Tyndale House Publishers to translate the New Living Translation.'],
-  ['2013', 'PBI publishes God’s Promises: Book of John.'],
-  ['2017', 'PBI publishes God’s Promises: New Testament in NLT English–North Korean.'],
-  ['2019', 'Professor Kim dies after completing the New Testament translation.'],
-  ['2022', 'The NLTNK translation is released digitally through YouVersion.'],
+  ['October 9, 2006', 'Professor Hyunsik (Taeyoung) Kim publishes the Korean Re-Unification Dictionary.'],
+  ['May 2007', 'At the Reah Empower Conference in Wheaton, Illinois, Hyunsik Kim asks for volunteers to help with his translation work.'],
+  ['November 29, 2007', 'Volunteer meetings begin in Chicago, Southern California, and Virginia.'],
+  ['December 2008', 'Pyongyang Bible Institute, Inc. is formed and registered as a 501(c)(3) nonprofit in Fairfax, Virginia.'],
+  ['February 25, 2011', 'PBI forms a license agreement to use the New English Translation (NET) Bible.'],
+  ['September 17, 2013', 'PBI forms a license agreement with Tyndale House Publishers to translate and use the New Living Translation Bible.'],
+  ['October 23, 2013', 'PBI and Hongsungsa publish God’s Promise: Book of John.'],
+  ['August 28, 2017', 'PBI and Hongsungsa publish God’s Promise: New Testament.'],
+  ['August 8, 2019', 'Professor Kim passes away at age 87 after completing the NLT New Testament translation in modern North Korean diction.'],
+  ['November 9, 2022', 'The NLTNK digital edition is published in the YouVersion Bible App.'],
 ];
 
 const team = [
-  ['Hyun Ja Kim', 'Project Lead', '김현식, 김현자.jpg'],
-  ['Yoo Jin Kim', 'Administration', 'yoojinkim.jpg'],
-  ['Jong Woo Lee', 'Volunteer Coordinator', 'jongwoolee.JPG'],
-  ['Jin Keol Park', 'Legal Counsel', 'Jin Keol Park.jpg'],
-  ['Rex Lee', 'External Liaison', 'jisoolee.jpg'],
+  ['Hyun Ja Kim', 'Project Lead', 'current/prof-and-mrs-kim.webp'],
+  ['Yoo Jin Kim', 'Administration', 'current/yoo-jin-kim.webp'],
+  ['Jong Woo Lee', 'Volunteer Coordinator', 'current/jong-woo-lee.webp'],
+  ['Jin Keol Park', 'Legal Counsel', 'current/jin-keol-park.webp'],
+  ['Rex Lee', 'External Liaison', 'current/rex-lee.webp'],
 ];
 
 export function AboutPage() {
   return (
     <>
       <InteriorHero
-        title="A translation shaped by lived experience"
-        intro="PBI began around Professor Hyunsik Kim’s conviction that North Korean readers should meet Scripture without first having to decode unfamiliar South Korean words."
+        title="Our story"
         image="PBI founding members.jpg"
         imageAlt="Founding members of Pyongyang Bible Institute"
       />
 
-      <StorySection title="Our story" image="group_pic.jpg" imageAlt="PBI members gathered together">
+      <StorySection title="How PBI began" image="current/about-mission.webp" imageAlt="A historic Korean family photograph">
         <p>
-          At the 2007 Reah International conference, a group of attendees met
-          Professor Hyunsik Kim and heard his case for a modern Bible
-          translation for North Korea—one that did not depend on Sino-Korean
-          words unfamiliar to many North Korean readers.
+          A group of people attending 2007 Reah International conference met
+          Prof. Hyunsik Kim who presented a talk on the need for modern
+          translation of Bible for North Korea. The case for a dedicated North
+          Korean translation of the Bible without use of Sino-Korean words
+          unfamiliar to North Korean readers were presented. After the
+          completion of the workshop, people gathered to ask the Lord to give
+          Prof. Kim the strength to take up the mantle of Bible translation.
+          Prof. Kim was 76 years old at the time. After the conference some
+          volunteers continue to meet at Prof. Kim’s house and Pyongyang Bible
+          Institute Inc. was founded in December 2008.
         </p>
-        <p>
-          After the workshop, people gathered to pray that Professor Kim,
-          then 76, would have strength to take up the work. Volunteers
-          continued meeting at his home, and Pyongyang Bible Institute, Inc.
-          was founded in December 2008.
-        </p>
-        <LinkArrow href="https://reah.org" external>Visit Reah International</LinkArrow>
+        <LinkArrow href="https://reah.org" external>reah.org</LinkArrow>
       </StorySection>
 
       <section className="mission-panel" id="mission">
         <div className="shell mission-grid">
           <div>
             <h2>Our mission</h2>
-            <p>To provide an accessible modern translation of the Bible for the people of North Korea.</p>
+            <p>To provide accessible modern translation of Bible for people of North Korea.</p>
           </div>
           <div>
             <h2>Our vision</h2>
@@ -62,35 +59,63 @@ export function AboutPage() {
           <div>
             <h2>Our core values</h2>
             <ul>
-              <li>Dependence on God’s leading</li>
-              <li>Accountability and transparency</li>
-              <li>Commitment to excellence</li>
+              <li>Dependence on God’s Leading</li>
+              <li>Accountability and Transparency</li>
+              <li>Commitment to Excellence</li>
             </ul>
           </div>
+        </div>
+      </section>
+
+      <section className="history-photos" aria-label="Photographs from PBI history">
+        <div className="shell history-photo-grid">
+          <figure>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/assets/KASCON.jpg" alt="Professor Kim speaking at KASCON" loading="lazy" />
+            <figcaption>Professor Kim sharing the case for a North Korean Bible.</figcaption>
+          </figure>
+          <figure>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/assets/North_Korean_students.jpg" alt="North Korean students" loading="lazy" />
+            <figcaption>North Korean students—the readers at the heart of PBI’s mission.</figcaption>
+          </figure>
         </div>
       </section>
 
       <section className="timeline-section" id="timeline">
         <div className="shell">
           <div className="section-heading">
-            <h2>Timeline of our history</h2>
+            <h2>Timeline of events in our history</h2>
             <p>From Professor Kim’s years in North Korea to a complete New Testament translation.</p>
           </div>
-          <ol className="timeline">
-            {timeline.map(([year, event]) => (
-              <li key={year}>
-                <time>{year}</time>
-                <p>{event}</p>
-              </li>
-            ))}
-          </ol>
+          <iframe
+            className="timeline-frame"
+            src="/timeline/index.html"
+            data-original-source="1vjDzTt-zc2e8VwPZ_t65iUGftNaj8GydFp3mhp_QbGk"
+            title="Timeline of events in Pyongyang Bible Institute history"
+            width="100%"
+            height="650"
+            loading="lazy"
+            allowFullScreen
+          />
+          <details className="timeline-fallback">
+            <summary>Read the timeline as text</summary>
+            <ol className="timeline">
+              {timeline.map(([year, event]) => (
+                <li key={year}>
+                  <time>{year}</time>
+                  <p>{event}</p>
+                </li>
+              ))}
+            </ol>
+          </details>
         </div>
       </section>
 
       <section className="team-section" id="team">
         <div className="shell">
           <div className="section-heading">
-            <h2>Our team</h2>
+            <h2>Our team members</h2>
             <p>Staff and volunteers continuing PBI’s translation and publishing work.</p>
           </div>
           <div className="team-grid">
@@ -106,25 +131,32 @@ export function AboutPage() {
       </section>
 
       <StorySection
-        title="Professor Hyunsik Kim"
+        title="Interesting story of Prof. Kim"
         image="ProfKimDuringLecture.png"
         imageAlt="Professor Hyunsik Kim during a lecture"
       >
         <p>
-          PBI was founded by Hyunsik Kim, born Taeyoung Kim, a linguistics
-          professor who taught at Kim Hyong Jik University of Education in
-          North Korea for nearly forty years. After defecting to South Korea
-          and later immigrating to the United States, he led translation
-          projects including children’s Bible stories and an English–North
-          Korean dictionary.
+          Pyongyang Bible Institute was founded by Hyunsik Kim (born Taeyoung
+          Kim), a linguistics professor from North Korea. He worked at Kim
+          Hyong Jik University of Education in North Korea for nearly 40 years
+          after which he defected to South Korea and eventually immigrated to
+          United States. He carried out several translation projects such as
+          children’s Bible stories and English-North Korean dictionary.
         </p>
         <p>
-          Professor Kim founded PBI in 2008 and remained lead translator until
-          his death in August 2019. He often reminded visitors of the
-          transformative power of Jesus and the Good News.
+          Pyongyang Bible Institute was founded by Hyunsik Kim in 2008 and he
+          has served as the lead translator until his passing on August 2019.
+          Hyunsik was an ardent believer in the transformative power of Jesus
+          and the message of Good News and often reminded those visiting him at
+          his home in Fairfax, Virginia.
+        </p>
+        <p>
+          Prof. Kim passed away on August 8, 2019 having completed the New
+          Testament translation of New Living Bible (NLT) bible published in
+          2017.
         </p>
         <LinkArrow href="https://foreignpolicy.com/2009/10/06/the-secret-history-of-kim-jong-il/" external>
-          Read Professor Kim’s Foreign Policy account
+          Read his Foreign Policy article to learn more about Professor Kim’s own account of life in North Korea
         </LinkArrow>
       </StorySection>
 
@@ -132,20 +164,20 @@ export function AboutPage() {
         <div className="shell profile-grid">
           <div className="profile-image">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/assets/disguised-in-russia.jpg" alt="Professor Kim while living in Russia" loading="lazy" />
+            <img src="/assets/current/prof-kim-couple.webp" alt="Professor and Mrs. Kim" loading="lazy" />
           </div>
           <div>
             <h2>Academic profile of Taeyoung Kim</h2>
             <ul className="profile-list">
-              <li>Born in South Hamgyong, North Korea, 1932</li>
-              <li>North Korean People’s Army soldier during the Korean War, 1950</li>
-              <li>Professor at Pyongyang Kim Hyong Jik University of Education, 1954–1987</li>
-              <li>Exchange professor at Russian National Education University, 1988–1991</li>
-              <li>Changed his name from Taeyoung Kim to Hyunsik Kim for security</li>
-              <li>Professor at Seoul Foreign Language University and KCIA University, 1994–1999</li>
-              <li>Visiting professor at New Orleans Baptist Theological Seminary, 2001–2002</li>
-              <li>Visiting professor at Yale University Divinity School, 2003–2006</li>
-              <li>Research professor at George Mason University, 2007–2017</li>
+              <li>Born 1932 in South Hamyong, North Korea</li>
+              <li>Participated in Korean War as a soldier of North Korean People’s Army, 1950</li>
+              <li>Professor at Pyongyang Kim Hyong Jik University of Education, 1954~1987</li>
+              <li>Exchange Professor at Russian National Education University, 1988~1991</li>
+              <li>Changed name from Taeyoung Kim to Hyunsik Kim for security reasons</li>
+              <li>Professor at Seoul Foreign Language University, and KCIA University, 1994~1999</li>
+              <li>Visiting Professor at New Orleans Baptist Theological Seminary, 2001~2002</li>
+              <li>Visiting Professor at Yale University Divinity School, 2003~2006</li>
+              <li>Research Professor at George Mason University, 2007~2017</li>
               <li>Founded Pyongyang Bible Institute in Fairfax, Virginia, 2008</li>
             </ul>
           </div>
@@ -154,29 +186,30 @@ export function AboutPage() {
 
       <StorySection
         title="By his side"
-        image="아내 김현자.jpg"
+        image="current/prof-and-mrs-kim.webp"
         imageAlt="Professor Kim with his wife, Hyun Ja Kim"
         reverse
       >
         <p>
-          After a brain aneurysm left Professor Kim unable to control the left
-          side of his body, he relied on his wife. Despite significant speech
-          difficulty and the use of a wheelchair, he spoke at nearly fifty
-          venues—including Yale, Harvard, Duke, Tufts, Georgetown, UC Berkeley,
-          UC San Diego, the University of Washington, Williams College, and
-          Fuller Theological Seminary. Mrs. Kim made that work possible at his
-          side.
+          Professor Kim was reliant on his wife after a Brain aneurysm left him
+          unable to control left side of his body. Despite significant slur in
+          his speech and use of wheelchair he spoke at nearly fifty speaking
+          venues including at Yale, Harvard, Duke, Tufts, Georgetown,
+          University of Washington, UC Berkeley, UC San Diego, William College,
+          Fuller Theological Seminary. This feat was made possible with the help
+          of Mrs. Kim by his side.
         </p>
       </StorySection>
 
       <section className="video-section" id="translation-session">
         <div className="shell video-grid">
           <div>
-            <h2>Translation review session</h2>
+            <h2>Translation Review Session</h2>
             <p>
-              This recording captures a May 21, 2014 review of a Bible passage.
-              In sessions like this, Professor Kim sometimes compared English
-              and Korean passages with Japanese and Russian translations.
+              One of the recorded translation sessions reviewing a Bible
+              passage. During these sessions professor Kim at times compared
+              English and Korean Bible passages to Japanese and Russian
+              translations. This video was recorded on May 21, 2014.
             </p>
           </div>
           <video controls preload="metadata">
@@ -190,17 +223,25 @@ export function AboutPage() {
         <div className="shell">
           <div className="section-heading">
             <h2>Past translation projects</h2>
-            <p>Professor Kim’s work before and alongside the 2017 New Testament.</p>
+            <p>
+              Prior to publication of <em>God’s Promises: New Testament</em>
+              (2017) professor Kim had served as also served as the lead translator for
+              <em> God’s Promises: Book of John</em> (2013), <em>Korea
+              Re-Unification Dictionary</em> (2007), and <em>Bible Stories:
+              South and North Together</em> (2004). Pyongyang Bible Institute
+              has also created an English-North Korean Dictionary with the help
+              of numerous volunteers that have not been published.
+            </p>
           </div>
           <div className="past-work-grid">
             <PublicationCard image="English-Korean Biligual Bible - Book of John.jpg" title="God’s Promises: Book of John">
-              <p>English–North Korean bilingual Book of John, 2013.</p>
+              <p>English-North Korean Bilingual Bible for Book of John, 2013. ISBN: NET English-North Korean Bilingual Bible.</p>
             </PublicationCard>
             <PublicationCard image="Childrens bible story-small.png" title="Bible Stories: South and North Together">
-              <p>Twenty-five bilingual Bible stories, 2004.</p>
+              <p>Short stories about 25 people of the Bible. English-North Korean bilingual format, 2004.</p>
             </PublicationCard>
             <PublicationCard image="NorthSouthDictionary.jpg" title="Korea Re-Unification Dictionary">
-              <p>About 10,000 words that differ between North and South Korean usage, 2007.</p>
+              <p>Dictionary containing about 10,000 words that are different between North and South, 2007. Note inaccurate authorship in front page. ISBN: 9788900217100.</p>
               <LinkArrow href="http://www.tongilnews.com/news/articleView.html?idxno=70330" external>
                 Note on listed authorship
               </LinkArrow>
@@ -209,21 +250,37 @@ export function AboutPage() {
         </div>
       </section>
 
-      <StorySection title="Focusing on Jesus and his Good News" image="Baptism.jpg" imageAlt="A baptism">
-        <p>
-          Professor Kim published two autobiographies that offer a view into
-          North Korean life after the Korean War and the events that led him to
-          Bible translation. PBI’s central conviction, often repeated by
-          Professor and Mrs. Kim, is that Jesus is the ultimate transformative
-          force. PBI continues to promote the living words of Jesus through
-          Scripture and teaching resources.
-        </p>
-        <ul>
-          <li><em>80 years, 35,000 km</em>, second autobiography, 2013 · ISBN 9788936503147</li>
-          <li><em>I am a nomad in the 21st century</em>, first autobiography, 2007 · ISBN 9788934925491</li>
-          <li><em>Documentary Kim Jung Il</em>, firsthand account and essay, 1997 · ISBN 9788986144062</li>
-        </ul>
-      </StorySection>
+      <section className="past-work focus-work">
+        <div className="shell">
+          <div className="section-heading">
+            <h2>Focusing on Jesus and his Good News</h2>
+            <p>
+              Professor Kim has published two autobiographies that provide a
+              visual insight into the lives of North Korean people after the
+              Korean War. These references also include the series of events
+              that led to his commitment to the work on Bible translation and
+              the creation of Pyongyang Bible Institute. Our central thesis is
+              one that is often reiterated by Prof. and Mrs. Kim and
+              acknowledged by other members of PBI: Jesus is the ultimate
+              transformative force. Pyongyang Bible Institute will continue to
+              serve as an organization that will continue to promote the Living
+              Words of Jesus and what He has to say to us today through the
+              Bible and Bible teaching resources.
+            </p>
+          </div>
+          <div className="past-work-grid">
+            <PublicationCard image="current/autobiography-80-years.webp" title="80 years, 35,000 km">
+              <p>Second autobiography of Hyunsik Kim, 2013 · ISBN 9788936503147</p>
+            </PublicationCard>
+            <PublicationCard image="current/autobiography-nomad.webp" title="I am a nomad in the 21st century">
+              <p>First autobiography of Hyunsik Kim, 2007 · ISBN 9788934925491</p>
+            </PublicationCard>
+            <PublicationCard image="DocumentaryKJI.jpg" title="Documentary Kim Jung Il">
+              <p>Hyunsik Kim’s first-hand account of Kim Jung Il and an essay on the downfall of North Korea, 1997 · ISBN 9788986144062</p>
+            </PublicationCard>
+          </div>
+        </div>
+      </section>
     </>
   );
 }

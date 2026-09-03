@@ -8,21 +8,23 @@ export function InteriorHero({
   imageAlt = '',
 }: {
   title: string;
-  intro: string;
-  image: string;
+  intro?: string;
+  image?: string;
   imageAlt?: string;
 }) {
   return (
     <section className="interior-hero">
-      <div className="shell interior-hero-grid">
+      <div className={`shell interior-hero-grid ${image ? '' : 'interior-hero-text-only'}`}>
         <div>
           <h1>{title}</h1>
-          <p>{intro}</p>
+          {intro && <p>{intro}</p>}
         </div>
-        <div className="interior-hero-media">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={`/assets/${image}`} alt={imageAlt} fetchPriority="high" />
-        </div>
+        {image && (
+          <div className="interior-hero-media">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={`/assets/${image}`} alt={imageAlt} fetchPriority="high" />
+          </div>
+        )}
       </div>
     </section>
   );

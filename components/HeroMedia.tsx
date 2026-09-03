@@ -28,7 +28,7 @@ export function HeroMedia() {
         loop
         playsInline
         preload="metadata"
-        poster="/assets/Dadohaehaesang National Park, Republic of Korea.jfif"
+        poster="/assets/current/page-texture.webp"
         aria-hidden="true"
       >
         <source src="/assets/spash.mp4" type="video/mp4" media="(min-width: 701px)" />

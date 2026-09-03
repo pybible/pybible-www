@@ -6,35 +6,28 @@ export function SupportPage() {
     <>
       <InteriorHero
         title="Lift up the people of North Korea in prayer"
-        intro="Prayer is the clearest way to stand with PBI’s work and with the people for whom this translation was made."
-        image="Prayer Group Signup.png"
-        imageAlt="Invitation to join the PBI prayer group"
+        intro="Please join with us in lifting up the people of North Korea through prayer."
+        image="current/support-prayer.webp"
+        imageAlt="A sign among leaves reading God is faithful"
       />
-      <StorySection title="Pray with us" image="Baptism.jpg" imageAlt="A baptism">
+      <StorySection title="Pray with us">
         <p>
-          Please join us in lifting up the people of North Korea through
-          prayer. If you would like to use our Bible translation, report a
-          translation error, or speak with the team, contact us directly.
+          If you would like to reach out to us for the use of our Bible
+          translation, report errors in translation, or reach out to us please
+          go to Contact Us page to reach out to us.
+        </p>
+        <p>
+          To receive updates about our work, we have joined The Fourth River
+          Project and pastor Ben Torrey in sharing our newsletter through this
+          forum.
         </p>
         <div className="inline-links">
           <LinkArrow href="/en/prayer-newsletter/">Join the prayer newsletter</LinkArrow>
           <LinkArrow href="/en/contactus/">Contact PBI</LinkArrow>
+          <LinkArrow href="http://www.thefourthriver.org/home.htm" external>
+            Visit The Fourth River Project
+          </LinkArrow>
         </div>
-      </StorySection>
-      <StorySection
-        title="A shared prayer effort"
-        image="Dadohaehaesang National Park, Republic of Korea.jfif"
-        imageAlt="The Korean coast"
-        reverse
-      >
-        <p>
-          PBI shares prayer updates with The Fourth River Project and Pastor
-          Ben Torrey. Their ministry brings together people preparing and
-          praying for reconciliation on the Korean peninsula.
-        </p>
-        <LinkArrow href="http://www.thefourthriver.org/home.htm" external>
-          Visit The Fourth River Project
-        </LinkArrow>
       </StorySection>
     </>
   );
@@ -44,18 +37,18 @@ export function PrayerNewsletterPage() {
   return (
     <>
       <InteriorHero
-        title="A monthly rhythm of prayer for North Korea"
+        title="Praying for North Korea"
         intro="Pyongyang Bible Institute partners with The Fourth River Project and Pastor Ben Torrey in praying for North Korea."
-        image="Prayer Group Signup.png"
-        imageAlt="Sign up for the PBI prayer group"
+        image="current/prayer-newsletter.webp"
+        imageAlt="A person praying beside a window"
       />
       <section className="newsletter-page">
         <div className="shell newsletter-page-grid">
           <div>
-            <h2>Request the monthly prayer newsletter</h2>
+            <h2>Sign Up for monthly prayer newsletter for North Korea from pastor Ben Torrey</h2>
             <p>
-              Receive prayer prompts and updates that help churches,
-              households, and individuals pray with attention and consistency.
+              Receive Pastor Ben Torrey’s monthly prayer newsletter for North
+              Korea through PBI’s partnership with The Fourth River Project.
             </p>
             <NewsletterRequestForm />
           </div>
@@ -63,8 +56,8 @@ export function PrayerNewsletterPage() {
             <p>Prayer partner</p>
             <h3>The Fourth River Project</h3>
             <p>
-              PBI joins Pastor Ben Torrey and The Fourth River Project in
-              sustained prayer for North Korea.
+              Pyongyang Bible Institute partners in praying for North Korea
+              with The Fourth River Project and pastor Ben Torrey.
             </p>
             <LinkArrow href="http://www.thefourthriver.org/home.htm" external>
               Learn about the project
@@ -81,9 +74,7 @@ export function ContactPage() {
     <>
       <InteriorHero
         title="Contact PBI"
-        intro="Questions, translation corrections, requests to use PBI’s work, and words of encouragement are all welcome."
-        image="Our Team.png"
-        imageAlt="Meet the Pyongyang Bible Institute team"
+        intro="For questions, concerns, typographical error found, compliments, or get in touch with us, please use the form below to give us your contact information and a message."
       />
       <section className="contact-section">
         <div className="shell contact-grid">
@@ -92,7 +83,7 @@ export function ContactPage() {
             <ContactForm />
           </div>
           <aside className="contact-details">
-            <h2>Address and contact information</h2>
+            <h2>Address and Contact Info</h2>
             <address>
               <strong>Pyongyang Bible Institute</strong><br />
               3609 Mercedes Way<br />

@@ -5,41 +5,41 @@ export function WhyNorthKoreanBiblePage() {
     <>
       <InteriorHero
         title="Why a North Korean Bible?"
-        intro="Seventy years of separation have changed how Korean is spoken on either side of the border. PBI translates Scripture to remove avoidable language barriers."
-        image="Splash_NorthAndSouthLangDiff.png"
-        imageAlt="Illustration comparing language used in North and South Korea"
+        image="current/korean-language-divide.webp"
+        imageAlt="Mountains and water on the Korean peninsula"
       />
 
       <StorySection
         title="One language, a widening divide"
-        image="North_Korean_students.jpg"
-        imageAlt="North Korean students"
+        image="current/old-korean-bible.webp"
+        imageAlt="Historic Korean-language Bible"
       >
         <p>
-          Significant differences in the language used by North and South
-          Koreans have grown since the Korean War in 1950 and the decades of
-          separation that followed.
+          Significant differences in language used by North and South Koreans
+          have since risen the Korean War in 1950 and 70 years of separation
+          that followed.
         </p>
         <p>
-          PBI asked a small group of North Korean defectors to read the
-          Easy Bible, a modern South Korean translation. Readers encountered
-          many unfamiliar words, especially words of Sino-Korean origin that
-          are not part of everyday speech in North Korea.
+          We have asked a small group of North Korean defectors to read Easy
+          Bible (Agape Publishing)—a modern Korean translation. What we have
+          learned is that there are a significant number of words in the Bible
+          the readers from North Korea are unfamiliar with. Many of these words
+          were Sino-Korean origin and are not part of everyday language in
+          North Korea.
         </p>
       </StorySection>
 
-      <StorySection
-        title="Language reform changed everyday words"
-        image="Protestant mission territories in Korea.jpg"
-        imageAlt="Historic map of Protestant mission territories in Korea"
-        reverse
-      >
+      <StorySection title="Language reform changed everyday words" reverse>
         <p>
-          The disparity traces in part to North Korea’s Language Revolution,
-          which began in the 1960s. Sino-Korean and other foreign loanwords
-          were replaced with Korean words through government policy. Spelling
-          also diverged: for example, “woman” is written 녀인 in North Korean
-          and 여인 in South Korean.
+          The disparity in the Korean language between North and South Koreas
+          traces back to North Korea’s Language Revolution that began in 1960s.
+          In the language reform Sino-Korean and other foreign loanwords were
+          replaced with Korean words as a compulsory government mandate.
+        </p>
+        <p>
+          In addition, there are significant spelling differences between the
+          two Korean languages. For example, the word for the word ‘woman’ in
+          North Korean is 녀인 whereas the same word in South Korean is 여인.
         </p>
         <div className="inline-links">
           <LinkArrow href="https://www.npr.org/2021/07/30/1022642030/north-korea-is-strictly-enforcing-its-language-purification-policy" external>
@@ -57,15 +57,22 @@ export function WhyNorthKoreanBiblePage() {
         imageAlt="God’s Promises English–North Korean bilingual Bible"
       >
         <p>
-          In <em>God’s Promises</em>, Sino-Korean and South Korean words used
-          in other Bibles are replaced with standard North Korean diction.
-          Instead of the Sino-Korean term 신약 (新約) for New Testament, our
-          translation reads “God’s Promises After Jesus” in Korean.
+          In our <em>God’s Promises: English-North Korean Bilingual Bible</em>,
+          use of Sino-Korean and South Korean words in Bibles have been
+          replaced with standard North Korean diction. Instead of referring to
+          New Testament using the word 신약 (新约) as it is done in other Korean
+          translations, for example, our translation reads “God’s Promises
+          After Jesus” in Korean.
         </p>
         <p>
-          We believe a North Korean translation should communicate the Good
-          News of Jesus without unnecessary linguistic hurdles standing in the
-          way.
+          So why is there a need for a North Korean Bible? We believe there is
+          a strong and present need for North Korean Bible translations that
+          communicate the Good News of Jesus without the unnecessary
+          linguistic hurdles getting in the way.
+        </p>
+        <p>
+          Please read about our mission of providing Bible and other biblical
+          literature to present the Good News to people of North Korea.
         </p>
         <LinkArrow href="/en/about/#mission">Read PBI’s mission</LinkArrow>
       </StorySection>
@@ -93,47 +100,42 @@ export function WhyBilingualPage() {
   return (
     <>
       <InteriorHero
-        title="Why make it bilingual?"
-        intro="English and North Korean appear side by side so Scripture can also support students and teachers working across a language barrier."
-        image="English-Korean Biligual Bible - Book of John.jpg"
-        imageAlt="English–North Korean bilingual Book of John"
+        title="Why a bilingual Bible?"
+        intro="Our English-North Korean Bilingual Bible strategically targets North Korean students and readers interested in learning English as a second language."
+        image="current/esl-class.webp"
+        imageAlt="A teacher helping a student read in an ESL classroom"
       />
 
-      <StorySection
-        title="Bible stories in English and North Korean"
-        image="missionary academy pyongyang.jpg"
-        imageAlt="Students at a missionary academy in Pyongyang"
-      >
+      <StorySection title="Bible stories in English and North Korean">
         <p>
-          Our bilingual Bible is designed for North Korean students and readers
-          interested in learning English as a second language.
-        </p>
-        <p>
-          In a future reunified Korea, we anticipate limited yet important
-          opportunities for Scripture to enter daily life in the North. The
-          bilingual format can support missionaries and youth pastors teaching
-          English as a second language.
+          In the era of re-unified Korea we anticipate limited yet critical
+          opportunities in which Bible and its content can penetrate into daily
+          life of North Korea citizens. We believe our English-North Korean
+          Bilingual Bible can be used by missionaries and youth pastors
+          teaching English as a second language.
         </p>
       </StorySection>
 
       <section className="prayer-excerpt">
         <div className="shell">
           <div className="section-heading">
-            <h2>The Lord’s Prayer, side by side</h2>
+            <h2>Excerpt from the Lord’s Prayer</h2>
             <p>
-              The North Korean translation follows the NLT’s sentence
-              organization and word selection, making it useful as an English
-              learning reference.
+              Our North Korean translation closely follows New Living
+              Translation (NLT) English content in both sentence organization
+              and word selection. This allows our translation to serve as an
+              excellent reference material for learning English as a second
+              language.
             </p>
           </div>
           <div className="prayer-columns">
             <blockquote lang="en">
               {englishPrayer.map((line) => <p key={line}>{line}</p>)}
-              <cite>Matthew 6:9–13</cite>
+              <cite>Matthew 6:9-13</cite>
             </blockquote>
             <blockquote lang="ko">
               {koreanPrayer.map((line) => <p key={line}>{line}</p>)}
-              <cite>마태가 전하는 반가운 소식 6:9–13</cite>
+              <cite>마태가 전하는 반가운 소식 6:9-13</cite>
             </blockquote>
           </div>
         </div>
@@ -141,16 +143,16 @@ export function WhyBilingualPage() {
 
       <StorySection
         title="Beyond us and now"
-        image="Dadohaehaesang National Park, Republic of Korea.jfif"
-        imageAlt="Coastline of Dadohaehaesang National Park in Korea"
+        image="current/beyond-now.webp"
+        imageAlt="A parent and child walking through a public building"
         reverse
       >
         <p>
-          We believe this work is helping make room for improved Bible
-          translations and better teaching resources for the people of North
-          Korea.
+          We believe our efforts are paving the way for emergence of
+          improved Bible translations and better Bible teaching resources for
+          the people of North Korea.
         </p>
-        <LinkArrow href="/en/about/#mission">Learn about our mission</LinkArrow>
+        <LinkArrow href="/en/about/#mission">Learn more about our mission</LinkArrow>
       </StorySection>
     </>
   );

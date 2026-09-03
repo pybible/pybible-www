@@ -1,0 +1,51 @@
+route	live_image	live_dimensions	rendered_local_asset	local_dimensions	phash_distance	dhash_distance	verdict
+/	image.jpg	2500x1515	current/page-texture.webp	2500x1515	2	1	MATCH
+/	YouVersion+Bible+Icon.png	120x120	current/youversion-bible-icon.webp	120x120	4	1	MATCH
+/	Why%2BNorth%2BKorean%2BBible.jpg	1319x1125	Why North Korean Bible.png	1319x1125	0	0	MATCH
+/	Gods+Promises+New+Testament.jpg	1319x1125	Gods Promises New Testament.png	1319x1125	0	3	MATCH
+/	Behind%25252Bthe%25252BScenes.jpg	1319x1125	Behind the Scenes.png	1319x1125	2	1	MATCH
+/	Looking+Back.jpg	1319x1125	Looking Back.png	1319x1125	0	3	MATCH
+/	Prayer+Group+Signup.jpg	1319x1125	Prayer Group Signup.png	1319x1125	2	0	MATCH
+/	Donate.jpg	1319x1125	Donate.png	1319x1125	2	3	MATCH
+/en/about	PBI+founding+members.jpg	561x379	PBI founding members.jpg	561x379	0	0	MATCH
+/en/about	Picture2.jpg	2500x1799	current/about-mission.webp	2500x1799	0	0	MATCH
+/en/about	KASCON.jpg	437x288	KASCON.jpg	437x288	0	0	MATCH
+/en/about	North_Korean_students.jpg	2500x1662	North_Korean_students.jpg	3008x2000	0	0	MATCH
+/en/about	ProfAndMrsKim.jpg	300x398	current/prof-and-mrs-kim.webp	300x398	0	0	MATCH
+/en/about	yoojinkim.jpg	357x473	current/yoo-jin-kim.webp	357x473	0	1	MATCH
+/en/about	jongwoolee.jpg	1195x1593	current/jong-woo-lee.webp	1195x1593	0	2	MATCH
+/en/about	Jin+Keol+Park.jpg	393x525	current/jin-keol-park.webp	393x525	0	0	MATCH
+/en/about	jisoolee.jpg	1802x2403	current/rex-lee.webp	1802x2403	0	0	MATCH
+/en/about	ProfKimDuringLecture.png	342x427	ProfKimDuringLecture.png	342x427	0	0	MATCH
+/en/about	%EA%B9%80%ED%98%84%EC%8B%9D%2C+%EA%B9%80%ED%98%84%EC%9E%90.jpg	1440x1080	current/prof-kim-couple.webp	1440x1080	0	0	MATCH
+/en/about	ProfAndMrsKim.jpg	300x398	current/prof-and-mrs-kim.webp	300x398	0	0	MATCH
+/en/about	English-Korean+Biligual+Bible+-+Book+of+John.jpg	458x670	English-Korean Biligual Bible - Book of John.jpg	458x670	0	0	MATCH
+/en/about	Childrens+bible+story.jpg	500x651	Childrens bible story-small.png	332x432	0	0	MATCH
+/en/about	NorthSouthDictionary.jpg	350x523	NorthSouthDictionary.jpg	350x523	0	4	MATCH
+/en/about	KimHyunSikAutoBio2.png	241x338	current/autobiography-80-years.webp	241x338	0	0	MATCH
+/en/about	KimHyunSikAutoBio1.png	480x683	current/autobiography-nomad.webp	480x683	0	0	MATCH
+/en/about	DocumentaryKJI.jpg	350x481	DocumentaryKJI.jpg	350x481	0	0	MATCH
+/en/home	image.jpg	2500x1515	current/page-texture.webp	2500x1515	2	1	MATCH
+/en/home	YouVersion+Bible+Icon.png	120x120	current/youversion-bible-icon.webp	120x120	4	1	MATCH
+/en/home	Why%2BNorth%2BKorean%2BBible.jpg	1319x1125	Why North Korean Bible.png	1319x1125	0	0	MATCH
+/en/home	Gods+Promises+New+Testament.jpg	1319x1125	Gods Promises New Testament.png	1319x1125	0	3	MATCH
+/en/home	Behind%25252Bthe%25252BScenes.jpg	1319x1125	Behind the Scenes.png	1319x1125	2	1	MATCH
+/en/home	Looking+Back.jpg	1319x1125	Looking Back.png	1319x1125	0	3	MATCH
+/en/home	Prayer+Group+Signup.jpg	1319x1125	Prayer Group Signup.png	1319x1125	2	0	MATCH
+/en/home	Donate.jpg	1319x1125	Donate.png	1319x1125	2	3	MATCH
+/en/inprogress	Gods+Promises+Side.png	747x941	Gods Promises Side.png	747x941	0	0	MATCH
+/en/inprogress	YouVersion+Bible+Icon.png	120x120	current/youversion-bible-icon.webp	120x120	4	1	MATCH
+/en/prayer-newsletter	image-asset.jpeg	2500x1667	current/prayer-newsletter.webp	2500x1667	0	0	MATCH
+/en/publications	Gods+Promises+Side2.png	628x909	current/gods-promises-side2.webp	628x909	10	3	MATCH
+/en/publications	YouVersion+Bible+Icon.png	120x120	current/youversion-bible-icon.webp	120x120	4	1	MATCH
+/en/publications	English-Korean+Biligual+Bible+-+Book+of+John.jpg	458x670	English-Korean Biligual Bible - Book of John.jpg	458x670	0	0	MATCH
+/en/publications	English-Korean+Biligual+Bible+-+Book+of+John.jpg	500x731	current/book-of-john-reference.webp	500x731	0	0	MATCH
+/en/publications	unsplash-image-Zv9YtLXs7pM.jpg	2500x1667	current/publications-cherry-blossoms.webp	2500x1667	0	2	MATCH
+/en/support	unsplash-image-iy34kwDyJ4E.jpg	2500x1404	current/support-prayer.webp	2500x1404	0	1	MATCH
+/en/teens	Childrens+bible+story-small.png	332x432	Childrens bible story-small.png	332x432	0	0	MATCH
+/en/teens	Childrens+bible+story-small.png	332x432	Childrens bible story-small.png	332x432	0	0	MATCH
+/en/whybilingual	ESL_class.jpg	1024x680	current/esl-class.webp	1024x680	0	0	MATCH
+/en/whybilingual	image-asset.jpeg	2500x1666	current/beyond-now.webp	2500x1666	0	0	MATCH
+/en/whynkbible	20140301_Trade-151_0124-copy.jpg	2200x1400	current/korean-language-divide.webp	2200x1400	0	1	MATCH
+/en/whynkbible	korea-cudl-1331x2059.jpeg	1331x2059	current/old-korean-bible.webp	1331x2059	0	0	MATCH
+/en/whynkbible	Gods+Promises+Side.png	747x941	Gods Promises Side.png	747x941	0	0	MATCH

@@ -1,0 +1,100 @@
+{
+  "title": {
+    "text": {
+      "headline": "Notable Events in Our History",
+      "text": ""
+    }
+  },
+  "events": [
+    {
+      "start_date": { "year": 2006, "month": 10, "day": 9 },
+      "end_date": { "year": 2006, "month": 10, "day": 9 },
+      "text": {
+        "headline": "Prof. Hyunsik (Taeyoung) Kim publishes Korean Re-unification Dictionary",
+        "text": "After detecting to South Korea in 1993 professor Kim begins work on a dictionary detailing different words between North and South Korea. In North Korea, Taeyoung Kim had been serving as a liguistics professor for 38 year until he defected to South Korea and changed his name to Hyunsik Kim and also adopted a pen name 정종남."
+      },
+      "media": { "url": "/assets/timeline/reunification-dictionary.jpg" }
+    },
+    {
+      "start_date": { "year": 2007, "month": 5 },
+      "end_date": { "year": 2007, "month": 5 },
+      "text": {
+        "headline": "Reah Empower Conference 2007, Wheaton, Illinois",
+        "text": "Hyunsik Kim asks for volunteers to help in his translation work. Empower conference attendees pray for Kim."
+      },
+      "media": { "url": "/assets/timeline/reah-logo.png" }
+    },
+    {
+      "start_date": { "year": 2007, "month": 11, "day": 29 },
+      "end_date": { "year": 2007, "month": 11, "day": 29 },
+      "text": {
+        "headline": "Volunteer Meetings in Chicago, Southern California, and Virginia",
+        "text": "Professor Kim visits Chicago to meet with volunteers. Jamie Kim of Reah hosts Professor, Mrs Kim, and handful of people in his home in Pasadena on November 29, 2007. Reah and Sarang church volunteers organize a two-day workshop on January 18-19, 2018 in El Monte, CA. This is followed by further meetings in Virginia, PBI headquarter."
+      },
+      "media": { "url": "/assets/timeline/volunteer-meetings.webp" }
+    },
+    {
+      "start_date": { "year": 2008, "month": 12 },
+      "end_date": { "year": 2008, "month": 12 },
+      "text": {
+        "headline": "Pyongyang Bible Institute Inc is formed",
+        "text": "Pyongyang Bible Institute is officially formed and registers as 501(c)(3) non-profit in Fairfax, Virginia"
+      },
+      "media": { "url": "/assets/timeline/professor-kim.webp" }
+    },
+    {
+      "start_date": { "year": 2011, "month": 2, "day": 25 },
+      "end_date": { "year": 2011, "month": 2, "day": 25 },
+      "text": {
+        "headline": "License agreement for use of New English Translation Bible",
+        "text": "PBI forms license agreement for use of New English Translation (NET) English Bible with Biblical Studies Press LLC."
+      },
+      "media": { "url": "/assets/timeline/net-bible.jpg" }
+    },
+    {
+      "start_date": { "year": 2013, "month": 10, "day": 23 },
+      "end_date": { "year": 2013, "month": 10, "day": 23 },
+      "text": {
+        "headline": "God's Promise: Book of John published",
+        "text": "PBI in partnership with Hongsungsa publishes its first Bible: Gospel of John in English-Korean Bilingual format. This work features Gospel of John in New English Translation (NET) translated to North Korean."
+      },
+      "media": { "url": "/assets/timeline/book-of-john.jpg" }
+    },
+    {
+      "start_date": { "year": 2013, "month": 9, "day": 17 },
+      "end_date": { "year": 2013, "month": 9, "day": 17 },
+      "text": {
+        "headline": "License agreement for use of New Living Translation Bible",
+        "text": "PBI forms license agreement for translation and use of New Living Translation (NLT) English Bible with Tyndale House Publishers. Translation of NLT New Testament to North Korean begins."
+      },
+      "media": { "url": "/assets/timeline/tyndale.jpg" }
+    },
+    {
+      "start_date": { "year": 2017, "month": 8, "day": 28 },
+      "end_date": { "year": 2017, "month": 8, "day": 28 },
+      "text": {
+        "headline": "God's Promise: New Testament published",
+        "text": "PBI in partnership with Hongsungsa publishes New Testament in English-Korean Bilingual format. This work features New Testament in New Living Translation (NLT) translated to North Korean."
+      },
+      "media": { "url": "/assets/timeline/new-testament.jpg" }
+    },
+    {
+      "start_date": { "year": 2019, "month": 8, "day": 22 },
+      "end_date": { "year": 2019, "month": 8, "day": 22 },
+      "text": {
+        "headline": "Prof. Kim passes away on August 8, 2019 at age of 87",
+        "text": "Prof. Kim returns to his heavenly home after having faithfully completed the New Testament translation of New Living Translation (NLT) Bible in modern North Korean diction. Mrs. Kim continues to direct a group of volunteers at PBI honoring Prof. Kim's wish to see the entire Bible translated."
+      },
+      "media": { "url": "/assets/timeline/prof-and-mrs-kim.webp" }
+    },
+    {
+      "start_date": { "year": 2022, "month": 11, "day": 9 },
+      "end_date": { "year": 2022, "month": 11, "day": 9 },
+      "text": {
+        "headline": "Digital version published in YouVersion Bible app",
+        "text": "In partnership with Tyndale, YouVersion, and Digital Bible Library, PBI publishes digital version as a new Korean translation, NLTNK, in Bible app."
+      },
+      "media": { "url": "/assets/timeline/youversion-bible-icon.webp" }
+    }
+  ]
+}

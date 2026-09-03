@@ -20,7 +20,7 @@ html {
 
 body {
   margin: 0;
-  background: var(--paper);
+  background: var(--paper) url('/assets/current/page-texture.webp') center top / 1250px auto;
   color: var(--ink);
   font-family: "Avenir Next", "Trebuchet MS", "Apple SD Gothic Neo", sans-serif;
   font-size: 1rem;
@@ -348,6 +348,80 @@ li {
   display: inline;
 }
 
+.source-home-verse {
+  padding-block: clamp(5rem, 10vw, 9rem);
+  background: url('/assets/current/page-texture.webp') center / cover;
+}
+
+.source-verse-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(3rem, 8vw, 8rem);
+}
+
+.source-verse-grid blockquote {
+  margin: 0;
+}
+
+.source-verse-grid p {
+  margin-bottom: 2rem;
+  color: #202020;
+  font-size: clamp(1.7rem, 3.2vw, 3.2rem);
+  font-weight: 700;
+  line-height: 1.18;
+}
+
+.source-verse-grid cite {
+  color: #555;
+  font-size: 0.9rem;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.source-youversion {
+  padding-block: clamp(4rem, 8vw, 7rem);
+  background: #fff;
+}
+
+.source-youversion-grid {
+  display: grid;
+  grid-template-columns: 160px minmax(0, 720px);
+  align-items: center;
+  justify-content: center;
+  gap: clamp(2rem, 7vw, 6rem);
+}
+
+.source-youversion-grid img {
+  width: 120px;
+  height: 120px;
+}
+
+.source-youversion-grid p {
+  margin: 0;
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.source-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  padding-block: clamp(4rem, 8vw, 7rem);
+}
+
+.source-gallery a {
+  display: block;
+  overflow: hidden;
+}
+
+.source-gallery img {
+  width: 100%;
+  height: 100%;
+  min-height: 280px;
+  object-fit: cover;
+}
+
 .scripture-grid cite {
   font-size: 0.86rem;
   font-style: normal;
@@ -395,6 +469,15 @@ li {
   margin-inline: auto;
   object-fit: contain;
   filter: drop-shadow(22px 30px 18px rgb(11 37 46 / 20%));
+}
+
+.app-stage {
+  align-self: center;
+}
+
+.app-stage img {
+  width: min(220px, 60%);
+  image-rendering: auto;
 }
 
 .youversion-copy p {
@@ -516,6 +599,18 @@ li {
   padding-block: clamp(4rem, 8vw, 7rem);
 }
 
+.interior-hero-text-only {
+  grid-template-columns: minmax(0, 760px);
+  justify-content: center;
+  min-height: 460px;
+  text-align: center;
+}
+
+.interior-hero-text-only h1,
+.interior-hero-text-only p {
+  margin-inline: auto;
+}
+
 .interior-hero h1 {
   margin-bottom: 1.5rem;
 }
@@ -580,6 +675,13 @@ li {
   max-height: 650px;
   min-height: 440px;
   object-fit: cover;
+}
+
+.story-media img[src*='youversion-bible-icon'],
+.story-media img[src*='prof-and-mrs-kim'] {
+  object-fit: contain;
+  padding: clamp(2rem, 7vw, 6rem);
+  background: #fff;
 }
 
 .story-copy h2 {
@@ -673,7 +775,7 @@ li {
 .rights-note {
   background:
     linear-gradient(rgb(11 37 46 / 88%), rgb(11 37 46 / 88%)),
-    url('/assets/bible.jpg') center / cover;
+    url('/assets/current/publications-cherry-blossoms.webp') center / cover;
   color: #fff;
 }
 
@@ -766,6 +868,59 @@ li {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.timeline-frame {
+  display: block;
+  width: 100%;
+  min-height: 650px;
+  border: 1px solid var(--line);
+  background: #fff;
+}
+
+.timeline-fallback {
+  margin-top: 1.5rem;
+  border: 1px solid var(--line);
+  background: #fff;
+}
+
+.timeline-fallback summary {
+  cursor: pointer;
+  padding: 1rem 1.25rem;
+  color: var(--sky-deep);
+  font-weight: 800;
+}
+
+.timeline-fallback .timeline {
+  padding: 0 1.25rem 1rem;
+}
+
+.history-photos {
+  padding-block: clamp(4rem, 8vw, 7rem);
+  background: #f7f9f9;
+}
+
+.history-photo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.history-photo-grid figure {
+  margin: 0;
+  background: #fff;
+}
+
+.history-photo-grid img {
+  width: 100%;
+  height: 430px;
+  object-fit: cover;
+}
+
+.history-photo-grid figcaption {
+  padding: 1rem 1.2rem;
+  color: var(--muted);
+  font-size: 0.9rem;
 }
 
 .timeline li {
@@ -861,6 +1016,18 @@ li {
   width: 100%;
   background: #000;
   box-shadow: 18px 24px 40px rgb(11 37 46 / 18%);
+}
+
+.video-frame {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  background: #000;
+  box-shadow: 18px 24px 40px rgb(11 37 46 / 18%);
+}
+
+.source-video-wrap {
+  max-width: 960px;
 }
 
 .past-work-grid {
@@ -1174,7 +1341,7 @@ li {
 
   .home-hero {
     min-height: calc(100svh - 72px);
-    background: var(--blue-black) url('/assets/Dadohaehaesang National Park, Republic of Korea.jfif') center / cover;
+    background: var(--blue-black) url('/assets/current/page-texture.webp') center / cover;
   }
 
   .home-hero-video,
@@ -1197,6 +1364,8 @@ li {
   }
 
   .scripture-grid,
+  .source-verse-grid,
+  .source-youversion-grid,
   .prayer-columns,
   .youversion-grid,
   .interior-hero-grid,
@@ -1208,6 +1377,15 @@ li {
   .footer-main,
   .footer-links {
     grid-template-columns: 1fr;
+  }
+
+  .source-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .source-youversion-grid {
+    justify-items: center;
+    text-align: center;
   }
 
   .scripture-grid blockquote {
@@ -1290,6 +1468,14 @@ li {
     border-left: 0;
   }
 
+  .history-photo-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .history-photo-grid img {
+    height: 330px;
+  }
+
   .timeline li {
     grid-template-columns: 1fr;
     gap: 0.5rem;
@@ -1334,7 +1520,7 @@ li {
   }
 
   .home-hero {
-    background: var(--blue-black) url('/assets/Dadohaehaesang National Park, Republic of Korea.jfif') center / cover;
+    background: var(--blue-black) url('/assets/current/page-texture.webp') center / cover;
   }
 
   .feature-tile img,
