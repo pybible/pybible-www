@@ -1,17 +1,4 @@
-import { InteriorHero, LinkArrow, PublicationCard, StorySection } from '@/components/Interior';
-
-const timeline = [
-  ['October 9, 2006', 'Professor Hyunsik (Taeyoung) Kim publishes the Korean Re-Unification Dictionary.'],
-  ['May 2007', 'At the Reah Empower Conference in Wheaton, Illinois, Hyunsik Kim asks for volunteers to help with his translation work.'],
-  ['November 29, 2007', 'Volunteer meetings begin in Chicago, Southern California, and Virginia.'],
-  ['December 2008', 'Pyongyang Bible Institute, Inc. is formed and registered as a 501(c)(3) nonprofit in Fairfax, Virginia.'],
-  ['February 25, 2011', 'PBI forms a license agreement to use the New English Translation (NET) Bible.'],
-  ['September 17, 2013', 'PBI forms a license agreement with Tyndale House Publishers to translate and use the New Living Translation Bible.'],
-  ['October 23, 2013', 'PBI and Hongsungsa publish God’s Promise: Book of John.'],
-  ['August 28, 2017', 'PBI and Hongsungsa publish God’s Promise: New Testament.'],
-  ['August 8, 2019', 'Professor Kim passes away at age 87 after completing the NLT New Testament translation in modern North Korean diction.'],
-  ['November 9, 2022', 'The NLTNK digital edition is published in the YouVersion Bible App.'],
-];
+import { LinkArrow, PublicationCard, StorySection } from '@/components/Interior';
 
 const team = [
   ['Hyun Ja Kim', 'Project Lead', 'current/prof-and-mrs-kim.webp'],
@@ -24,40 +11,57 @@ const team = [
 export function AboutPage() {
   return (
     <>
-      <InteriorHero
-        title="Our story"
-        image="PBI founding members.jpg"
-        imageAlt="Founding members of Pyongyang Bible Institute"
-      />
+      <section className="about-story">
+        <div className="shell about-story-grid">
+          <div className="about-story-copy">
+            <h1>Our Story</h1>
+            <p>
+              A group of people attending 2007 Reah International conference
+              {' '}(<a href="https://www.reah.org/" target="_blank" rel="noreferrer">reah.org</a>) met
+              Prof. Hyunsik Kim who presented a talk on the need for modern
+              translation of Bible for North Korea. The case for a dedicated North
+              Korean translation of the Bible without use of Sino-Korean words
+              unfamiliar to North Korean readers were presented. After the
+              completion of the workshop, people gathered to ask the Lord to give
+              Prof. Kim the strength to take up the mantle of Bible translation.
+              Prof. Kim was 76 years old at the time. After the conference some
+              volunteers continue to meet at Prof. Kim’s house and Pyongyang Bible
+              Institute Inc. was founded in December 2008.
+            </p>
+          </div>
+          <div className="about-story-media">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/assets/PBI founding members.jpg" alt="Founding members of Pyongyang Bible Institute" fetchPriority="high" />
+          </div>
+        </div>
+      </section>
 
-      <StorySection title="How PBI began" image="current/about-mission.webp" imageAlt="A historic Korean family photograph">
-        <p>
-          A group of people attending 2007 Reah International conference met
-          Prof. Hyunsik Kim who presented a talk on the need for modern
-          translation of Bible for North Korea. The case for a dedicated North
-          Korean translation of the Bible without use of Sino-Korean words
-          unfamiliar to North Korean readers were presented. After the
-          completion of the workshop, people gathered to ask the Lord to give
-          Prof. Kim the strength to take up the mantle of Bible translation.
-          Prof. Kim was 76 years old at the time. After the conference some
-          volunteers continue to meet at Prof. Kim’s house and Pyongyang Bible
-          Institute Inc. was founded in December 2008.
-        </p>
-        <LinkArrow href="https://www.reah.org/" external>reah.org</LinkArrow>
-      </StorySection>
-
-      <section className="mission-panel" id="mission">
-        <div className="shell mission-grid">
-          <div>
-            <h2>Our mission</h2>
+      <section className="about-principles" id="mission">
+        <div className="shell about-principles-grid">
+          <figure className="about-principle-media about-mission-media">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/assets/current/about-mission.webp" alt="A historic Korean family photograph" loading="lazy" />
+          </figure>
+          <div className="about-principle-copy about-mission-copy">
+            <h2>Our Mission</h2>
             <p>To provide accessible modern translation of Bible for people of North Korea.</p>
           </div>
-          <div>
-            <h2>Our vision</h2>
+
+          <div className="about-principle-copy about-vision-copy">
+            <h2>Our Vision</h2>
             <p>People of North Korea meeting Jesus and encountering life anew as beloved children of God.</p>
           </div>
-          <div>
-            <h2>Our core values</h2>
+          <figure className="about-principle-media about-vision-media">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/assets/KASCON.jpg" alt="Professor Kim speaking at KASCON" loading="lazy" />
+          </figure>
+
+          <figure className="about-principle-media about-values-media">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/assets/North_Korean_students.jpg" alt="North Korean students" loading="lazy" />
+          </figure>
+          <div className="about-principle-copy about-values-copy">
+            <h2>Our Core Values</h2>
             <ul>
               <li>Dependence on God’s Leading</li>
               <li>Accountability and Transparency</li>
@@ -67,30 +71,14 @@ export function AboutPage() {
         </div>
       </section>
 
-      <section className="history-photos" aria-label="Photographs from PBI history">
-        <div className="shell history-photo-grid">
-          <figure>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/assets/KASCON.jpg" alt="Professor Kim speaking at KASCON" loading="lazy" />
-            <figcaption>Professor Kim sharing the case for a North Korean Bible.</figcaption>
-          </figure>
-          <figure>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/assets/North_Korean_students.jpg" alt="North Korean students" loading="lazy" />
-            <figcaption>North Korean students—the readers at the heart of PBI’s mission.</figcaption>
-          </figure>
-        </div>
-      </section>
-
       <section className="timeline-section" id="timeline">
         <div className="shell">
           <div className="section-heading">
-            <h2>Timeline of events in our history</h2>
-            <p>From Professor Kim’s years in North Korea to a complete New Testament translation.</p>
+            <h2>Timeline of Events in Our History</h2>
           </div>
           <iframe
             className="timeline-frame"
-            src="/timeline/index.html"
+            src="/timeline/"
             data-original-source="1vjDzTt-zc2e8VwPZ_t65iUGftNaj8GydFp3mhp_QbGk"
             title="Timeline of events in Pyongyang Bible Institute history"
             width="100%"
@@ -98,33 +86,21 @@ export function AboutPage() {
             loading="lazy"
             allowFullScreen
           />
-          <details className="timeline-fallback">
-            <summary>Read the timeline as text</summary>
-            <ol className="timeline">
-              {timeline.map(([year, event]) => (
-                <li key={year}>
-                  <time>{year}</time>
-                  <p>{event}</p>
-                </li>
-              ))}
-            </ol>
-          </details>
         </div>
       </section>
 
       <section className="team-section" id="team">
         <div className="shell">
           <div className="section-heading">
-            <h2>Our team members</h2>
-            <p>Staff and volunteers continuing PBI’s translation and publishing work.</p>
+            <h2>Our Team Members</h2>
           </div>
           <div className="team-grid">
             {team.map(([name, role, image]) => (
-              <article className="team-member" key={name}>
+              <figure className="team-member" key={name}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src={`/assets/${image}`} alt={name} loading="lazy" />
-                <div><h3>{name}</h3><p>{role}</p></div>
-              </article>
+                <figcaption><span>{name}</span><span>{role}</span></figcaption>
+              </figure>
             ))}
           </div>
         </div>

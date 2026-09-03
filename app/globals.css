@@ -1040,140 +1040,158 @@ li {
   font-weight: 400;
 }
 
-.mission-panel {
-  padding-block: clamp(4rem, 8vw, 7rem);
-  background: var(--blue-black);
-  color: #fff;
+.about-story-grid,
+.about-principles-grid {
+  width: min(1258px, 92vw);
+  margin-right: 0;
+  margin-left: max(4vw, calc((100vw - 1216px) / 2));
 }
 
-.mission-grid {
+.about-story-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 1px;
-  background: rgb(255 255 255 / 20%);
+  grid-template-columns: minmax(0, 541fr) minmax(0, 596fr);
+  gap: min(8.4vw, 121px);
 }
 
-.mission-grid > div {
-  padding: clamp(2rem, 4vw, 3.5rem);
-  background: var(--blue-black);
+.about-story-copy h1,
+.about-principle-copy h2 {
+  margin-bottom: 1.45rem;
+  font-size: clamp(2.15rem, 2.56vw, 2.3rem);
 }
 
-.mission-grid h2 {
-  margin-bottom: 1.2rem;
-  color: var(--sky);
-  font-size: clamp(1.7rem, 2.55vw, 2.3rem);
+.about-story-copy p,
+.about-principle-copy p,
+.about-principle-copy li {
+  margin: 0;
+  color: var(--ink);
+  font-family: var(--font-copy);
+  font-size: clamp(1rem, 1.4vw, 1.252rem);
+  font-weight: 300;
+  line-height: 1.8;
 }
 
-.mission-grid p,
-.mission-grid li {
-  color: rgb(255 255 255 / 85%);
-  font-size: 1.05rem;
+.about-story-copy a {
+  color: #786f69;
+  text-underline-offset: 0.16em;
 }
 
-.mission-grid ul {
-  padding-left: 1.25rem;
+.about-story-media img {
+  width: 100%;
+  height: 548px;
+  object-fit: cover;
 }
 
-.timeline {
+.about-principles {
+  padding-top: 42px;
+}
+
+.about-principles-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 651px) minmax(0, 430px);
+  column-gap: 66px;
+  row-gap: 51px;
+}
+
+.about-principle-media {
+  margin: 0;
+}
+
+.about-principle-media img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.about-mission-media img {
+  height: 463px;
+}
+
+.about-vision-media img {
+  height: 582px;
+}
+
+.about-vision-media {
+  width: 651px;
+  margin-left: -220px;
+}
+
+.about-values-media img {
+  height: 384px;
+}
+
+.about-principle-copy {
+  align-self: start;
+}
+
+.about-mission-copy,
+.about-vision-copy {
+  margin-top: 79px;
+}
+
+.about-values-media {
+  margin-top: 78px;
+}
+
+.about-values-copy {
+  margin-top: 117px;
+}
+
+.about-principle-copy ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
+.about-principles + .timeline-section {
+  padding-top: 90px;
+  padding-bottom: 0;
+}
+
+.timeline-section .section-heading {
+  display: block;
+  margin-bottom: -10px;
+}
+
+.timeline-section .section-heading h2 {
+  max-width: none;
+  font-size: clamp(2.15rem, 2.56vw, 2.3rem);
+}
+
 .timeline-frame {
   display: block;
-  width: 100%;
+  width: min(1203px, 100%);
   min-height: 650px;
   border: 1px solid var(--line);
   background: #fff;
 }
 
-.timeline-fallback {
-  margin-top: 1.5rem;
-  border: 1px solid var(--line);
-  background: #fff;
-}
-
-.timeline-fallback summary {
-  cursor: pointer;
-  padding: 1rem 1.25rem;
-  color: var(--sky-deep);
-  font-weight: 500;
-}
-
-.timeline-fallback .timeline {
-  padding: 0 1.25rem 1rem;
-}
-
-.history-photos {
-  padding-block: clamp(4rem, 8vw, 7rem);
-  background: #f7f9f9;
-}
-
-.history-photo-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
-}
-
-.history-photo-grid figure {
-  margin: 0;
-  background: #fff;
-}
-
-.history-photo-grid img {
-  width: 100%;
-  height: 384px;
-  object-fit: cover;
-}
-
-.history-photo-grid figure:first-child img {
-  height: 582px;
-}
-
-.history-photo-grid figcaption {
-  padding: 1rem 1.2rem;
-  color: var(--muted);
-  font-size: 0.9rem;
-}
-
-.timeline li {
-  max-width: none;
-  display: grid;
-  grid-template-columns: 180px 1fr;
-  gap: clamp(1.5rem, 5vw, 5rem);
-  padding-block: 1.6rem;
-  border-top: 1px solid var(--line);
-}
-
-.timeline time {
-  color: var(--sky-deep);
-  font-size: clamp(1.15rem, 2vw, 1.5rem);
-  font-weight: 500;
-}
-
-.timeline p {
-  margin: 0;
-  font-size: 1.05rem;
-}
-
 .team-section {
   padding-block: clamp(5rem, 10vw, 9rem);
-  background: var(--mist);
+  background: #fff;
+}
+
+.team-section > .shell {
+  width: min(985px, 92vw);
+}
+
+.team-section .section-heading {
+  display: block;
+  margin-bottom: 34px;
+}
+
+.team-section .section-heading h2 {
+  font-size: clamp(2.15rem, 2.56vw, 2.3rem);
 }
 
 .team-grid {
-  width: min(855px, 100%);
+  width: min(900px, 100%);
   display: grid;
-  grid-template-columns: 1.628fr repeat(4, 1fr);
+  grid-template-columns: 1.625fr repeat(4, 1fr);
   align-items: start;
-  gap: 21px;
-  margin-inline: auto;
+  gap: 34px;
 }
 
 .team-member {
-  overflow: hidden;
-  background: #fff;
+  margin: 0;
 }
 
 .team-member img {
@@ -1184,24 +1202,21 @@ li {
   object-position: center 25%;
 }
 
-.team-member div {
-  padding: 0.9rem;
+.team-member figcaption {
+  padding-top: 0.65rem;
+  font-family: var(--font-copy);
+  font-size: clamp(1rem, 1.4vw, 1.252rem);
+  font-weight: 300;
+  line-height: 1.8;
+  text-align: center;
 }
 
-.team-member h3,
-.team-member p {
-  margin-bottom: 0;
+.team-member figcaption span {
+  display: block;
 }
 
-.team-member h3 {
-  font-size: 1.2rem;
+.team-member figcaption span:first-child {
   font-weight: 500;
-}
-
-.team-member p {
-  color: var(--muted);
-  font-size: 0.9rem;
-  line-height: 1.45;
 }
 
 .profile-section,
@@ -1519,8 +1534,42 @@ li {
     gap: 3rem;
   }
 
-  .mission-grid {
+  .about-story-grid,
+  .about-principles-grid {
+    width: 88vw;
+    margin-inline: auto;
     grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .about-story {
+    padding-top: 2rem;
+  }
+
+  .about-story-media img,
+  .about-principle-media img {
+    height: auto;
+  }
+
+  .about-principle-copy,
+  .about-mission-copy,
+  .about-vision-copy,
+  .about-values-copy,
+  .about-values-media {
+    margin-top: 0;
+  }
+
+  .about-vision-media {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .about-principles + .timeline-section {
+    padding-top: clamp(5rem, 10vw, 9rem);
+  }
+
+  .timeline-section .section-heading {
+    margin-bottom: 2rem;
   }
 
   .team-grid {
@@ -1754,25 +1803,10 @@ li {
     width: 100%;
   }
 
-  .history-photo-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .history-photo-grid img {
-    height: auto;
-  }
-
-  .history-photo-grid figure:first-child img {
-    height: auto;
-  }
-
-  .timeline li {
-    grid-template-columns: 1fr;
-    gap: 0.5rem;
-  }
-
   .team-grid {
+    width: min(300px, 100%);
     grid-template-columns: 1fr;
+    margin-inline: auto;
   }
 
   .team-member,
