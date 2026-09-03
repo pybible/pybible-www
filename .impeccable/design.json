@@ -1,0 +1,314 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-03T02:56:29Z",
+  "title": "Design System: Pyongyang Bible Institute",
+  "extensions": {
+    "colorMeta": {
+      "sky": {
+        "role": "primary",
+        "displayName": "Open Sky",
+        "canonical": "#79d5ef",
+        "tonalRamp": [
+          "oklch(15% 0.0949 218.21)",
+          "oklch(27% 0.0949 218.21)",
+          "oklch(39% 0.0949 218.21)",
+          "oklch(51% 0.0949 218.21)",
+          "oklch(63% 0.0949 218.21)",
+          "oklch(75% 0.0949 218.21)",
+          "oklch(87% 0.0949 218.21)",
+          "oklch(95% 0.0949 218.21)"
+        ]
+      },
+      "sky-deep": {
+        "role": "primary",
+        "displayName": "River Blue",
+        "canonical": "#0d7695",
+        "tonalRamp": [
+          "oklch(15% 0.0970 225.12)",
+          "oklch(27% 0.0970 225.12)",
+          "oklch(39% 0.0970 225.12)",
+          "oklch(51% 0.0970 225.12)",
+          "oklch(63% 0.0970 225.12)",
+          "oklch(75% 0.0970 225.12)",
+          "oklch(87% 0.0970 225.12)",
+          "oklch(95% 0.0970 225.12)"
+        ]
+      },
+      "mist": {
+        "role": "neutral",
+        "displayName": "Translation Mist",
+        "canonical": "#eefafd",
+        "tonalRamp": [
+          "oklch(15% 0.0133 214.36)",
+          "oklch(27% 0.0133 214.36)",
+          "oklch(39% 0.0133 214.36)",
+          "oklch(51% 0.0133 214.36)",
+          "oklch(63% 0.0133 214.36)",
+          "oklch(75% 0.0133 214.36)",
+          "oklch(87% 0.0133 214.36)",
+          "oklch(95% 0.0133 214.36)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Proof Ink",
+        "canonical": "#17191a",
+        "tonalRamp": [
+          "oklch(15% 0.0037 228.98)",
+          "oklch(27% 0.0037 228.98)",
+          "oklch(39% 0.0037 228.98)",
+          "oklch(51% 0.0037 228.98)",
+          "oklch(63% 0.0037 228.98)",
+          "oklch(75% 0.0037 228.98)",
+          "oklch(87% 0.0037 228.98)",
+          "oklch(95% 0.0037 228.98)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Editorial Slate",
+        "canonical": "#596267",
+        "tonalRamp": [
+          "oklch(15% 0.0138 231.89)",
+          "oklch(27% 0.0138 231.89)",
+          "oklch(39% 0.0138 231.89)",
+          "oklch(51% 0.0138 231.89)",
+          "oklch(63% 0.0138 231.89)",
+          "oklch(75% 0.0138 231.89)",
+          "oklch(87% 0.0138 231.89)",
+          "oklch(95% 0.0138 231.89)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Archive Rule",
+        "canonical": "#d9e3e7",
+        "tonalRamp": [
+          "oklch(15% 0.0121 223.53)",
+          "oklch(27% 0.0121 223.53)",
+          "oklch(39% 0.0121 223.53)",
+          "oklch(51% 0.0121 223.53)",
+          "oklch(63% 0.0121 223.53)",
+          "oklch(75% 0.0121 223.53)",
+          "oklch(87% 0.0121 223.53)",
+          "oklch(95% 0.0121 223.53)"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Paper",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "oklch(15% 0 0)",
+          "oklch(27% 0 0)",
+          "oklch(39% 0 0)",
+          "oklch(51% 0 0)",
+          "oklch(63% 0 0)",
+          "oklch(75% 0 0)",
+          "oklch(87% 0 0)",
+          "oklch(95% 0 0)"
+        ]
+      },
+      "blue-black": {
+        "role": "neutral",
+        "displayName": "Deep Archive",
+        "canonical": "#0b252e",
+        "tonalRamp": [
+          "oklch(15% 0.0358 223.88)",
+          "oklch(27% 0.0358 223.88)",
+          "oklch(39% 0.0358 223.88)",
+          "oklch(51% 0.0358 223.88)",
+          "oklch(63% 0.0358 223.88)",
+          "oklch(75% 0.0358 223.88)",
+          "oklch(87% 0.0358 223.88)",
+          "oklch(95% 0.0358 223.88)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hero assertions within a 13ch measure."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Major section openings within a 17ch measure."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Card, person, and subsection titles."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Long-form reading within a 72ch measure."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Uppercase navigation and metadata."
+      }
+    },
+    "shadows": [
+      {
+        "name": "light-action-lift",
+        "value": "0 9px 22px rgb(0 0 0 / 12%)",
+        "purpose": "White actions on dark, colored, or photographic fields."
+      },
+      {
+        "name": "dark-action-lift",
+        "value": "0 9px 22px rgb(11 37 46 / 15%)",
+        "purpose": "Dark actions on light reading surfaces."
+      },
+      {
+        "name": "popover-ambient",
+        "value": "0 18px 40px rgb(11 37 46 / 20%)",
+        "purpose": "Desktop navigation popovers."
+      },
+      {
+        "name": "documentary-frame",
+        "value": "20px 24px 42px rgb(11 37 46 / 14%)",
+        "purpose": "Major editorial photographs."
+      },
+      {
+        "name": "book-object",
+        "value": "drop-shadow(14px 18px 12px rgb(11 37 46 / 18%))",
+        "purpose": "Publication-cover silhouettes."
+      }
+    ],
+    "motion": [
+      {
+        "name": "action-lift",
+        "value": "transform 180ms ease-out, background 180ms ease-out, box-shadow 180ms ease-out",
+        "purpose": "Two-pixel button lift; disabled when reduced motion is requested."
+      },
+      {
+        "name": "editorial-image-zoom",
+        "value": "transform 500ms cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Subtle feature-image zoom; disabled when reduced motion is requested."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "navigation-collapse",
+        "value": "960px"
+      },
+      {
+        "name": "single-column",
+        "value": "700px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Dark Button",
+      "kind": "button",
+      "refersTo": "button-dark",
+      "description": "Primary action on light reading surfaces.",
+      "html": "<button class=\"ds-button-dark\">Open the Bible <span aria-hidden=\"true\">↗</span></button>",
+      "css": ".ds-button-dark { display: inline-flex; min-height: 48px; align-items: center; justify-content: center; padding: 0.75rem 1.1rem; border: 1px solid transparent; border-radius: 2px; background: var(--ink, #17191a); color: var(--paper, #ffffff); box-shadow: 0 9px 22px rgb(11 37 46 / 15%); font-family: \"Avenir Next\", \"Trebuchet MS\", \"Apple SD Gothic Neo\", sans-serif; font-size: 1rem; font-weight: 700; line-height: 1.2; transition: transform 180ms ease-out, background 180ms ease-out, box-shadow 180ms ease-out; } .ds-button-dark:hover { transform: translateY(-2px); } .ds-button-dark:focus-visible { outline: 3px solid var(--sky-deep, #0d7695); outline-offset: 4px; } .ds-button-dark:active { transform: translateY(0); }"
+    },
+    {
+      "name": "Light Button",
+      "kind": "button",
+      "refersTo": "button-light",
+      "description": "Primary action on dark, blue, or photographic fields.",
+      "html": "<div class=\"ds-button-light-stage\"><button class=\"ds-button-light\">Prayer newsletter</button></div>",
+      "css": ".ds-button-light-stage { padding: 2rem; background: var(--blue-black, #0b252e); } .ds-button-light { display: inline-flex; min-height: 48px; align-items: center; justify-content: center; padding: 0.75rem 1.1rem; border: 1px solid transparent; border-radius: 2px; background: var(--paper, #ffffff); color: var(--ink, #17191a); box-shadow: 0 9px 22px rgb(0 0 0 / 12%); font-family: \"Avenir Next\", \"Trebuchet MS\", \"Apple SD Gothic Neo\", sans-serif; font-size: 1rem; font-weight: 700; line-height: 1.2; transition: transform 180ms ease-out, background 180ms ease-out, box-shadow 180ms ease-out; } .ds-button-light:hover { transform: translateY(-2px); } .ds-button-light:focus-visible { outline: 3px solid var(--sky-deep, #0d7695); outline-offset: 4px; } .ds-button-light:active { transform: translateY(0); }"
+    },
+    {
+      "name": "Text Link",
+      "kind": "custom",
+      "refersTo": "text-link",
+      "description": "Directional inline action in editorial copy.",
+      "html": "<a class=\"ds-text-link\" href=\"#\">Why this translation matters <span aria-hidden=\"true\">→</span></a>",
+      "css": ".ds-text-link { display: inline-block; color: var(--sky-deep, #0d7695); font-family: \"Avenir Next\", \"Trebuchet MS\", \"Apple SD Gothic Neo\", sans-serif; font-weight: 700; text-underline-offset: 0.22em; } .ds-text-link:hover { text-decoration-thickness: 2px; } .ds-text-link:focus-visible { outline: 3px solid var(--sky-deep, #0d7695); outline-offset: 4px; } .ds-text-link:active { color: var(--ink, #17191a); }"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "input-field",
+      "description": "Square, high-contrast field for contact and newsletter forms.",
+      "html": "<label class=\"ds-field-label\" for=\"ds-email\">Email address</label><input class=\"ds-input-field\" id=\"ds-email\" type=\"email\" placeholder=\"you@example.com\">",
+      "css": ".ds-field-label { display: block; margin-bottom: 0.45rem; color: var(--ink, #17191a); font-family: \"Avenir Next\", \"Trebuchet MS\", \"Apple SD Gothic Neo\", sans-serif; font-size: 0.86rem; font-weight: 700; } .ds-input-field { width: 100%; min-height: 52px; padding: 0.8rem 0.9rem; border: 1px solid #aebdc3; border-radius: 0; background: var(--paper, #ffffff); color: var(--ink, #17191a); font-family: \"Avenir Next\", \"Trebuchet MS\", \"Apple SD Gothic Neo\", sans-serif; font-size: 1rem; } .ds-input-field:hover { border-color: var(--muted, #596267); } .ds-input-field:focus-visible { outline: 3px solid var(--sky-deep, #0d7695); outline-offset: 4px; }"
+    },
+    {
+      "name": "Navigation Popover",
+      "kind": "nav",
+      "refersTo": "navigation-popover",
+      "description": "Compact uppercase group trigger with a deep archival link panel.",
+      "html": "<details class=\"ds-nav-group\" open><summary>Our Bibles</summary><nav class=\"ds-nav-popover\"><a href=\"#\">Bible Publications</a><a href=\"#\">Children and Teens</a><a href=\"#\">Read PBI Bible at Bible.com ↗</a></nav></details>",
+      "css": ".ds-nav-group { position: relative; width: 270px; color: var(--ink, #17191a); font-family: \"Avenir Next\", \"Trebuchet MS\", \"Apple SD Gothic Neo\", sans-serif; } .ds-nav-group summary { padding: 0.8rem 0.9rem; cursor: pointer; list-style: none; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; } .ds-nav-group summary::after { content: \" –\"; color: var(--sky-deep, #0d7695); } .ds-nav-group summary:focus-visible { outline: 3px solid var(--sky-deep, #0d7695); outline-offset: 4px; } .ds-nav-popover { width: 270px; padding: 0.75rem; background: var(--blue-black, #0b252e); box-shadow: 0 18px 40px rgb(11 37 46 / 20%); } .ds-nav-popover a { display: block; padding: 0.7rem 0.8rem; color: var(--paper, #ffffff); font-size: 0.9rem; text-decoration: none; } .ds-nav-popover a:hover, .ds-nav-popover a:focus-visible { background: rgb(121 213 239 / 14%); color: var(--sky, #79d5ef); } .ds-nav-popover a:focus-visible { outline: 3px solid var(--sky-deep, #0d7695); outline-offset: 1px; } .ds-nav-popover a:active { color: var(--paper, #ffffff); }"
+    },
+    {
+      "name": "Information Card",
+      "kind": "card",
+      "refersTo": "info-card",
+      "description": "Flat mist-colored aside for contextual ministry information.",
+      "html": "<aside class=\"ds-info-card\"><p class=\"ds-info-label\">Stay connected</p><h3>Prayer newsletter</h3><p>Receive prayer updates for North Korea and news from PBI’s translation work.</p><a href=\"#\">Request by email →</a></aside>",
+      "css": ".ds-info-card { padding: clamp(2rem, 4vw, 3.5rem); border-radius: 0; background: var(--mist, #eefafd); color: var(--ink, #17191a); font-family: \"Avenir Next\", \"Trebuchet MS\", \"Apple SD Gothic Neo\", sans-serif; line-height: 1.65; } .ds-info-card h3 { margin: 0 0 1rem; font-size: 1.35rem; line-height: 1.08; letter-spacing: -0.03em; } .ds-info-label { margin: 0 0 0.8rem; color: var(--sky-deep, #0d7695); font-size: 0.78rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; } .ds-info-card a { color: var(--sky-deep, #0d7695); font-weight: 700; text-underline-offset: 0.22em; } .ds-info-card a:hover { text-decoration-thickness: 2px; } .ds-info-card a:focus-visible { outline: 3px solid var(--sky-deep, #0d7695); outline-offset: 4px; }"
+    },
+    {
+      "name": "Bilingual Scripture Pair",
+      "kind": "custom",
+      "refersTo": "scripture-pair",
+      "description": "Equal English and Korean Scripture panels, the system’s signature proof component.",
+      "html": "<div class=\"ds-scripture-pair\"><blockquote lang=\"en\"><p>“You will receive power when the Holy Spirit comes upon you.”</p><cite>Acts 1:8 NLT</cite></blockquote><blockquote lang=\"ko\"><p>너희는 성령님이 너희에게 오시면 너희는 능력을 받을 것이다.</p><cite>선교활동 1:8 하나님의 약속</cite></blockquote></div>",
+      "css": ".ds-scripture-pair { display: grid; grid-template-columns: 1fr 1fr; background: var(--blue-black, #0b252e); color: var(--paper, #ffffff); font-family: \"Avenir Next\", \"Trebuchet MS\", \"Apple SD Gothic Neo\", sans-serif; } .ds-scripture-pair blockquote { min-height: 260px; margin: 0; padding: clamp(3rem, 7vw, 6rem) clamp(2rem, 5vw, 5rem); display: flex; flex-direction: column; justify-content: space-between; } .ds-scripture-pair blockquote + blockquote { border-left: 1px solid rgb(255 255 255 / 25%); background: var(--sky, #79d5ef); color: var(--ink, #17191a); } .ds-scripture-pair p { margin: 0; font-size: clamp(1.35rem, 2.7vw, 2.45rem); font-weight: 700; line-height: 1.28; letter-spacing: -0.025em; } .ds-scripture-pair cite { margin-top: 2rem; font-size: 0.86rem; font-style: normal; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; } @media (max-width: 700px) { .ds-scripture-pair { grid-template-columns: 1fr; } .ds-scripture-pair blockquote + blockquote { border-top: 1px solid rgb(255 255 255 / 25%); border-left: 0; } }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Bilingual Field Guide",
+    "overview": "The interface feels like an archival field guide for living translation work: documentary, precise, and grounded rather than campaign-polished. The translation leads, with real photographs, book-cover silhouettes, and side-by-side English/Korean passages carrying proof before any invitation to support.\n\nWhite paper, blue-black fields, sky-blue panels, and crisp rules build a clear editorial hierarchy. Density is generous but purposeful: long-form reading has room to breathe, while navigation, labels, and citations stay compact and exact.",
+    "keyCharacteristics": [
+      "Documentary imagery acts as evidence, not decoration.",
+      "Bilingual content receives equal visual authority.",
+      "Crisp zero-to-two-pixel edges, restrained lift, and broad editorial spacing define the form.",
+      "Translation purpose precedes read, pray, support, and contact actions."
+    ],
+    "rules": [
+      {
+        "name": "The Sky as Signal Rule",
+        "body": "Use the sky family to identify translation content, active pathways, and ministry calls to action; its clarity depends on leaving most reading surfaces neutral.",
+        "section": "colors"
+      },
+      {
+        "name": "The Ink-and-Paper Rule",
+        "body": "Long-form passages stay on high-contrast paper or deep-archive fields, never on decorative mid-tone surfaces.",
+        "section": "colors"
+      },
+      {
+        "name": "The One-Family, Two-Voices Rule",
+        "body": "English and Korean use the same type stack and receive equal weight; language distinction comes from content and panel structure, not novelty fonts.",
+        "section": "typography"
+      },
+      {
+        "name": "The Short-Headline Rule",
+        "body": "Preserve the `13ch` display and `17ch` headline measures so large type reads as an assertion rather than a paragraph.",
+        "section": "typography"
+      },
+      {
+        "name": "The Flat-by-Default Rule",
+        "body": "Sections, cards, fields, and records remain flat at rest; shadows appear only when layer, state, or object silhouette needs explanation.",
+        "section": "elevation"
+      },
+      {
+        "name": "The No-Pill Rule",
+        "body": "Do not introduce pill-shaped buttons, badges, or navigation when the incumbent system communicates action with crisp rectangular silhouettes.",
+        "section": "shapes"
+      }
+    ],
+    "dos": [
+      "Do let real Scripture, publications, and documentary images provide the visual proof.",
+      "Do preserve the Open Sky, River Blue, Deep Archive, Paper, and Proof Ink relationships across new surfaces.",
+      "Do keep English and Korean passages equally prominent when they appear together.",
+      "Do use broad fluid section spacing and short headline measures to make long-form content easy to scan.",
+      "Do honor reduced-motion preferences by removing nonessential transitions and substituting the still hero image."
+    ],
+    "donts": [
+      "Don't replace the first-view translation story with a generic charity appeal or a row of interchangeable appeal cards.",
+      "Don't introduce rounded pills, soft dashboard cards, or decorative gradients that weaken the archival field-guide form.",
+      "Don't scatter sky blue as ornament; reserve it for translation content, interaction, and intentional ministry emphasis.",
+      "Don't invent a second type personality for Korean content or reduce it to supporting-caption scale.",
+      "Don't add shadows to ordinary reading sections, fields, or record cards."
+    ]
+  }
+}
