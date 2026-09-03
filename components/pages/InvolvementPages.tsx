@@ -41,6 +41,7 @@ export function PrayerNewsletterPage() {
         intro="Pyongyang Bible Institute partners with The Fourth River Project and Pastor Ben Torrey in praying for North Korea."
         image="current/prayer-newsletter.webp"
         imageAlt="A person praying beside a window"
+        imageLayout="background"
       />
       <section className="newsletter-page">
         <div className="shell newsletter-page-grid">

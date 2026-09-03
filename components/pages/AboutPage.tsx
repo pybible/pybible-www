@@ -43,7 +43,7 @@ export function AboutPage() {
           volunteers continue to meet at Prof. Kim’s house and Pyongyang Bible
           Institute Inc. was founded in December 2008.
         </p>
-        <LinkArrow href="https://reah.org" external>reah.org</LinkArrow>
+        <LinkArrow href="https://www.reah.org/" external>reah.org</LinkArrow>
       </StorySection>
 
       <section className="mission-panel" id="mission">

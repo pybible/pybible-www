@@ -48,7 +48,7 @@ export function PublicationsPage() {
           laid the foundation for the subsequent translation of the entire
           New Testament in North Korean.
         </p>
-        <LinkArrow href="https://netbible.org" external>Visit the NET Bible</LinkArrow>
+        <LinkArrow href="https://netbible.com/" external>Visit the NET Bible</LinkArrow>
       </StorySection>
 
       <section className="reference-section">
@@ -70,7 +70,7 @@ export function PublicationsPage() {
                 <LinkArrow href="https://www.logos.com/product/161668/hananimyi-yagsog-yesu-hupyeon" external>
                   Digital Print Edition Available
                 </LinkArrow>
-                <LinkArrow href="http://www.kyobobook.co.kr/product/detailViewKor.laf?barcode=9788936512453" external>
+                <LinkArrow href="https://product.kyobobook.co.kr/detail/S000000614249" external>
                   Buy at Kyobo Store
                 </LinkArrow>
               </div>
@@ -84,7 +84,7 @@ export function PublicationsPage() {
                 <div><dt>Publication Date</dt><dd>2013</dd></div>
                 <div><dt>ISBN</dt><dd>9788936510008</dd></div>
               </dl>
-              <LinkArrow href="http://www.kyobobook.co.kr/product/detailViewKor.laf?barcode=9788936510008" external>
+              <LinkArrow href="https://product.kyobobook.co.kr/detail/S000000614114" external>
                 Buy at Kyobo Store
               </LinkArrow>
             </PublicationCard>
@@ -93,7 +93,13 @@ export function PublicationsPage() {
       </section>
 
       <section className="rights-note">
-        <div className="shell">
+        <div className="shell rights-note-grid">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/assets/current/publications-cherry-blossoms.webp"
+            alt="Cherry blossoms beside an open Bible"
+            loading="lazy"
+          />
           <p>
             Pyongyang Bible Institute (PBI) provides its Bible content
             royalty-free to our publishing partners in both physical print and
@@ -150,7 +156,7 @@ export function TeensPage() {
                 <div><dt>Publisher</dt><dd>Love One Korea Foundation</dd></div>
                 <div><dt>Publication Date</dt><dd>2004 · no longer in print</dd></div>
               </dl>
-              <LinkArrow href="http://www.yes24.com/Product/goods/20036794" external>
+              <LinkArrow href="https://www.yes24.com/Product/goods/20036794" external>
                 Buy It Used
               </LinkArrow>
             </PublicationCard>
@@ -199,7 +205,7 @@ export function InProgressPage() {
           and paints colors to the message of Good News.
         </p>
         <div className="inline-links">
-          <LinkArrow href="https://www.youversion.com/the-bible-app/" external>Get the Bible App</LinkArrow>
+          <LinkArrow href="https://www.youversion.com/bible-app" external>Get the Bible App</LinkArrow>
           <LinkArrow href="/en/whynkbible/">Why modern North Korean diction?</LinkArrow>
           <LinkArrow href="/en/whybilingual/">Why a bilingual format?</LinkArrow>
         </div>

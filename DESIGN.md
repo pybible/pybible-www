@@ -12,42 +12,54 @@ colors:
   blue-black: "#0b252e"
 typography:
   display:
-    fontFamily: "Avenir Next, Trebuchet MS, Apple SD Gothic Neo, sans-serif"
-    fontSize: "clamp(2.75rem, 6vw, 5.8rem)"
-    fontWeight: 700
-    lineHeight: 1.08
-    letterSpacing: "-0.03em"
+    fontFamily: "SF Pro Display, SF Pro Text, -apple-system, BlinkMacSystemFont, Helvetica Neue, Arial, Apple SD Gothic Neo, sans-serif"
+    fontSize: "clamp(2.5rem, 4.45vw, 4rem)"
+    fontWeight: 500
+    lineHeight: 1.3
+    letterSpacing: "normal"
   headline:
-    fontFamily: "Avenir Next, Trebuchet MS, Apple SD Gothic Neo, sans-serif"
-    fontSize: "clamp(2rem, 4vw, 3.75rem)"
-    fontWeight: 700
-    lineHeight: 1.08
-    letterSpacing: "-0.03em"
+    fontFamily: "SF Pro Display, SF Pro Text, -apple-system, BlinkMacSystemFont, Helvetica Neue, Arial, Apple SD Gothic Neo, sans-serif"
+    fontSize: "clamp(2.05rem, 3.45vw, 3.1rem)"
+    fontWeight: 500
+    lineHeight: 1.3
+    letterSpacing: "normal"
   title:
-    fontFamily: "Avenir Next, Trebuchet MS, Apple SD Gothic Neo, sans-serif"
-    fontSize: "1.35rem"
-    fontWeight: 700
-    lineHeight: 1.08
-    letterSpacing: "-0.03em"
+    fontFamily: "SF Pro Display, SF Pro Text, -apple-system, BlinkMacSystemFont, Helvetica Neue, Arial, Apple SD Gothic Neo, sans-serif"
+    fontSize: "clamp(1.7rem, 2.55vw, 2.3rem)"
+    fontWeight: 500
+    lineHeight: 1.3
+    letterSpacing: "normal"
   body:
-    fontFamily: "Avenir Next, Trebuchet MS, Apple SD Gothic Neo, sans-serif"
-    fontSize: "1rem"
-    fontWeight: 400
-    lineHeight: 1.65
+    fontFamily: "Poppins, Helvetica Neue, Arial, Apple SD Gothic Neo, sans-serif"
+    fontSize: "clamp(1rem, calc(1rem + 0.36vw), 1.325rem)"
+    fontWeight: 300
+    lineHeight: 1.8
     letterSpacing: "normal"
   label:
-    fontFamily: "Avenir Next, Trebuchet MS, Apple SD Gothic Neo, sans-serif"
-    fontSize: "0.78rem"
-    fontWeight: 700
-    lineHeight: 1.65
-    letterSpacing: "0.08em"
+    fontFamily: "Ubuntu Condensed, Arial Narrow, Arial, sans-serif"
+    fontSize: "1.1rem"
+    fontWeight: 400
+    lineHeight: 1.3
+    letterSpacing: "0.05em"
+  verse:
+    fontFamily: "SF Pro Display, SF Pro Text, -apple-system, BlinkMacSystemFont, Helvetica Neue, Arial, Apple SD Gothic Neo, sans-serif"
+    fontSize: "clamp(1.5rem, 1.86vw, 1.672rem)"
+    fontWeight: 500
+    lineHeight: 1.36
+    letterSpacing: "normal"
+  citation:
+    fontFamily: "SF Pro Display, SF Pro Text, -apple-system, BlinkMacSystemFont, Helvetica Neue, Arial, Apple SD Gothic Neo, sans-serif"
+    fontSize: "clamp(1.1rem, 1.51vw, 1.357rem)"
+    fontWeight: 300
+    lineHeight: 1.8
+    letterSpacing: "normal"
 rounded:
   square: "0"
   crisp: "2px"
 spacing:
-  shell-gutter: "24px"
-  shell-gutter-mobile: "16px"
-  grid-tight: "1rem"
+  shell-gutter: "4vw"
+  shell-gutter-mobile: "6vw"
+  grid-tight: "1.05vw"
   action-gap: "1.25rem"
   section-block: "clamp(5rem, 10vw, 9rem)"
 components:
@@ -130,33 +142,35 @@ The palette pairs open-sky optimism with deep archival ink, using mist and paper
 
 ## Typography
 
-**Display Font:** Avenir Next (with Trebuchet MS, Apple SD Gothic Neo, and sans-serif fallbacks)  
-**Body Font:** Avenir Next (with Trebuchet MS, Apple SD Gothic Neo, and sans-serif fallbacks)  
-**Label Font:** Avenir Next (with Trebuchet MS, Apple SD Gothic Neo, and sans-serif fallbacks)
+**Display and Copy Font:** SF Pro Display/Text where available, with the source site's Apple system, Helvetica, Arial, and Korean system fallbacks
 
-**Character:** One humane geometric sans-serif carries both English and Korean-facing content. Scale, compression, and uppercase tracking create hierarchy without introducing a second editorial voice.
+**Body and UI Font:** Poppins, locally bundled at the source weights
+**Navigation Font:** Ubuntu Condensed, locally bundled at weight 400
+
+**Character:** The original site pairs neutral SF-compatible editorial copy with Poppins UI text and narrow uppercase Ubuntu Condensed navigation. English and Korean Scripture use the same copy stack and equal visual authority.
 
 ### Hierarchy
 
-- **Display** (700, `clamp(2.75rem, 6vw, 5.8rem)`, 1.08): Leads home and interior heroes; keep lines compact within 13 characters of measure (`13ch`). On small screens it shifts to `clamp(2.45rem, 12vw, 4rem)`.
-- **Headline** (700, `clamp(2rem, 4vw, 3.75rem)`, 1.08): Opens major sections within a 17-character measure (`17ch`). On small screens it shifts to `clamp(2rem, 9vw, 3rem)`.
-- **Title** (700, `1.35rem`, 1.08): Names cards, team members, and subsection content; publication titles may expand responsively to `clamp(1.5rem, 3vw, 2.35rem)`.
-- **Body** (400, `1rem`, 1.65): Carries the reading experience with a maximum measure of 72 characters (`72ch`); important introductions rise to the observed `1.08rem`–`1.35rem` range.
-- **Label** (700, `0.78rem`, `0.08em`, uppercase): Identifies navigation groups and metadata. Citations use the adjacent observed treatment (`0.86rem`, `0.07em`).
+- **Display** (500, `clamp(2.5rem, 4.45vw, 4rem)`, 1.3): Leads interior heroes within a 16-character measure (`16ch`).
+- **Headline** (500, `clamp(2.05rem, 3.45vw, 3.1rem)`, 1.3): Opens major sections within a 22-character measure (`22ch`).
+- **Title** (500, `clamp(1.7rem, 2.55vw, 2.3rem)`, 1.3): Names subsections and publication records; compact team names use the source-derived `1.2rem` step.
+- **Body** (300, `clamp(1rem, calc(1rem + 0.36vw), 1.325rem)`, 1.8): Reproduces the source's fluid 20–21px desktop reading size.
+- **Verse** (500, `clamp(1.5rem, 1.86vw, 1.672rem)`, 1.36): Preserves the archived bilingual homepage measure and line count.
+- **Label** (400, `1.1rem`, `0.05em`, uppercase): Identifies desktop navigation groups in Ubuntu Condensed.
 
 ### Named Rules
 
-**The One-Family, Two-Voices Rule.** English and Korean use the same type stack and receive equal weight; language distinction comes from content and panel structure, not novelty fonts.
+**The Shared-Scripture Rule.** English and Korean Scripture use the same copy stack and receive equal weight; language distinction comes from content and layout, not novelty fonts.
 
 **The Short-Headline Rule.** Preserve the `13ch` display and `17ch` headline measures so large type reads as an assertion rather than a paragraph.
 
 ## Layout
 
-The core reading shell is capped at 1180px with 24px side gutters (`width: min(1180px, calc(100% - 48px))`); the header widens to 1320px for the wordmark and navigation. Full-bleed color and media fields wrap this shell, producing an editorial rhythm of expansive backgrounds and disciplined content columns.
+The core reading shell follows the Squarespace source: a 1400px cap with 4vw desktop side gutters (`width: min(1400px, 92vw)`). Full-bleed color and media fields wrap this shell, producing an editorial rhythm of expansive backgrounds and disciplined content columns.
 
-Primary storytelling uses balanced two-column grids with image and copy proportions tuned to the subject. Feature content uses a three-column grid with one- or two-column spans; team content uses a 12-column grid; publication entries pair a 290px cover column with flexible copy. Major sections generally use the established fluid block rhythm (`clamp(5rem, 10vw, 9rem)`), while one-pixel gaps and rules keep dense records legible.
+Primary storytelling uses two-column grids with source-specific photo widths and intrinsic proportions. The homepage gallery is three 4:3 columns with a 1.05vw gutter; team photography uses a 3:4 crop in a source-derived 3:2:2:2:2 track ratio; publication entries use portrait covers without stretching them beyond their source geometry. Major sections retain the established fluid block rhythm (`clamp(5rem, 10vw, 9rem)`).
 
-At 960px, the desktop navigation becomes a compact menu, complex layouts simplify, and header height drops from 82px to 72px. At 700px, content becomes single-column, shell gutters narrow to 16px, action rows stack, reversed stories return to reading order, and the video hero becomes a still documentary image. Mobile changes preserve content sequence rather than merely shrinking the desktop composition.
+At 960px, the desktop navigation becomes a compact menu and complex layouts simplify. At 700px, content becomes single-column, shell gutters become 6vw, the source text-only mobile wordmark replaces the desktop logo, homepage gallery photography becomes two columns, and reversed stories return to reading order.
 
 ## Elevation & Depth
 
@@ -210,7 +224,7 @@ Cards feel like pages, records, or photographic plates rather than floating dash
 
 ### Navigation
 
-The sticky header is a compact white wordmark bar with thin separation. Desktop group labels are uppercase (`0.78rem`, 700, `0.08em`) and reveal a 270px Deep Archive popover; links remain white until hover brings in Open Sky and a 14%-sky background. At 960px the menu becomes a bordered rectangular trigger and a full-width, three-column dark panel; at 700px that panel becomes one column.
+The sticky header is a compact white wordmark bar with thin separation. Desktop group labels are uppercase Ubuntu Condensed (`1.1rem`, 400, `0.05em`) and reveal a 270px Deep Archive popover; links remain white until hover brings in Open Sky and a 14%-sky background. At 960px the menu becomes a 48px hamburger target and a full-width, three-column dark panel; at 700px that panel becomes one column.
 
 ### Text Links
 

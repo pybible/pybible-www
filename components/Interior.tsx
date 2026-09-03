@@ -6,14 +6,16 @@ export function InteriorHero({
   intro,
   image,
   imageAlt = '',
+  imageLayout = 'split',
 }: {
   title: string;
   intro?: string;
   image?: string;
   imageAlt?: string;
+  imageLayout?: 'split' | 'wide' | 'background';
 }) {
   return (
-    <section className="interior-hero">
+    <section className={`interior-hero interior-hero-${imageLayout}`}>
       <div className={`shell interior-hero-grid ${image ? '' : 'interior-hero-text-only'}`}>
         <div>
           <h1>{title}</h1>

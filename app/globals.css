@@ -1,3 +1,59 @@
+@font-face {
+  font-family: "Poppins";
+  src: url('/assets/fonts/poppins-300.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url('/assets/fonts/poppins-400.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url('/assets/fonts/poppins-500.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url('/assets/fonts/poppins-700.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url('/assets/fonts/poppins-400-italic.woff2') format('woff2');
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url('/assets/fonts/poppins-700-italic.woff2') format('woff2');
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Ubuntu Condensed";
+  src: url('/assets/fonts/ubuntu-condensed-400.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
 :root {
   --sky: #79d5ef;
   --sky-deep: #0d7695;
@@ -7,6 +63,10 @@
   --line: #d9e3e7;
   --paper: #ffffff;
   --blue-black: #0b252e;
+  --font-copy: "SF Pro Display", "SF Pro Text", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, "Apple SD Gothic Neo", sans-serif;
+  --font-body: "Poppins", "Helvetica Neue", Arial, "Apple SD Gothic Neo", sans-serif;
+  --font-nav: "Ubuntu Condensed", "Arial Narrow", Arial, sans-serif;
+  --type-body: clamp(1rem, calc(1rem + 0.36vw), 1.325rem);
 }
 
 * {
@@ -20,15 +80,15 @@ html {
 
 body {
   margin: 0;
-  background: var(--paper) url('/assets/current/page-texture.webp') center top / 1250px auto;
+  background: var(--paper);
   color: var(--ink);
-  font-family: "Avenir Next", "Trebuchet MS", "Apple SD Gothic Neo", sans-serif;
-  font-size: 1rem;
-  line-height: 1.65;
+  font-family: var(--font-body);
+  font-size: var(--type-body);
+  font-weight: 300;
+  line-height: 1.8;
   text-rendering: optimizeLegibility;
 }
 
-body,
 button,
 input,
 textarea {
@@ -50,28 +110,30 @@ h2,
 h3,
 p,
 blockquote {
+  font-family: var(--font-copy);
   margin-top: 0;
 }
 
 h1,
 h2,
 h3 {
-  line-height: 1.08;
-  letter-spacing: -0.03em;
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: 0;
 }
 
 h1 {
-  font-size: clamp(2.75rem, 6vw, 5.8rem);
-  max-width: 13ch;
+  font-size: clamp(2.5rem, 4.45vw, 4rem);
+  max-width: 16ch;
 }
 
 h2 {
-  font-size: clamp(2rem, 4vw, 3.75rem);
-  max-width: 17ch;
+  font-size: clamp(2.05rem, 3.45vw, 3.1rem);
+  max-width: 22ch;
 }
 
 h3 {
-  font-size: 1.35rem;
+  font-size: clamp(1.7rem, 2.55vw, 2.3rem);
 }
 
 p,
@@ -90,7 +152,7 @@ li {
 }
 
 .shell {
-  width: min(1180px, calc(100% - 48px));
+  width: min(1400px, 92vw);
   margin-inline: auto;
 }
 
@@ -103,9 +165,10 @@ li {
 }
 
 .header-inner {
-  width: min(1320px, calc(100% - 48px));
-  min-height: 82px;
+  width: min(1400px, 92vw);
+  min-height: 0;
   margin-inline: auto;
+  padding-block: 1.3vw;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -113,12 +176,17 @@ li {
 }
 
 .brand {
-  flex: 0 1 390px;
+  flex: 0 1 462px;
 }
 
 .brand img {
-  width: min(390px, 36vw);
-  height: auto;
+  width: auto;
+  height: 75px;
+  max-width: 100%;
+}
+
+.brand-mobile-logo {
+  display: none;
 }
 
 .desktop-nav {
@@ -144,9 +212,10 @@ li {
 
 .nav-group summary {
   padding: 0.8rem 0.9rem;
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
+  font-family: var(--font-nav);
+  font-size: 1.1rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
 }
 
@@ -180,7 +249,10 @@ li {
   display: block;
   padding: 0.7rem 0.8rem;
   color: #fff;
-  font-size: 0.9rem;
+  font-family: var(--font-nav);
+  font-size: 1.05rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
   text-decoration: none;
 }
 
@@ -201,7 +273,8 @@ li {
   padding: 0.75rem 1.1rem;
   border: 1px solid transparent;
   border-radius: 2px;
-  font-weight: 700;
+  font-family: var(--font-body);
+  font-weight: 500;
   line-height: 1.2;
   text-decoration: none;
   transition: transform 180ms ease-out, background 180ms ease-out, box-shadow 180ms ease-out;
@@ -226,7 +299,7 @@ li {
 .text-link {
   display: inline-block;
   color: var(--sky-deep);
-  font-weight: 700;
+  font-weight: 500;
   text-underline-offset: 0.22em;
 }
 
@@ -278,7 +351,7 @@ li {
   color: #fff;
   cursor: pointer;
   font-size: 0.78rem;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .motion-toggle:hover {
@@ -339,7 +412,7 @@ li {
 
 .scripture-grid blockquote p {
   font-size: clamp(1.35rem, 2.7vw, 2.45rem);
-  font-weight: 700;
+  font-weight: 500;
   line-height: 1.28;
   letter-spacing: -0.025em;
 }
@@ -349,14 +422,15 @@ li {
 }
 
 .source-home-verse {
-  padding-block: clamp(5rem, 10vw, 9rem);
+  padding: clamp(6rem, 12.8vw, 11.55rem) 0 clamp(5.5rem, 11vw, 9.9rem);
   background: url('/assets/current/page-texture.webp') center / cover;
 }
 
 .source-verse-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: clamp(3rem, 8vw, 8rem);
+  grid-template-columns: 657fr 545.5fr;
+  gap: 4.63vw;
+  padding-right: 3.86vw;
 }
 
 .source-verse-grid blockquote {
@@ -364,68 +438,73 @@ li {
 }
 
 .source-verse-grid p {
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   color: #202020;
-  font-size: clamp(1.7rem, 3.2vw, 3.2rem);
-  font-weight: 700;
-  line-height: 1.18;
+  font-size: clamp(1.5rem, 1.86vw, 1.672rem);
+  font-weight: 500;
+  line-height: 1.36;
 }
 
 .source-verse-grid cite {
+  display: block;
   color: #555;
-  font-size: 0.9rem;
+  font-family: var(--font-copy);
+  font-size: clamp(1.1rem, 1.51vw, 1.357rem);
   font-style: normal;
-  font-weight: 700;
+  font-weight: 300;
+  line-height: 1.8;
+  text-align: right;
 }
 
 .source-youversion {
-  padding-block: clamp(4rem, 8vw, 7rem);
+  padding-block: clamp(5rem, 9.1vw, 8.2rem);
   background: #fff;
 }
 
 .source-youversion-grid {
   display: grid;
-  grid-template-columns: 160px minmax(0, 720px);
+  grid-template-columns: 109px minmax(0, 662px);
   align-items: center;
   justify-content: center;
-  gap: clamp(2rem, 7vw, 6rem);
+  gap: 0;
 }
 
 .source-youversion-grid img {
-  width: 120px;
-  height: 120px;
+  width: 109px;
+  height: 109px;
 }
 
 .source-youversion-grid p {
   margin: 0;
-  font-size: clamp(1.5rem, 3vw, 2.5rem);
-  font-weight: 700;
-  line-height: 1.25;
+  font-size: clamp(1.5rem, 1.86vw, 1.672rem);
+  font-weight: 500;
+  line-height: 1.36;
+  text-align: center;
 }
 
 .source-gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-  padding-block: clamp(4rem, 8vw, 7rem);
+  gap: 1.05vw;
+  padding-block: 4vw;
 }
 
 .source-gallery a {
   display: block;
+  aspect-ratio: 4 / 3;
   overflow: hidden;
 }
 
 .source-gallery img {
   width: 100%;
   height: 100%;
-  min-height: 280px;
   object-fit: cover;
 }
 
 .scripture-grid cite {
   font-size: 0.86rem;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: 0.07em;
   text-transform: uppercase;
 }
@@ -548,7 +627,7 @@ li {
   bottom: 1.2rem;
   left: 1.4rem;
   font-size: clamp(1.15rem, 2vw, 1.65rem);
-  font-weight: 700;
+  font-weight: 500;
   line-height: 1.15;
   letter-spacing: -0.025em;
 }
@@ -591,18 +670,18 @@ li {
 }
 
 .interior-hero-grid {
-  min-height: 620px;
+  min-height: 0;
   display: grid;
-  grid-template-columns: minmax(340px, 0.9fr) minmax(420px, 1.1fr);
+  grid-template-columns: minmax(320px, 5fr) minmax(360px, 5fr);
   align-items: center;
-  gap: clamp(3rem, 7vw, 7rem);
-  padding-block: clamp(4rem, 8vw, 7rem);
+  gap: clamp(3rem, 8vw, 8rem);
+  padding-block: clamp(4rem, 6.5vw, 7rem);
 }
 
 .interior-hero-text-only {
   grid-template-columns: minmax(0, 760px);
   justify-content: center;
-  min-height: 460px;
+  min-height: 0;
   text-align: center;
 }
 
@@ -623,24 +702,104 @@ li {
 
 .interior-hero-media {
   position: relative;
-  min-height: 460px;
+  min-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .interior-hero-media::before {
-  content: "";
-  position: absolute;
-  inset: 9% -5% -5% 12%;
-  background: var(--sky);
+  content: none;
 }
 
 .interior-hero-media img {
-  position: absolute;
-  inset: 0;
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-height: 820px;
+  object-fit: contain;
+}
+
+.interior-hero-media img[src*='gods-promises-side2'] {
+  width: min(350px, 100%);
+}
+
+.interior-hero-media img[src*='Childrens-bible-story-small'],
+.interior-hero-media img[src*='Childrens bible story-small'],
+.interior-hero-media img[src*='Childrens%20bible%20story-small'] {
+  width: min(269px, 100%);
+}
+
+.interior-hero-media img[src*='Gods-Promises-Side'],
+.interior-hero-media img[src*='Gods Promises Side'],
+.interior-hero-media img[src*='Gods%20Promises%20Side'] {
+  width: min(394px, 100%);
+}
+
+.interior-hero-media img[src*='PBI-founding-members'],
+.interior-hero-media img[src*='PBI founding members'],
+.interior-hero-media img[src*='PBI%20founding%20members'] {
+  width: min(601px, 100%);
+  height: 548px;
+  object-fit: cover;
+}
+
+.interior-hero-wide .interior-hero-grid {
+  grid-template-columns: minmax(0, 1fr);
+  gap: clamp(2rem, 4vw, 4rem);
+}
+
+.interior-hero-wide .interior-hero-media img {
+  width: 100%;
+  max-height: none;
+}
+
+.interior-hero-wide .interior-hero-media img[src*='korean-language-divide'] {
+  width: min(908px, 100%);
+}
+
+.interior-hero-wide .interior-hero-media img[src*='esl-class'] {
+  width: min(788px, 100%);
+}
+
+.interior-hero-background {
+  position: relative;
+  min-height: 410px;
+  background: var(--blue-black);
+  color: #fff;
+}
+
+.interior-hero-background .interior-hero-grid {
+  position: relative;
   z-index: 1;
   width: 100%;
+  height: 410px;
+  min-height: inherit;
+  grid-template-columns: minmax(320px, 0.8fr) minmax(420px, 1.2fr);
+  padding-block: 0;
+}
+
+.interior-hero-background .interior-hero-grid > div:first-child {
+  position: relative;
+  z-index: 2;
+  padding: clamp(2rem, 4vw, 4rem);
+  background: rgb(11 37 46 / 82%);
+}
+
+.interior-hero-background p {
+  color: rgb(255 255 255 / 88%);
+}
+
+.interior-hero-background .interior-hero-media {
+  position: absolute;
+  inset: 0;
+}
+
+.interior-hero-background .interior-hero-media img {
+  width: 100%;
   height: 100%;
+  max-height: none;
   object-fit: cover;
-  box-shadow: 20px 24px 42px rgb(11 37 46 / 14%);
 }
 
 .story-section {
@@ -665,23 +824,62 @@ li {
 }
 
 .story-media {
-  min-height: 440px;
-  background: var(--mist);
+  min-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
 }
 
 .story-media img {
   width: 100%;
-  height: 100%;
-  max-height: 650px;
-  min-height: 440px;
+  height: auto;
+  max-height: none;
+  min-height: 0;
+  object-fit: contain;
+}
+
+.story-media img[src*='youversion-bible-icon'] {
+  width: min(120px, 100%);
+  object-fit: contain;
+}
+
+.story-media img[src*='English-Korean-Biligual-Bible'],
+.story-media img[src*='English-Korean Biligual Bible'],
+.story-media img[src*='English-Korean%20Biligual%20Bible'] {
+  width: min(322px, 100%);
+}
+
+.story-media img[src*='Childrens-bible-story-small'],
+.story-media img[src*='Childrens bible story-small'],
+.story-media img[src*='Childrens%20bible%20story-small'] {
+  width: min(422px, 100%);
+}
+
+.story-media img[src*='ProfKimDuringLecture'] {
+  width: min(342px, 100%);
+}
+
+.story-media img[src*='prof-kim-couple'] {
+  width: min(419px, 100%);
+}
+
+.story-media img[src*='prof-and-mrs-kim'] {
+  width: min(563px, 100%);
+}
+
+.story-grid:has(img[src*='about-mission']) {
+  grid-template-columns: minmax(0, 657px) minmax(400px, 1fr);
+}
+
+.story-grid:has(img[src*='about-mission']) .story-media img {
+  height: 463px;
   object-fit: cover;
 }
 
-.story-media img[src*='youversion-bible-icon'],
-.story-media img[src*='prof-and-mrs-kim'] {
-  object-fit: contain;
-  padding: clamp(2rem, 7vw, 6rem);
-  background: #fff;
+.story-grid:has(img[src*='beyond-now']) {
+  grid-template-columns: minmax(320px, 4fr) minmax(600px, 8fr);
+  gap: 50px;
 }
 
 .story-copy h2 {
@@ -691,7 +889,7 @@ li {
 .story-copy > p,
 .story-copy > ul {
   color: #3f484c;
-  font-size: 1.08rem;
+  font-size: var(--type-body);
 }
 
 .story-copy > p + p {
@@ -729,7 +927,7 @@ li {
 .publication-item {
   min-height: 410px;
   display: grid;
-  grid-template-columns: 290px 1fr;
+  grid-template-columns: 232px 1fr;
   align-items: center;
   gap: clamp(2rem, 6vw, 6rem);
   padding: clamp(2rem, 5vw, 4rem);
@@ -737,15 +935,21 @@ li {
 }
 
 .publication-cover img {
-  width: 100%;
+  width: auto;
+  max-width: 100%;
   max-height: 430px;
+  margin-inline: auto;
   object-fit: contain;
   filter: drop-shadow(14px 18px 12px rgb(11 37 46 / 18%));
 }
 
+.publication-cover img[src*='gods-promises-side2'] {
+  width: min(214px, 100%);
+}
+
 .publication-item h3 {
   margin-bottom: 1.5rem;
-  font-size: clamp(1.5rem, 3vw, 2.35rem);
+  font-size: clamp(1.7rem, 2.55vw, 2.3rem);
 }
 
 .spec-list {
@@ -763,7 +967,7 @@ li {
 .spec-list dt {
   color: var(--muted);
   font-size: 0.78rem;
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: 0.07em;
   text-transform: uppercase;
 }
@@ -773,23 +977,29 @@ li {
 }
 
 .rights-note {
-  background:
-    linear-gradient(rgb(11 37 46 / 88%), rgb(11 37 46 / 88%)),
-    url('/assets/current/publications-cherry-blossoms.webp') center / cover;
-  color: #fff;
+  padding-block: clamp(4rem, 7vw, 6rem);
+  background: #fff;
+  color: var(--ink);
 }
 
-.rights-note .shell {
-  min-height: 380px;
+.rights-note-grid {
   display: grid;
+  grid-template-columns: minmax(0, 384px) minmax(0, 386px);
   align-items: center;
+  justify-content: center;
+  gap: 56px;
+}
+
+.rights-note img {
+  width: 384px;
+  height: auto;
 }
 
 .rights-note p {
   margin: 0;
-  font-size: clamp(1.4rem, 3vw, 2.5rem);
-  font-weight: 700;
-  line-height: 1.35;
+  font-size: var(--type-body);
+  font-weight: 300;
+  line-height: 1.8;
 }
 
 .prayer-excerpt {
@@ -827,7 +1037,7 @@ li {
   margin-top: 2rem;
   color: var(--sky);
   font-style: normal;
-  font-weight: 700;
+  font-weight: 400;
 }
 
 .mission-panel {
@@ -851,7 +1061,7 @@ li {
 .mission-grid h2 {
   margin-bottom: 1.2rem;
   color: var(--sky);
-  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  font-size: clamp(1.7rem, 2.55vw, 2.3rem);
 }
 
 .mission-grid p,
@@ -888,7 +1098,7 @@ li {
   cursor: pointer;
   padding: 1rem 1.25rem;
   color: var(--sky-deep);
-  font-weight: 800;
+  font-weight: 500;
 }
 
 .timeline-fallback .timeline {
@@ -903,7 +1113,7 @@ li {
 .history-photo-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1rem;
+  gap: 10px;
 }
 
 .history-photo-grid figure {
@@ -913,8 +1123,12 @@ li {
 
 .history-photo-grid img {
   width: 100%;
-  height: 430px;
+  height: 384px;
   object-fit: cover;
+}
+
+.history-photo-grid figure:first-child img {
+  height: 582px;
 }
 
 .history-photo-grid figcaption {
@@ -935,7 +1149,7 @@ li {
 .timeline time {
   color: var(--sky-deep);
   font-size: clamp(1.15rem, 2vw, 1.5rem);
-  font-weight: 800;
+  font-weight: 500;
 }
 
 .timeline p {
@@ -949,31 +1163,29 @@ li {
 }
 
 .team-grid {
+  width: min(855px, 100%);
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 1rem;
+  grid-template-columns: 1.628fr repeat(4, 1fr);
+  align-items: start;
+  gap: 21px;
+  margin-inline: auto;
 }
 
 .team-member {
-  grid-column: span 4;
   overflow: hidden;
   background: #fff;
 }
 
-.team-member:nth-child(1),
-.team-member:nth-child(2) {
-  grid-column: span 6;
-}
-
 .team-member img {
   width: 100%;
-  height: 360px;
+  height: auto;
+  aspect-ratio: 3 / 4;
   object-fit: cover;
   object-position: center 25%;
 }
 
 .team-member div {
-  padding: 1.3rem 1.4rem;
+  padding: 0.9rem;
 }
 
 .team-member h3,
@@ -981,8 +1193,15 @@ li {
   margin-bottom: 0;
 }
 
+.team-member h3 {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
 .team-member p {
   color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.45;
 }
 
 .profile-section,
@@ -992,9 +1211,10 @@ li {
 }
 
 .profile-image img {
-  width: 100%;
-  max-height: 650px;
-  object-fit: cover;
+  width: min(419px, 100%);
+  height: auto;
+  max-height: none;
+  object-fit: contain;
 }
 
 .profile-list {
@@ -1044,7 +1264,10 @@ li {
 }
 
 .past-work-grid .publication-cover img {
-  height: 300px;
+  width: auto;
+  max-width: 100%;
+  max-height: none;
+  height: auto;
 }
 
 .newsletter-page-grid,
@@ -1069,7 +1292,7 @@ li {
 .newsletter-page-grid aside > p:first-child {
   color: var(--sky-deep);
   font-size: 0.78rem;
-  font-weight: 800;
+  font-weight: 500;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
@@ -1084,7 +1307,7 @@ li {
   display: block;
   margin-bottom: 0.45rem;
   font-size: 0.86rem;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .mail-form input,
@@ -1168,7 +1391,7 @@ li {
 
 .footer-links > div > p {
   color: var(--sky);
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .footer-links a {
@@ -1202,15 +1425,26 @@ li {
 
 @media (max-width: 960px) {
   .header-inner {
-    min-height: 72px;
+    min-height: 0;
+    padding-block: 1rem;
   }
 
   .brand {
-    flex-basis: 320px;
+    flex-basis: auto;
   }
 
   .brand img {
-    width: min(320px, 60vw);
+    width: auto;
+    height: 42px;
+    max-width: 70vw;
+  }
+
+  .brand-desktop-logo {
+    display: none;
+  }
+
+  .brand .brand-mobile-logo {
+    display: block;
   }
 
   .desktop-nav {
@@ -1224,9 +1458,10 @@ li {
   .mobile-nav > summary {
     padding: 0.65rem 0.85rem;
     border: 1px solid var(--ink);
-    font-size: 0.8rem;
-    font-weight: 800;
-    letter-spacing: 0.06em;
+    font-family: var(--font-nav);
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0.05em;
     text-transform: uppercase;
   }
 
@@ -1237,7 +1472,7 @@ li {
 
   .mobile-nav > nav {
     position: absolute;
-    top: 72px;
+    top: 100%;
     right: 0;
     left: 0;
     max-height: calc(100svh - 72px);
@@ -1253,9 +1488,10 @@ li {
   .mobile-nav-group p {
     margin-bottom: 0.8rem;
     color: var(--sky);
-    font-size: 0.78rem;
-    font-weight: 800;
-    letter-spacing: 0.08em;
+    font-family: var(--font-nav);
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0.05em;
     text-transform: uppercase;
   }
 
@@ -1263,7 +1499,8 @@ li {
     display: block;
     padding-block: 0.45rem;
     color: #fff;
-    font-size: 0.93rem;
+    font-family: var(--font-nav);
+    font-size: 1rem;
     text-decoration: none;
   }
 
@@ -1282,20 +1519,12 @@ li {
     gap: 3rem;
   }
 
-  .interior-hero-media,
-  .story-media,
-  .story-media img {
-    min-height: 360px;
-  }
-
   .mission-grid {
     grid-template-columns: 1fr;
   }
 
-  .team-member,
-  .team-member:nth-child(1),
-  .team-member:nth-child(2) {
-    grid-column: span 6;
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .past-work-grid {
@@ -1312,17 +1541,21 @@ li {
 }
 
 @media (max-width: 700px) {
-  .shell,
+  .shell {
+    width: 88vw;
+  }
+
   .header-inner {
-    width: min(100% - 32px, 1180px);
+    width: 88vw;
+    padding-block: 1.6rem;
   }
 
   h1 {
-    font-size: clamp(2.45rem, 12vw, 4rem);
+    font-size: clamp(2.35rem, 8vw, 2.75rem);
   }
 
   h2 {
-    font-size: clamp(2rem, 9vw, 3rem);
+    font-size: clamp(1.95rem, 7vw, 2.35rem);
   }
 
   .brand {
@@ -1330,7 +1563,27 @@ li {
   }
 
   .brand img {
-    width: min(245px, 62vw);
+    width: auto;
+    height: 35px;
+    max-width: 68vw;
+  }
+
+  .mobile-nav > summary {
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    border: 0;
+    background:
+      linear-gradient(var(--ink), var(--ink)) center 17px / 34px 1px no-repeat,
+      linear-gradient(var(--ink), var(--ink)) center 30px / 34px 1px no-repeat;
+    font-size: 0;
+  }
+
+  .mobile-nav[open] > summary {
+    background:
+      linear-gradient(45deg, transparent 48%, #fff 49%, #fff 51%, transparent 52%) center / 32px 32px no-repeat,
+      linear-gradient(-45deg, transparent 48%, #fff 49%, #fff 51%, transparent 52%) center / 32px 32px no-repeat,
+      var(--ink);
   }
 
   .mobile-nav > nav {
@@ -1380,7 +1633,12 @@ li {
   }
 
   .source-gallery {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .source-verse-grid {
+    padding-right: 0;
   }
 
   .source-youversion-grid {
@@ -1440,16 +1698,33 @@ li {
   }
 
   .interior-hero-media {
-    min-height: 390px;
+    min-height: 0;
+  }
+
+  .interior-hero-media img[src*='PBI-founding-members'],
+  .interior-hero-media img[src*='PBI founding members'],
+  .interior-hero-media img[src*='PBI%20founding%20members'] {
+    height: auto;
+    object-fit: contain;
   }
 
   .story-reverse .story-media {
     order: 0;
   }
 
+  .story-grid:has(img[src*='beyond-now']) {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
   .story-media,
   .story-media img {
-    min-height: 330px;
+    min-height: 0;
+  }
+
+  .story-grid:has(img[src*='about-mission']) .story-media img {
+    height: auto;
+    object-fit: contain;
   }
 
   .publication-item,
@@ -1460,7 +1735,9 @@ li {
 
   .publication-cover img,
   .past-work-grid .publication-cover img {
-    height: 310px;
+    width: min(75vw, 360px);
+    height: auto;
+    margin-inline: auto;
   }
 
   .prayer-columns blockquote + blockquote {
@@ -1468,12 +1745,25 @@ li {
     border-left: 0;
   }
 
+  .rights-note-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .rights-note img {
+    width: 100%;
+  }
+
   .history-photo-grid {
     grid-template-columns: 1fr;
   }
 
   .history-photo-grid img {
-    height: 330px;
+    height: auto;
+  }
+
+  .history-photo-grid figure:first-child img {
+    height: auto;
   }
 
   .timeline li {

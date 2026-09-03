@@ -7,6 +7,7 @@ export function WhyNorthKoreanBiblePage() {
         title="Why a North Korean Bible?"
         image="current/korean-language-divide.webp"
         imageAlt="Mountains and water on the Korean peninsula"
+        imageLayout="wide"
       />
 
       <StorySection
@@ -104,6 +105,7 @@ export function WhyBilingualPage() {
         intro="Our English-North Korean Bilingual Bible strategically targets North Korean students and readers interested in learning English as a second language."
         image="current/esl-class.webp"
         imageAlt="A teacher helping a student read in an ESL classroom"
+        imageLayout="wide"
       />
 
       <StorySection title="Bible stories in English and North Korean">

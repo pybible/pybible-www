@@ -39,7 +39,9 @@ export function SiteHeader() {
         <Link className="brand" href="/" aria-label="Pyongyang Bible Institute home">
           {/* The supplied logo is the visual source of truth for the wordmark. */}
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/assets/PBI logo.png" alt="Pyongyang Bible Institute" />
+          <img className="brand-desktop-logo" src="/assets/PBI logo.png" alt="Pyongyang Bible Institute" />
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img className="brand-mobile-logo" src="/assets/PBI logo - mobile.png" alt="Pyongyang Bible Institute" />
         </Link>
 
         <nav className="desktop-nav" aria-label="Primary navigation">
