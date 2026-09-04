@@ -1476,6 +1476,7 @@ li {
 
 .footer-brand img {
   width: min(360px, 100%);
+  height: auto;
   margin-bottom: 1.5rem;
   filter: brightness(0) invert(1);
 }
