@@ -75,7 +75,7 @@ export function AboutPage() {
           </div>
           <iframe
             className="timeline-frame"
-            src="/timeline/index.html"
+            src="/timeline/"
             data-original-source="1vjDzTt-zc2e8VwPZ_t65iUGftNaj8GydFp3mhp_QbGk"
             title="Timeline of events in Pyongyang Bible Institute history"
             width="100%"
