@@ -2,7 +2,7 @@
 
 import { useState, type FormEvent } from 'react';
 
-const FORM_ENDPOINT = 'https://formsubmit.co/ajax/contact@pybible.org';
+const FORM_ENDPOINT = 'https://formsubmit.co/ajax/59478ced76eda94af6f37e450b2596f1';
 
 type SubmitState =
   | { kind: 'idle'; message: '' }
