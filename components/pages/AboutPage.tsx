@@ -1,4 +1,5 @@
 import { LinkArrow, PublicationCard, StorySection } from '@/components/Interior';
+import { ResponsiveImage } from '@/components/ResponsiveImage';
 
 const team = [
   ['Hyun Ja Kim', 'Project Lead', 'current/prof-and-mrs-kim.webp'],
@@ -30,8 +31,7 @@ export function AboutPage() {
             </p>
           </div>
           <div className="about-story-media">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/assets/PBI founding members.jpg" alt="Founding members of Pyongyang Bible Institute" fetchPriority="high" />
+            <ResponsiveImage image="PBI founding members.jpg" alt="Founding members of Pyongyang Bible Institute" sizes="(max-width: 960px) 88vw, 46vw" fetchPriority="high" />
           </div>
         </div>
       </section>
@@ -39,8 +39,7 @@ export function AboutPage() {
       <section className="about-principles" id="mission">
         <div className="shell about-principles-grid">
           <figure className="about-principle-media about-mission-media">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/assets/current/about-mission.webp" alt="A historic Korean family photograph" loading="lazy" />
+            <ResponsiveImage image="current/about-mission.webp" alt="A historic Korean family photograph" sizes="(max-width: 960px) 88vw, 651px" loading="lazy" />
           </figure>
           <div className="about-principle-copy about-mission-copy">
             <h2>Our Mission</h2>
@@ -52,13 +51,11 @@ export function AboutPage() {
             <p>People of North Korea meeting Jesus and encountering life anew as beloved children of God.</p>
           </div>
           <figure className="about-principle-media about-vision-media">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/assets/KASCON.jpg" alt="Professor Kim speaking at KASCON" loading="lazy" />
+            <ResponsiveImage image="KASCON.jpg" alt="Professor Kim speaking at KASCON" sizes="(max-width: 960px) 88vw, 651px" loading="lazy" />
           </figure>
 
           <figure className="about-principle-media about-values-media">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/assets/North_Korean_students.jpg" alt="North Korean students" loading="lazy" />
+            <ResponsiveImage image="North_Korean_students.jpg" alt="North Korean students" sizes="(max-width: 960px) 88vw, 651px" loading="lazy" />
           </figure>
           <div className="about-principle-copy about-values-copy">
             <h2>Our Core Values</h2>
@@ -78,7 +75,7 @@ export function AboutPage() {
           </div>
           <iframe
             className="timeline-frame"
-            src="/timeline/"
+            src="/timeline/index.html"
             data-original-source="1vjDzTt-zc2e8VwPZ_t65iUGftNaj8GydFp3mhp_QbGk"
             title="Timeline of events in Pyongyang Bible Institute history"
             width="100%"
@@ -97,8 +94,7 @@ export function AboutPage() {
           <div className="team-grid">
             {team.map(([name, role, image]) => (
               <figure className="team-member" key={name}>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={`/assets/${image}`} alt={name} loading="lazy" />
+                <ResponsiveImage image={image} alt={name} sizes="(max-width: 700px) 300px, (max-width: 960px) 44vw, 210px" loading="lazy" />
                 <figcaption><span>{name}</span><span>{role}</span></figcaption>
               </figure>
             ))}
@@ -139,8 +135,7 @@ export function AboutPage() {
       <section className="profile-section">
         <div className="shell profile-grid">
           <div className="profile-image">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/assets/current/prof-kim-couple.webp" alt="Professor and Mrs. Kim" loading="lazy" />
+            <ResponsiveImage image="current/prof-kim-couple.webp" alt="Professor and Mrs. Kim" sizes="(max-width: 700px) 88vw, 419px" loading="lazy" />
           </div>
           <div>
             <h2>Academic profile of Taeyoung Kim</h2>
@@ -188,10 +183,26 @@ export function AboutPage() {
               translations. This video was recorded on May 21, 2014.
             </p>
           </div>
-          <video controls preload="metadata">
-            <source src="/assets/Bible Translation Record 2014-05-21.mp4" type="video/mp4" />
-            Your browser does not support embedded video.
-          </video>
+          <figure className="video-player">
+            <video
+              controls
+              preload="metadata"
+              poster="/assets/current/translation-review-poster.webp"
+              width={1280}
+              height={720}
+            >
+              <source src="/assets/Bible Translation Record 2014-05-21.mp4" type="video/mp4" />
+              <track
+                kind="captions"
+                src="/assets/captions/translation-review-en.vtt"
+                srcLang="en"
+                label="English (translated)"
+                default
+              />
+              Your browser does not support embedded video.
+            </video>
+            <figcaption>English captions translate the Japanese and Korean discussion.</figcaption>
+          </figure>
         </div>
       </section>
 

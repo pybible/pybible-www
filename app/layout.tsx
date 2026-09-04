@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.pybible.org'),
+  metadataBase: new URL('https://pybible.org'),
   title: {
     default: 'Pyongyang Bible Institute — NLTNK',
     template: '%s — Pyongyang Bible Institute',

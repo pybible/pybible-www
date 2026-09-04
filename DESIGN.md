@@ -10,6 +10,18 @@ colors:
   line: "#d9e3e7"
   paper: "#ffffff"
   blue-black: "#0b252e"
+  source-verse-ink: "#202020"
+  source-citation: "#555555"
+  source-youversion-copy: "#37474d"
+  source-intro-copy: "#3f535b"
+  source-story-copy: "#3f484c"
+  source-link: "#786f69"
+  section-wash: "#f7f9f9"
+  field-line: "#aebdc3"
+  footer-ink: "#101415"
+  danger: "#9e2f24"
+  danger-wash: "#fff2f0"
+  media-black: "#000000"
 typography:
   display:
     fontFamily: "SF Pro Display, SF Pro Text, -apple-system, BlinkMacSystemFont, Helvetica Neue, Arial, Apple SD Gothic Neo, sans-serif"
@@ -53,6 +65,84 @@ typography:
     fontWeight: 300
     lineHeight: 1.8
     letterSpacing: "normal"
+  source-copy:
+    fontFamily: "SF Pro Display, SF Pro Text, -apple-system, BlinkMacSystemFont, Helvetica Neue, Arial, Apple SD Gothic Neo, sans-serif"
+    fontSize: "clamp(1rem, 1.4vw, 1.252rem)"
+    fontWeight: 300
+    lineHeight: 1.8
+    letterSpacing: "normal"
+  support:
+    fontFamily: "Poppins, Helvetica Neue, Arial, Apple SD Gothic Neo, sans-serif"
+    fontSize: "0.82rem"
+    fontWeight: 300
+    lineHeight: 1.5
+    letterSpacing: "normal"
+  overline:
+    fontFamily: "Poppins, Helvetica Neue, Arial, Apple SD Gothic Neo, sans-serif"
+    fontSize: "0.78rem"
+    fontWeight: 500
+    lineHeight: 1.5
+    letterSpacing: "0.08em"
+  metadata:
+    fontFamily: "Poppins, Helvetica Neue, Arial, Apple SD Gothic Neo, sans-serif"
+    fontSize: "0.86rem"
+    fontWeight: 500
+    lineHeight: 1.5
+    letterSpacing: "normal"
+  status:
+    fontFamily: "Poppins, Helvetica Neue, Arial, Apple SD Gothic Neo, sans-serif"
+    fontSize: "0.9rem"
+    fontWeight: 300
+    lineHeight: 1.5
+    letterSpacing: "normal"
+  navigation-link:
+    fontFamily: "Ubuntu Condensed, Arial Narrow, Arial, sans-serif"
+    fontSize: "1.05rem"
+    fontWeight: 400
+    lineHeight: 1.3
+    letterSpacing: "0.03em"
+  lead:
+    fontFamily: "Poppins, Helvetica Neue, Arial, Apple SD Gothic Neo, sans-serif"
+    fontSize: "1.18rem"
+    fontWeight: 300
+    lineHeight: 1.8
+    letterSpacing: "normal"
+  hero-support:
+    fontFamily: "SF Pro Display, SF Pro Text, -apple-system, BlinkMacSystemFont, Helvetica Neue, Arial, Apple SD Gothic Neo, sans-serif"
+    fontSize: "clamp(1.05rem, 2vw, 1.3rem)"
+    fontWeight: 300
+    lineHeight: 1.8
+    letterSpacing: "normal"
+  scripture-display:
+    fontFamily: "SF Pro Display, SF Pro Text, -apple-system, BlinkMacSystemFont, Helvetica Neue, Arial, Apple SD Gothic Neo, sans-serif"
+    fontSize: "clamp(1.35rem, 2.7vw, 2.45rem)"
+    fontWeight: 500
+    lineHeight: 1.28
+    letterSpacing: "-0.025em"
+  feature-title:
+    fontFamily: "Poppins, Helvetica Neue, Arial, Apple SD Gothic Neo, sans-serif"
+    fontSize: "clamp(1.15rem, 2vw, 1.65rem)"
+    fontWeight: 500
+    lineHeight: 1.15
+    letterSpacing: "-0.025em"
+  source-heading:
+    fontFamily: "SF Pro Display, SF Pro Text, -apple-system, BlinkMacSystemFont, Helvetica Neue, Arial, Apple SD Gothic Neo, sans-serif"
+    fontSize: "clamp(2.15rem, 2.56vw, 2.3rem)"
+    fontWeight: 500
+    lineHeight: 1.3
+    letterSpacing: "normal"
+  mobile-display:
+    fontFamily: "SF Pro Display, SF Pro Text, -apple-system, BlinkMacSystemFont, Helvetica Neue, Arial, Apple SD Gothic Neo, sans-serif"
+    fontSize: "clamp(2.35rem, 8vw, 2.75rem)"
+    fontWeight: 500
+    lineHeight: 1.3
+    letterSpacing: "normal"
+  mobile-headline:
+    fontFamily: "SF Pro Display, SF Pro Text, -apple-system, BlinkMacSystemFont, Helvetica Neue, Arial, Apple SD Gothic Neo, sans-serif"
+    fontSize: "clamp(1.95rem, 7vw, 2.35rem)"
+    fontWeight: 500
+    lineHeight: 1.3
+    letterSpacing: "normal"
 rounded:
   square: "0"
   crisp: "2px"
@@ -62,6 +152,7 @@ spacing:
   grid-tight: "1.05vw"
   action-gap: "1.25rem"
   section-block: "clamp(5rem, 10vw, 9rem)"
+  touch-target: "44px"
 components:
   button-dark:
     backgroundColor: "{colors.ink}"
@@ -133,6 +224,15 @@ The palette pairs open-sky optimism with deep archival ink, using mist and paper
 - **Archive Rule** (`#d9e3e7`): Separates specifications, timelines, profiles, and publication rows with crisp one-pixel rules.
 - **Paper** (`#ffffff`): Is the reading surface, light-button surface, and reverse text color.
 - **Deep Archive** (`#0b252e`): Anchors Scripture panels, navigation popovers, mission fields, and image-backed fallbacks.
+- **Source Verse Ink** (`#202020`): Preserves the archived homepage Scripture color without weakening the global Proof Ink token.
+- **Source Citation** (`#555555`): Preserves the archived homepage citation tone.
+- **Source YouVersion Copy** (`#37474d`), **Source Intro Copy** (`#3f535b`), and **Source Story Copy** (`#3f484c`): Retain three subtly different source-derived reading grays only in their original content roles.
+- **Source Link** (`#786f69`): Preserves the archived About-page link treatment.
+- **Section Wash** (`#f7f9f9`): Alternates long-form story and record sections without introducing elevation.
+- **Field Line** (`#aebdc3`): Defines form controls at rest.
+- **Footer Ink** (`#101415`): Keeps the footer visually distinct from Deep Archive content fields.
+- **Danger** (`#9e2f24`) and **Danger Wash** (`#fff2f0`): Communicate recoverable form delivery errors.
+- **Media Black** (`#000000`): Frames letterboxed archival video without becoming a general interface surface.
 
 ### Named Rules
 
@@ -153,16 +253,25 @@ The palette pairs open-sky optimism with deep archival ink, using mist and paper
 
 - **Display** (500, `clamp(2.5rem, 4.45vw, 4rem)`, 1.3): Leads interior heroes within a 16-character measure (`16ch`).
 - **Headline** (500, `clamp(2.05rem, 3.45vw, 3.1rem)`, 1.3): Opens major sections within a 22-character measure (`22ch`).
-- **Title** (500, `clamp(1.7rem, 2.55vw, 2.3rem)`, 1.3): Names subsections and publication records; compact team names use the source-derived `1.2rem` step.
+- **Title** (500, `clamp(1.7rem, 2.55vw, 2.3rem)`, 1.3): Names subsections and publication records; compact team names use the Source Copy scale.
 - **Body** (300, `clamp(1rem, calc(1rem + 0.36vw), 1.325rem)`, 1.8): Reproduces the source's fluid 20–21px desktop reading size.
 - **Verse** (500, `clamp(1.5rem, 1.86vw, 1.672rem)`, 1.36): Preserves the archived bilingual homepage measure and line count.
 - **Label** (400, `1.1rem`, `0.05em`, uppercase): Identifies desktop navigation groups in Ubuntu Condensed.
+- **Source Copy** (300, `clamp(1rem, 1.4vw, 1.252rem)`, 1.8): Preserves the archived About-page paragraph and caption scale.
+- **Support** (300, `0.82rem`, 1.5): Handles captions, delivery notes, and other compact explanatory text.
+- **Overline / Metadata / Status** (`0.78rem` / `0.86rem` / `0.9rem`): Preserve the compact source-derived label, field, timeline, and feedback steps.
+- **Navigation Link** (400, `1.05rem`, `0.03em`): Keeps dropdown and mobile navigation legible in Ubuntu Condensed.
+- **Lead and Hero Support** (300, `1.18rem` or `clamp(1.05rem, 2vw, 1.3rem)`): Give hero and contextual introductions one restrained step above body copy.
+- **Scripture Display** (500, `clamp(1.35rem, 2.7vw, 2.45rem)`, 1.28): Gives bilingual Scripture equal, prominent authority.
+- **Feature Title** (500, `clamp(1.15rem, 2vw, 1.65rem)`, 1.15): Labels photographic homepage tiles without competing with section headings.
+- **Source Heading** (500, `clamp(2.15rem, 2.56vw, 2.3rem)`, 1.3): Preserves the archived About page's tighter heading scale.
+- **Mobile Display / Headline** (500, `clamp(2.35rem, 8vw, 2.75rem)` / `clamp(1.95rem, 7vw, 2.35rem)`, 1.3): Prevent large editorial headings from overwhelming compact viewports.
 
 ### Named Rules
 
 **The Shared-Scripture Rule.** English and Korean Scripture use the same copy stack and receive equal weight; language distinction comes from content and layout, not novelty fonts.
 
-**The Short-Headline Rule.** Preserve the `13ch` display and `17ch` headline measures so large type reads as an assertion rather than a paragraph.
+**The Short-Headline Rule.** Preserve the `16ch` display and `22ch` headline measures so large type reads as an assertion rather than a paragraph.
 
 ## Layout
 
@@ -171,6 +280,8 @@ The core reading shell follows the Squarespace source: a 1400px cap with 4vw des
 Primary storytelling uses two-column grids with source-specific photo widths and intrinsic proportions. The homepage gallery is three 4:3 columns with a 1.05vw gutter; team photography uses a 3:4 crop in a source-derived 3:2:2:2:2 track ratio; publication entries use portrait covers without stretching them beyond their source geometry. Major sections retain the established fluid block rhythm (`clamp(5rem, 10vw, 9rem)`).
 
 At 960px, the desktop navigation becomes a compact menu and complex layouts simplify. At 700px, content becomes single-column, shell gutters become 6vw, the source text-only mobile wordmark replaces the desktop logo, homepage gallery photography becomes two columns, and reversed stories return to reading order.
+
+Coarse-pointer controls use a minimum 44px hit area; primary buttons and the compact menu trigger remain 48px. Inline prose links retain the platform exemption, while standalone directional and footer links expand their hit area without enlarging their type.
 
 ## Elevation & Depth
 
@@ -221,6 +332,7 @@ Cards feel like pages, records, or photographic plates rather than floating dash
 - **Style:** White fill, square corners (`0`), a one-pixel cool-gray stroke (`#aebdc3`), and `0.8rem 0.9rem` internal padding.
 - **Focus:** Three-pixel River Blue outline with a four-pixel offset; the global focus treatment remains visible outside the field edge.
 - **Textarea:** Keeps the same field language, begins at 180px tall, and resizes vertically.
+- **Delivery status:** Success and progress use Translation Mist with a one-pixel River Blue frame; recoverable errors use Danger Wash with a one-pixel Danger frame. Inputs remain populated after errors and reset only after confirmed delivery.
 
 ### Navigation
 
@@ -228,7 +340,7 @@ The sticky header is a compact white wordmark bar with thin separation. Desktop 
 
 ### Text Links
 
-Inline links use River Blue and a 700 weight with a visibly offset underline (`0.22em`). On dark surfaces they reverse to Paper. Directional arrows and external-link marks are textual, preserving the field-guide tone.
+Inline links use River Blue and a 500 weight with a visibly offset underline (`0.22em`). On dark surfaces they reverse to Paper. Directional arrows and external-link marks are textual, preserving the field-guide tone.
 
 ### Bilingual Scripture Pair
 

@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { PageShell } from '@/components/PageShell';
+import { ResponsiveImage } from '@/components/ResponsiveImage';
 
 const features = [
   ['Why a North Korean Bible?', 'Why North Korean Bible.png', '/en/whynkbible/'],
@@ -13,6 +14,7 @@ const features = [
 export default function Home() {
   return (
     <PageShell>
+      <h1 className="sr-only">Pyongyang Bible Institute</h1>
       <section className="source-home-verse">
         <div className="shell source-verse-grid">
           <blockquote lang="en">
@@ -36,8 +38,7 @@ export default function Home() {
       </section>
       <section className="source-youversion">
         <div className="shell source-youversion-grid">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/assets/current/youversion-bible-icon.webp" alt="YouVersion Bible App" />
+          <ResponsiveImage image="current/youversion-bible-icon.webp" alt="YouVersion Bible App" sizes="109px" />
           <p>
             NLTNK translation <em>God’s Promises: New Testament</em> is now
             available on YouVersion Bible App on Android or iOS.
@@ -47,8 +48,7 @@ export default function Home() {
       <section className="source-gallery shell" aria-label="Explore Pyongyang Bible Institute">
         {features.map(([title, image, href]) => (
           <Link href={href} key={title} aria-label={title}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={`/assets/${image}`} alt="" loading="lazy" />
+            <ResponsiveImage image={image} alt="" sizes="(max-width: 700px) 44vw, 30vw" loading="lazy" />
           </Link>
         ))}
       </section>

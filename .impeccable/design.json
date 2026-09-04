@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-03T02:56:29Z",
+  "generatedAt": "2026-09-04T07:06:34Z",
   "title": "Design System: Pyongyang Bible Institute",
   "extensions": {
     "colorMeta": {
@@ -123,16 +123,196 @@
           "oklch(87% 0.0358 223.88)",
           "oklch(95% 0.0358 223.88)"
         ]
+      },
+      "source-verse-ink": {
+        "role": "neutral",
+        "displayName": "Source Verse Ink",
+        "canonical": "#202020",
+        "tonalRamp": [
+          "oklch(15% 0.0000 0.00)",
+          "oklch(27% 0.0000 0.00)",
+          "oklch(39% 0.0000 0.00)",
+          "oklch(51% 0.0000 0.00)",
+          "oklch(63% 0.0000 0.00)",
+          "oklch(75% 0.0000 0.00)",
+          "oklch(87% 0.0000 0.00)",
+          "oklch(95% 0.0000 0.00)"
+        ]
+      },
+      "source-citation": {
+        "role": "neutral",
+        "displayName": "Source Citation",
+        "canonical": "#555555",
+        "tonalRamp": [
+          "oklch(15% 0.0000 0.00)",
+          "oklch(27% 0.0000 0.00)",
+          "oklch(39% 0.0000 0.00)",
+          "oklch(51% 0.0000 0.00)",
+          "oklch(63% 0.0000 0.00)",
+          "oklch(75% 0.0000 0.00)",
+          "oklch(87% 0.0000 0.00)",
+          "oklch(95% 0.0000 0.00)"
+        ]
+      },
+      "source-youversion-copy": {
+        "role": "neutral",
+        "displayName": "Source YouVersion Copy",
+        "canonical": "#37474d",
+        "tonalRamp": [
+          "oklch(15% 0.0228 222.74)",
+          "oklch(27% 0.0228 222.74)",
+          "oklch(39% 0.0228 222.74)",
+          "oklch(51% 0.0228 222.74)",
+          "oklch(63% 0.0228 222.74)",
+          "oklch(75% 0.0228 222.74)",
+          "oklch(87% 0.0228 222.74)",
+          "oklch(95% 0.0228 222.74)"
+        ]
+      },
+      "source-intro-copy": {
+        "role": "neutral",
+        "displayName": "Source Intro Copy",
+        "canonical": "#3f535b",
+        "tonalRamp": [
+          "oklch(15% 0.0280 224.34)",
+          "oklch(27% 0.0280 224.34)",
+          "oklch(39% 0.0280 224.34)",
+          "oklch(51% 0.0280 224.34)",
+          "oklch(63% 0.0280 224.34)",
+          "oklch(75% 0.0280 224.34)",
+          "oklch(87% 0.0280 224.34)",
+          "oklch(95% 0.0280 224.34)"
+        ]
+      },
+      "source-story-copy": {
+        "role": "neutral",
+        "displayName": "Source Story Copy",
+        "canonical": "#3f484c",
+        "tonalRamp": [
+          "oklch(15% 0.0135 226.30)",
+          "oklch(27% 0.0135 226.30)",
+          "oklch(39% 0.0135 226.30)",
+          "oklch(51% 0.0135 226.30)",
+          "oklch(63% 0.0135 226.30)",
+          "oklch(75% 0.0135 226.30)",
+          "oklch(87% 0.0135 226.30)",
+          "oklch(95% 0.0135 226.30)"
+        ]
+      },
+      "source-link": {
+        "role": "neutral",
+        "displayName": "Source Link",
+        "canonical": "#786f69",
+        "tonalRamp": [
+          "oklch(15% 0.0146 56.07)",
+          "oklch(27% 0.0146 56.07)",
+          "oklch(39% 0.0146 56.07)",
+          "oklch(51% 0.0146 56.07)",
+          "oklch(63% 0.0146 56.07)",
+          "oklch(75% 0.0146 56.07)",
+          "oklch(87% 0.0146 56.07)",
+          "oklch(95% 0.0146 56.07)"
+        ]
+      },
+      "section-wash": {
+        "role": "neutral",
+        "displayName": "Section Wash",
+        "canonical": "#f7f9f9",
+        "tonalRamp": [
+          "oklch(15% 0.0021 197.12)",
+          "oklch(27% 0.0021 197.12)",
+          "oklch(39% 0.0021 197.12)",
+          "oklch(51% 0.0021 197.12)",
+          "oklch(63% 0.0021 197.12)",
+          "oklch(75% 0.0021 197.12)",
+          "oklch(87% 0.0021 197.12)",
+          "oklch(95% 0.0021 197.12)"
+        ]
+      },
+      "field-line": {
+        "role": "neutral",
+        "displayName": "Field Line",
+        "canonical": "#aebdc3",
+        "tonalRamp": [
+          "oklch(15% 0.0187 223.66)",
+          "oklch(27% 0.0187 223.66)",
+          "oklch(39% 0.0187 223.66)",
+          "oklch(51% 0.0187 223.66)",
+          "oklch(63% 0.0187 223.66)",
+          "oklch(75% 0.0187 223.66)",
+          "oklch(87% 0.0187 223.66)",
+          "oklch(95% 0.0187 223.66)"
+        ]
+      },
+      "footer-ink": {
+        "role": "neutral",
+        "displayName": "Footer Ink",
+        "canonical": "#101415",
+        "tonalRamp": [
+          "oklch(15% 0.0066 214.47)",
+          "oklch(27% 0.0066 214.47)",
+          "oklch(39% 0.0066 214.47)",
+          "oklch(51% 0.0066 214.47)",
+          "oklch(63% 0.0066 214.47)",
+          "oklch(75% 0.0066 214.47)",
+          "oklch(87% 0.0066 214.47)",
+          "oklch(95% 0.0066 214.47)"
+        ]
+      },
+      "danger": {
+        "role": "tertiary",
+        "displayName": "Danger",
+        "canonical": "#9e2f24",
+        "tonalRamp": [
+          "oklch(15% 0.1486 29.40)",
+          "oklch(27% 0.1486 29.40)",
+          "oklch(39% 0.1486 29.40)",
+          "oklch(51% 0.1486 29.40)",
+          "oklch(63% 0.1486 29.40)",
+          "oklch(75% 0.1486 29.40)",
+          "oklch(87% 0.1486 29.40)",
+          "oklch(95% 0.1486 29.40)"
+        ]
+      },
+      "danger-wash": {
+        "role": "tertiary",
+        "displayName": "Danger Wash",
+        "canonical": "#fff2f0",
+        "tonalRamp": [
+          "oklch(15% 0.0143 28.01)",
+          "oklch(27% 0.0143 28.01)",
+          "oklch(39% 0.0143 28.01)",
+          "oklch(51% 0.0143 28.01)",
+          "oklch(63% 0.0143 28.01)",
+          "oklch(75% 0.0143 28.01)",
+          "oklch(87% 0.0143 28.01)",
+          "oklch(95% 0.0143 28.01)"
+        ]
+      },
+      "media-black": {
+        "role": "neutral",
+        "displayName": "Media Black",
+        "canonical": "#000000",
+        "tonalRamp": [
+          "oklch(15% 0.0000 0.00)",
+          "oklch(27% 0.0000 0.00)",
+          "oklch(39% 0.0000 0.00)",
+          "oklch(51% 0.0000 0.00)",
+          "oklch(63% 0.0000 0.00)",
+          "oklch(75% 0.0000 0.00)",
+          "oklch(87% 0.0000 0.00)",
+          "oklch(95% 0.0000 0.00)"
+        ]
       }
     },
     "typographyMeta": {
       "display": {
         "displayName": "Display",
-        "purpose": "Hero assertions within a 13ch measure."
+        "purpose": "Hero assertions within a 16ch measure."
       },
       "headline": {
         "displayName": "Headline",
-        "purpose": "Major section openings within a 17ch measure."
+        "purpose": "Major section openings within a 22ch measure."
       },
       "title": {
         "displayName": "Title",
@@ -145,6 +325,58 @@
       "label": {
         "displayName": "Label",
         "purpose": "Uppercase navigation and metadata."
+      },
+      "source-copy": {
+        "displayName": "Source Copy",
+        "purpose": "Archived About-page paragraphs and captions at their source-derived scale."
+      },
+      "support": {
+        "displayName": "Support",
+        "purpose": "Captions, form delivery notes, and compact explanatory text."
+      },
+      "overline": {
+        "displayName": "Overline",
+        "purpose": "Compact uppercase source labels."
+      },
+      "metadata": {
+        "displayName": "Metadata",
+        "purpose": "Field labels and compact source metadata."
+      },
+      "status": {
+        "displayName": "Status",
+        "purpose": "Form delivery status and recoverable error copy."
+      },
+      "navigation-link": {
+        "displayName": "Navigation Link",
+        "purpose": "Dropdown and mobile navigation links in Ubuntu Condensed."
+      },
+      "lead": {
+        "displayName": "Lead",
+        "purpose": "Contextual reading copy one step above body text."
+      },
+      "hero-support": {
+        "displayName": "Hero Support",
+        "purpose": "Introductory copy on hero fields."
+      },
+      "scripture-display": {
+        "displayName": "Scripture Display",
+        "purpose": "Prominent bilingual Scripture pairs."
+      },
+      "feature-title": {
+        "displayName": "Feature Title",
+        "purpose": "Labels over documentary homepage tiles."
+      },
+      "source-heading": {
+        "displayName": "Source Heading",
+        "purpose": "Tighter archived About-page section headings."
+      },
+      "mobile-display": {
+        "displayName": "Mobile Display",
+        "purpose": "Compact viewport display headings."
+      },
+      "mobile-headline": {
+        "displayName": "Mobile Headline",
+        "purpose": "Compact viewport section headings."
       }
     },
     "shadows": [
@@ -204,7 +436,7 @@
       "refersTo": "button-dark",
       "description": "Primary action on light reading surfaces.",
       "html": "<button class=\"ds-button-dark\">Open the Bible <span aria-hidden=\"true\">↗</span></button>",
-      "css": ".ds-button-dark { display: inline-flex; min-height: 48px; align-items: center; justify-content: center; padding: 0.75rem 1.1rem; border: 1px solid transparent; border-radius: 2px; background: var(--ink, #17191a); color: var(--paper, #ffffff); box-shadow: 0 9px 22px rgb(11 37 46 / 15%); font-family: \"Avenir Next\", \"Trebuchet MS\", \"Apple SD Gothic Neo\", sans-serif; font-size: 1rem; font-weight: 700; line-height: 1.2; transition: transform 180ms ease-out, background 180ms ease-out, box-shadow 180ms ease-out; } .ds-button-dark:hover { transform: translateY(-2px); } .ds-button-dark:focus-visible { outline: 3px solid var(--sky-deep, #0d7695); outline-offset: 4px; } .ds-button-dark:active { transform: translateY(0); }"
+      "css": ".ds-button-dark { display: inline-flex; min-height: 48px; align-items: center; justify-content: center; padding: 0.75rem 1.1rem; border: 1px solid transparent; border-radius: 2px; background: var(--ink, #17191a); color: var(--paper, #ffffff); box-shadow: 0 9px 22px rgb(11 37 46 / 15%); font-family: \"Poppins\", \"Helvetica Neue\", Arial, \"Apple SD Gothic Neo\", sans-serif; font-size: 1rem; font-weight: 500; line-height: 1.2; transition: transform 180ms ease-out, background 180ms ease-out, box-shadow 180ms ease-out; } .ds-button-dark:hover { transform: translateY(-2px); } .ds-button-dark:focus-visible { outline: 3px solid var(--sky-deep, #0d7695); outline-offset: 4px; } .ds-button-dark:active { transform: translateY(0); }"
     },
     {
       "name": "Light Button",
@@ -212,7 +444,7 @@
       "refersTo": "button-light",
       "description": "Primary action on dark, blue, or photographic fields.",
       "html": "<div class=\"ds-button-light-stage\"><button class=\"ds-button-light\">Prayer newsletter</button></div>",
-      "css": ".ds-button-light-stage { padding: 2rem; background: var(--blue-black, #0b252e); } .ds-button-light { display: inline-flex; min-height: 48px; align-items: center; justify-content: center; padding: 0.75rem 1.1rem; border: 1px solid transparent; border-radius: 2px; background: var(--paper, #ffffff); color: var(--ink, #17191a); box-shadow: 0 9px 22px rgb(0 0 0 / 12%); font-family: \"Avenir Next\", \"Trebuchet MS\", \"Apple SD Gothic Neo\", sans-serif; font-size: 1rem; font-weight: 700; line-height: 1.2; transition: transform 180ms ease-out, background 180ms ease-out, box-shadow 180ms ease-out; } .ds-button-light:hover { transform: translateY(-2px); } .ds-button-light:focus-visible { outline: 3px solid var(--sky-deep, #0d7695); outline-offset: 4px; } .ds-button-light:active { transform: translateY(0); }"
+      "css": ".ds-button-light-stage { padding: 2rem; background: var(--blue-black, #0b252e); } .ds-button-light { display: inline-flex; min-height: 48px; align-items: center; justify-content: center; padding: 0.75rem 1.1rem; border: 1px solid transparent; border-radius: 2px; background: var(--paper, #ffffff); color: var(--ink, #17191a); box-shadow: 0 9px 22px rgb(0 0 0 / 12%); font-family: \"Poppins\", \"Helvetica Neue\", Arial, \"Apple SD Gothic Neo\", sans-serif; font-size: 1rem; font-weight: 500; line-height: 1.2; transition: transform 180ms ease-out, background 180ms ease-out, box-shadow 180ms ease-out; } .ds-button-light:hover { transform: translateY(-2px); } .ds-button-light:focus-visible { outline: 3px solid var(--sky-deep, #0d7695); outline-offset: 4px; } .ds-button-light:active { transform: translateY(0); }"
     },
     {
       "name": "Text Link",
@@ -220,7 +452,7 @@
       "refersTo": "text-link",
       "description": "Directional inline action in editorial copy.",
       "html": "<a class=\"ds-text-link\" href=\"#\">Why this translation matters <span aria-hidden=\"true\">→</span></a>",
-      "css": ".ds-text-link { display: inline-block; color: var(--sky-deep, #0d7695); font-family: \"Avenir Next\", \"Trebuchet MS\", \"Apple SD Gothic Neo\", sans-serif; font-weight: 700; text-underline-offset: 0.22em; } .ds-text-link:hover { text-decoration-thickness: 2px; } .ds-text-link:focus-visible { outline: 3px solid var(--sky-deep, #0d7695); outline-offset: 4px; } .ds-text-link:active { color: var(--ink, #17191a); }"
+      "css": ".ds-text-link { display: inline-block; color: var(--sky-deep, #0d7695); font-family: \"Poppins\", \"Helvetica Neue\", Arial, \"Apple SD Gothic Neo\", sans-serif; font-weight: 500; text-underline-offset: 0.22em; } .ds-text-link:hover { text-decoration-thickness: 2px; } .ds-text-link:focus-visible { outline: 3px solid var(--sky-deep, #0d7695); outline-offset: 4px; } .ds-text-link:active { color: var(--ink, #17191a); }"
     },
     {
       "name": "Text Field",
@@ -228,7 +460,7 @@
       "refersTo": "input-field",
       "description": "Square, high-contrast field for contact and newsletter forms.",
       "html": "<label class=\"ds-field-label\" for=\"ds-email\">Email address</label><input class=\"ds-input-field\" id=\"ds-email\" type=\"email\" placeholder=\"you@example.com\">",
-      "css": ".ds-field-label { display: block; margin-bottom: 0.45rem; color: var(--ink, #17191a); font-family: \"Avenir Next\", \"Trebuchet MS\", \"Apple SD Gothic Neo\", sans-serif; font-size: 0.86rem; font-weight: 700; } .ds-input-field { width: 100%; min-height: 52px; padding: 0.8rem 0.9rem; border: 1px solid #aebdc3; border-radius: 0; background: var(--paper, #ffffff); color: var(--ink, #17191a); font-family: \"Avenir Next\", \"Trebuchet MS\", \"Apple SD Gothic Neo\", sans-serif; font-size: 1rem; } .ds-input-field:hover { border-color: var(--muted, #596267); } .ds-input-field:focus-visible { outline: 3px solid var(--sky-deep, #0d7695); outline-offset: 4px; }"
+      "css": ".ds-field-label { display: block; margin-bottom: 0.45rem; color: var(--ink, #17191a); font-family: \"Poppins\", \"Helvetica Neue\", Arial, \"Apple SD Gothic Neo\", sans-serif; font-size: 0.86rem; font-weight: 500; } .ds-input-field { width: 100%; min-height: 52px; padding: 0.8rem 0.9rem; border: 1px solid var(--field-line, #aebdc3); border-radius: 0; background: var(--paper, #ffffff); color: var(--ink, #17191a); font-family: \"Poppins\", \"Helvetica Neue\", Arial, \"Apple SD Gothic Neo\", sans-serif; font-size: 1rem; } .ds-input-field:hover { border-color: var(--muted, #596267); } .ds-input-field:focus-visible { outline: 3px solid var(--sky-deep, #0d7695); outline-offset: 4px; }"
     },
     {
       "name": "Navigation Popover",
@@ -236,7 +468,7 @@
       "refersTo": "navigation-popover",
       "description": "Compact uppercase group trigger with a deep archival link panel.",
       "html": "<details class=\"ds-nav-group\" open><summary>Our Bibles</summary><nav class=\"ds-nav-popover\"><a href=\"#\">Bible Publications</a><a href=\"#\">Children and Teens</a><a href=\"#\">Read PBI Bible at Bible.com ↗</a></nav></details>",
-      "css": ".ds-nav-group { position: relative; width: 270px; color: var(--ink, #17191a); font-family: \"Avenir Next\", \"Trebuchet MS\", \"Apple SD Gothic Neo\", sans-serif; } .ds-nav-group summary { padding: 0.8rem 0.9rem; cursor: pointer; list-style: none; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; } .ds-nav-group summary::after { content: \" –\"; color: var(--sky-deep, #0d7695); } .ds-nav-group summary:focus-visible { outline: 3px solid var(--sky-deep, #0d7695); outline-offset: 4px; } .ds-nav-popover { width: 270px; padding: 0.75rem; background: var(--blue-black, #0b252e); box-shadow: 0 18px 40px rgb(11 37 46 / 20%); } .ds-nav-popover a { display: block; padding: 0.7rem 0.8rem; color: var(--paper, #ffffff); font-size: 0.9rem; text-decoration: none; } .ds-nav-popover a:hover, .ds-nav-popover a:focus-visible { background: rgb(121 213 239 / 14%); color: var(--sky, #79d5ef); } .ds-nav-popover a:focus-visible { outline: 3px solid var(--sky-deep, #0d7695); outline-offset: 1px; } .ds-nav-popover a:active { color: var(--paper, #ffffff); }"
+      "css": ".ds-nav-group { position: relative; width: 270px; color: var(--ink, #17191a); font-family: \"Ubuntu Condensed\", \"Arial Narrow\", Arial, sans-serif; } .ds-nav-group summary { padding: 0.8rem 0.9rem; cursor: pointer; list-style: none; font-size: 1.1rem; font-weight: 400; letter-spacing: 0.08em; text-transform: uppercase; } .ds-nav-group summary::after { content: \" –\"; color: var(--sky-deep, #0d7695); } .ds-nav-group summary:focus-visible { outline: 3px solid var(--sky-deep, #0d7695); outline-offset: 4px; } .ds-nav-popover { width: 270px; padding: 0.75rem; background: var(--blue-black, #0b252e); box-shadow: 0 18px 40px rgb(11 37 46 / 20%); } .ds-nav-popover a { display: block; padding: 0.7rem 0.8rem; color: var(--paper, #ffffff); font-size: 1.05rem; text-decoration: none; } .ds-nav-popover a:hover, .ds-nav-popover a:focus-visible { background: rgb(121 213 239 / 14%); color: var(--sky, #79d5ef); } .ds-nav-popover a:focus-visible { outline: 3px solid var(--sky-deep, #0d7695); outline-offset: 1px; } .ds-nav-popover a:active { color: var(--paper, #ffffff); }"
     },
     {
       "name": "Information Card",
@@ -244,7 +476,7 @@
       "refersTo": "info-card",
       "description": "Flat mist-colored aside for contextual ministry information.",
       "html": "<aside class=\"ds-info-card\"><p class=\"ds-info-label\">Stay connected</p><h3>Prayer newsletter</h3><p>Receive prayer updates for North Korea and news from PBI’s translation work.</p><a href=\"#\">Request by email →</a></aside>",
-      "css": ".ds-info-card { padding: clamp(2rem, 4vw, 3.5rem); border-radius: 0; background: var(--mist, #eefafd); color: var(--ink, #17191a); font-family: \"Avenir Next\", \"Trebuchet MS\", \"Apple SD Gothic Neo\", sans-serif; line-height: 1.65; } .ds-info-card h3 { margin: 0 0 1rem; font-size: 1.35rem; line-height: 1.08; letter-spacing: -0.03em; } .ds-info-label { margin: 0 0 0.8rem; color: var(--sky-deep, #0d7695); font-size: 0.78rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; } .ds-info-card a { color: var(--sky-deep, #0d7695); font-weight: 700; text-underline-offset: 0.22em; } .ds-info-card a:hover { text-decoration-thickness: 2px; } .ds-info-card a:focus-visible { outline: 3px solid var(--sky-deep, #0d7695); outline-offset: 4px; }"
+      "css": ".ds-info-card { padding: clamp(2rem, 4vw, 3.5rem); border-radius: 0; background: var(--mist, #eefafd); color: var(--ink, #17191a); font-family: \"SF Pro Display\", \"SF Pro Text\", -apple-system, BlinkMacSystemFont, \"Helvetica Neue\", Arial, \"Apple SD Gothic Neo\", sans-serif; line-height: 1.65; } .ds-info-card h3 { margin: 0 0 1rem; font-size: 1.35rem; line-height: 1.08; letter-spacing: -0.03em; } .ds-info-label { margin: 0 0 0.8rem; color: var(--sky-deep, #0d7695); font-size: 0.78rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; } .ds-info-card a { color: var(--sky-deep, #0d7695); font-weight: 500; text-underline-offset: 0.22em; } .ds-info-card a:hover { text-decoration-thickness: 2px; } .ds-info-card a:focus-visible { outline: 3px solid var(--sky-deep, #0d7695); outline-offset: 4px; }"
     },
     {
       "name": "Bilingual Scripture Pair",
@@ -252,7 +484,15 @@
       "refersTo": "scripture-pair",
       "description": "Equal English and Korean Scripture panels, the system’s signature proof component.",
       "html": "<div class=\"ds-scripture-pair\"><blockquote lang=\"en\"><p>“You will receive power when the Holy Spirit comes upon you.”</p><cite>Acts 1:8 NLT</cite></blockquote><blockquote lang=\"ko\"><p>너희는 성령님이 너희에게 오시면 너희는 능력을 받을 것이다.</p><cite>선교활동 1:8 하나님의 약속</cite></blockquote></div>",
-      "css": ".ds-scripture-pair { display: grid; grid-template-columns: 1fr 1fr; background: var(--blue-black, #0b252e); color: var(--paper, #ffffff); font-family: \"Avenir Next\", \"Trebuchet MS\", \"Apple SD Gothic Neo\", sans-serif; } .ds-scripture-pair blockquote { min-height: 260px; margin: 0; padding: clamp(3rem, 7vw, 6rem) clamp(2rem, 5vw, 5rem); display: flex; flex-direction: column; justify-content: space-between; } .ds-scripture-pair blockquote + blockquote { border-left: 1px solid rgb(255 255 255 / 25%); background: var(--sky, #79d5ef); color: var(--ink, #17191a); } .ds-scripture-pair p { margin: 0; font-size: clamp(1.35rem, 2.7vw, 2.45rem); font-weight: 700; line-height: 1.28; letter-spacing: -0.025em; } .ds-scripture-pair cite { margin-top: 2rem; font-size: 0.86rem; font-style: normal; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; } @media (max-width: 700px) { .ds-scripture-pair { grid-template-columns: 1fr; } .ds-scripture-pair blockquote + blockquote { border-top: 1px solid rgb(255 255 255 / 25%); border-left: 0; } }"
+      "css": ".ds-scripture-pair { display: grid; grid-template-columns: 1fr 1fr; background: var(--blue-black, #0b252e); color: var(--paper, #ffffff); font-family: \"SF Pro Display\", \"SF Pro Text\", -apple-system, BlinkMacSystemFont, \"Helvetica Neue\", Arial, \"Apple SD Gothic Neo\", sans-serif; } .ds-scripture-pair blockquote { min-height: 260px; margin: 0; padding: clamp(3rem, 7vw, 6rem) clamp(2rem, 5vw, 5rem); display: flex; flex-direction: column; justify-content: space-between; } .ds-scripture-pair blockquote + blockquote { border-left: 1px solid rgb(255 255 255 / 25%); background: var(--sky, #79d5ef); color: var(--ink, #17191a); } .ds-scripture-pair p { margin: 0; font-size: clamp(1.35rem, 2.7vw, 2.45rem); font-weight: 500; line-height: 1.28; letter-spacing: -0.025em; } .ds-scripture-pair cite { margin-top: 2rem; font-size: 0.86rem; font-style: normal; font-weight: 400; letter-spacing: 0.07em; text-transform: uppercase; } @media (max-width: 700px) { .ds-scripture-pair { grid-template-columns: 1fr; } .ds-scripture-pair blockquote + blockquote { border-top: 1px solid rgb(255 255 255 / 25%); border-left: 0; } }"
+    },
+    {
+      "name": "Form Delivery Status",
+      "kind": "custom",
+      "refersTo": "form-status",
+      "description": "Persistent in-page progress, success, and recoverable error feedback.",
+      "html": "<div class=\"ds-form-stage\"><p class=\"ds-form-status\" role=\"status\">Your message was sent to PBI. Thank you.</p><p class=\"ds-form-status ds-form-status-error\" role=\"alert\">We could not send your message. Your entries are still here.</p></div>",
+      "css": ".ds-form-stage { display: grid; gap: 0.75rem; font-family: \"Poppins\", \"Helvetica Neue\", Arial, \"Apple SD Gothic Neo\", sans-serif; } .ds-form-status { margin: 0; padding: 0.75rem 0.9rem; border: 1px solid var(--sky-deep, #0d7695); background: var(--mist, #eefafd); color: var(--ink, #17191a); font-size: 0.9rem; line-height: 1.5; } .ds-form-status-error { border-color: var(--danger, #9e2f24); background: var(--danger-wash, #fff2f0); }"
     }
   ],
   "narrative": {
@@ -282,7 +522,7 @@
       },
       {
         "name": "The Short-Headline Rule",
-        "body": "Preserve the `13ch` display and `17ch` headline measures so large type reads as an assertion rather than a paragraph.",
+        "body": "Preserve the `16ch` display and `22ch` headline measures so large type reads as an assertion rather than a paragraph.",
         "section": "typography"
       },
       {

@@ -1,0 +1,730 @@
+{
+  "PBI logo.png": {
+    "width": 2311,
+    "height": 377,
+    "avif": [
+      {
+        "src": "/assets/optimized/pbi-logo-480.avif",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/pbi-logo-960.avif",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/pbi-logo-1440.avif",
+        "width": 1440
+      }
+    ],
+    "webp": [
+      {
+        "src": "/assets/optimized/pbi-logo-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/pbi-logo-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/pbi-logo-1440.webp",
+        "width": 1440
+      }
+    ]
+  },
+  "PBI logo - mobile.png": {
+    "width": 1925,
+    "height": 316,
+    "avif": [
+      {
+        "src": "/assets/optimized/pbi-logo-mobile-480.avif",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/pbi-logo-mobile-960.avif",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/pbi-logo-mobile-1440.avif",
+        "width": 1440
+      }
+    ],
+    "webp": [
+      {
+        "src": "/assets/optimized/pbi-logo-mobile-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/pbi-logo-mobile-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/pbi-logo-mobile-1440.webp",
+        "width": 1440
+      }
+    ]
+  },
+  "Why North Korean Bible.png": {
+    "width": 1319,
+    "height": 1125,
+    "avif": [
+      {
+        "src": "/assets/optimized/why-north-korean-bible-480.avif",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/why-north-korean-bible-960.avif",
+        "width": 960
+      }
+    ],
+    "webp": [
+      {
+        "src": "/assets/optimized/why-north-korean-bible-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/why-north-korean-bible-960.webp",
+        "width": 960
+      }
+    ]
+  },
+  "Gods Promises New Testament.png": {
+    "width": 1319,
+    "height": 1125,
+    "avif": [
+      {
+        "src": "/assets/optimized/gods-promises-new-testament-480.avif",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/gods-promises-new-testament-960.avif",
+        "width": 960
+      }
+    ],
+    "webp": [
+      {
+        "src": "/assets/optimized/gods-promises-new-testament-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/gods-promises-new-testament-960.webp",
+        "width": 960
+      }
+    ]
+  },
+  "Behind the Scenes.png": {
+    "width": 1319,
+    "height": 1125,
+    "avif": [
+      {
+        "src": "/assets/optimized/behind-the-scenes-480.avif",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/behind-the-scenes-960.avif",
+        "width": 960
+      }
+    ],
+    "webp": [
+      {
+        "src": "/assets/optimized/behind-the-scenes-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/behind-the-scenes-960.webp",
+        "width": 960
+      }
+    ]
+  },
+  "Looking Back.png": {
+    "width": 1319,
+    "height": 1125,
+    "avif": [
+      {
+        "src": "/assets/optimized/looking-back-480.avif",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/looking-back-960.avif",
+        "width": 960
+      }
+    ],
+    "webp": [
+      {
+        "src": "/assets/optimized/looking-back-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/looking-back-960.webp",
+        "width": 960
+      }
+    ]
+  },
+  "Prayer Group Signup.png": {
+    "width": 1319,
+    "height": 1125,
+    "avif": [
+      {
+        "src": "/assets/optimized/prayer-group-signup-480.avif",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/prayer-group-signup-960.avif",
+        "width": 960
+      }
+    ],
+    "webp": [
+      {
+        "src": "/assets/optimized/prayer-group-signup-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/prayer-group-signup-960.webp",
+        "width": 960
+      }
+    ]
+  },
+  "Donate.png": {
+    "width": 1319,
+    "height": 1125,
+    "avif": [
+      {
+        "src": "/assets/optimized/donate-480.avif",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/donate-960.avif",
+        "width": 960
+      }
+    ],
+    "webp": [
+      {
+        "src": "/assets/optimized/donate-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/donate-960.webp",
+        "width": 960
+      }
+    ]
+  },
+  "English-Korean Biligual Bible - Book of John.jpg": {
+    "width": 458,
+    "height": 670,
+    "avif": [],
+    "webp": []
+  },
+  "Childrens bible story-small.png": {
+    "width": 332,
+    "height": 432,
+    "avif": [],
+    "webp": []
+  },
+  "Gods Promises Side.png": {
+    "width": 747,
+    "height": 941,
+    "avif": [
+      {
+        "src": "/assets/optimized/gods-promises-side-480.avif",
+        "width": 480
+      }
+    ],
+    "webp": [
+      {
+        "src": "/assets/optimized/gods-promises-side-480.webp",
+        "width": 480
+      }
+    ]
+  },
+  "PBI founding members.jpg": {
+    "width": 561,
+    "height": 379,
+    "avif": [
+      {
+        "src": "/assets/optimized/pbi-founding-members-480.avif",
+        "width": 480
+      }
+    ],
+    "webp": [
+      {
+        "src": "/assets/optimized/pbi-founding-members-480.webp",
+        "width": 480
+      }
+    ]
+  },
+  "KASCON.jpg": {
+    "width": 437,
+    "height": 288,
+    "avif": [],
+    "webp": []
+  },
+  "North_Korean_students.jpg": {
+    "width": 3008,
+    "height": 2000,
+    "avif": [
+      {
+        "src": "/assets/optimized/north-korean-students-480.avif",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/north-korean-students-960.avif",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/north-korean-students-1440.avif",
+        "width": 1440
+      }
+    ],
+    "webp": [
+      {
+        "src": "/assets/optimized/north-korean-students-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/north-korean-students-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/north-korean-students-1440.webp",
+        "width": 1440
+      }
+    ]
+  },
+  "ProfKimDuringLecture.png": {
+    "width": 342,
+    "height": 427,
+    "avif": [],
+    "webp": []
+  },
+  "NorthSouthDictionary.jpg": {
+    "width": 350,
+    "height": 523,
+    "avif": [],
+    "webp": []
+  },
+  "DocumentaryKJI.jpg": {
+    "width": 350,
+    "height": 481,
+    "avif": [],
+    "webp": []
+  },
+  "current/about-mission.webp": {
+    "width": 2500,
+    "height": 1799,
+    "avif": [
+      {
+        "src": "/assets/optimized/current-about-mission-480.avif",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/current-about-mission-960.avif",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/current-about-mission-1440.avif",
+        "width": 1440
+      }
+    ],
+    "webp": [
+      {
+        "src": "/assets/optimized/current-about-mission-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/current-about-mission-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/current-about-mission-1440.webp",
+        "width": 1440
+      }
+    ]
+  },
+  "current/autobiography-80-years.webp": {
+    "width": 241,
+    "height": 338,
+    "avif": [],
+    "webp": []
+  },
+  "current/autobiography-nomad.webp": {
+    "width": 480,
+    "height": 683,
+    "avif": [],
+    "webp": []
+  },
+  "current/beyond-now.webp": {
+    "width": 2500,
+    "height": 1666,
+    "avif": [
+      {
+        "src": "/assets/optimized/current-beyond-now-480.avif",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/current-beyond-now-960.avif",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/current-beyond-now-1440.avif",
+        "width": 1440
+      }
+    ],
+    "webp": [
+      {
+        "src": "/assets/optimized/current-beyond-now-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/current-beyond-now-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/current-beyond-now-1440.webp",
+        "width": 1440
+      }
+    ]
+  },
+  "current/book-of-john-reference.webp": {
+    "width": 500,
+    "height": 731,
+    "avif": [
+      {
+        "src": "/assets/optimized/current-book-of-john-reference-480.avif",
+        "width": 480
+      }
+    ],
+    "webp": [
+      {
+        "src": "/assets/optimized/current-book-of-john-reference-480.webp",
+        "width": 480
+      }
+    ]
+  },
+  "current/esl-class.webp": {
+    "width": 1024,
+    "height": 680,
+    "avif": [
+      {
+        "src": "/assets/optimized/current-esl-class-480.avif",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/current-esl-class-960.avif",
+        "width": 960
+      }
+    ],
+    "webp": [
+      {
+        "src": "/assets/optimized/current-esl-class-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/current-esl-class-960.webp",
+        "width": 960
+      }
+    ]
+  },
+  "current/gods-promises-side2.webp": {
+    "width": 628,
+    "height": 909,
+    "avif": [
+      {
+        "src": "/assets/optimized/current-gods-promises-side2-480.avif",
+        "width": 480
+      }
+    ],
+    "webp": [
+      {
+        "src": "/assets/optimized/current-gods-promises-side2-480.webp",
+        "width": 480
+      }
+    ]
+  },
+  "current/jin-keol-park.webp": {
+    "width": 393,
+    "height": 525,
+    "avif": [],
+    "webp": []
+  },
+  "current/jong-woo-lee.webp": {
+    "width": 1195,
+    "height": 1593,
+    "avif": [
+      {
+        "src": "/assets/optimized/current-jong-woo-lee-480.avif",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/current-jong-woo-lee-960.avif",
+        "width": 960
+      }
+    ],
+    "webp": [
+      {
+        "src": "/assets/optimized/current-jong-woo-lee-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/current-jong-woo-lee-960.webp",
+        "width": 960
+      }
+    ]
+  },
+  "current/korean-language-divide.webp": {
+    "width": 2200,
+    "height": 1400,
+    "avif": [
+      {
+        "src": "/assets/optimized/current-korean-language-divide-480.avif",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/current-korean-language-divide-960.avif",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/current-korean-language-divide-1440.avif",
+        "width": 1440
+      }
+    ],
+    "webp": [
+      {
+        "src": "/assets/optimized/current-korean-language-divide-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/current-korean-language-divide-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/current-korean-language-divide-1440.webp",
+        "width": 1440
+      }
+    ]
+  },
+  "current/old-korean-bible.webp": {
+    "width": 1331,
+    "height": 2059,
+    "avif": [
+      {
+        "src": "/assets/optimized/current-old-korean-bible-480.avif",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/current-old-korean-bible-960.avif",
+        "width": 960
+      }
+    ],
+    "webp": [
+      {
+        "src": "/assets/optimized/current-old-korean-bible-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/current-old-korean-bible-960.webp",
+        "width": 960
+      }
+    ]
+  },
+  "current/page-texture.webp": {
+    "width": 2500,
+    "height": 1515,
+    "avif": [
+      {
+        "src": "/assets/optimized/current-page-texture-480.avif",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/current-page-texture-960.avif",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/current-page-texture-1440.avif",
+        "width": 1440
+      }
+    ],
+    "webp": [
+      {
+        "src": "/assets/optimized/current-page-texture-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/current-page-texture-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/current-page-texture-1440.webp",
+        "width": 1440
+      }
+    ]
+  },
+  "current/prayer-newsletter.webp": {
+    "width": 2500,
+    "height": 1667,
+    "avif": [
+      {
+        "src": "/assets/optimized/current-prayer-newsletter-480.avif",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/current-prayer-newsletter-960.avif",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/current-prayer-newsletter-1440.avif",
+        "width": 1440
+      }
+    ],
+    "webp": [
+      {
+        "src": "/assets/optimized/current-prayer-newsletter-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/current-prayer-newsletter-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/current-prayer-newsletter-1440.webp",
+        "width": 1440
+      }
+    ]
+  },
+  "current/prof-and-mrs-kim.webp": {
+    "width": 300,
+    "height": 398,
+    "avif": [],
+    "webp": []
+  },
+  "current/prof-kim-couple.webp": {
+    "width": 1440,
+    "height": 1080,
+    "avif": [
+      {
+        "src": "/assets/optimized/current-prof-kim-couple-480.avif",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/current-prof-kim-couple-960.avif",
+        "width": 960
+      }
+    ],
+    "webp": [
+      {
+        "src": "/assets/optimized/current-prof-kim-couple-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/current-prof-kim-couple-960.webp",
+        "width": 960
+      }
+    ]
+  },
+  "current/publications-cherry-blossoms.webp": {
+    "width": 2500,
+    "height": 1667,
+    "avif": [
+      {
+        "src": "/assets/optimized/current-publications-cherry-blossoms-480.avif",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/current-publications-cherry-blossoms-960.avif",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/current-publications-cherry-blossoms-1440.avif",
+        "width": 1440
+      }
+    ],
+    "webp": [
+      {
+        "src": "/assets/optimized/current-publications-cherry-blossoms-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/current-publications-cherry-blossoms-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/current-publications-cherry-blossoms-1440.webp",
+        "width": 1440
+      }
+    ]
+  },
+  "current/rex-lee.webp": {
+    "width": 1802,
+    "height": 2403,
+    "avif": [
+      {
+        "src": "/assets/optimized/current-rex-lee-480.avif",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/current-rex-lee-960.avif",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/current-rex-lee-1440.avif",
+        "width": 1440
+      }
+    ],
+    "webp": [
+      {
+        "src": "/assets/optimized/current-rex-lee-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/current-rex-lee-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/current-rex-lee-1440.webp",
+        "width": 1440
+      }
+    ]
+  },
+  "current/support-prayer.webp": {
+    "width": 2500,
+    "height": 1404,
+    "avif": [
+      {
+        "src": "/assets/optimized/current-support-prayer-480.avif",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/current-support-prayer-960.avif",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/current-support-prayer-1440.avif",
+        "width": 1440
+      }
+    ],
+    "webp": [
+      {
+        "src": "/assets/optimized/current-support-prayer-480.webp",
+        "width": 480
+      },
+      {
+        "src": "/assets/optimized/current-support-prayer-960.webp",
+        "width": 960
+      },
+      {
+        "src": "/assets/optimized/current-support-prayer-1440.webp",
+        "width": 1440
+      }
+    ]
+  },
+  "current/yoo-jin-kim.webp": {
+    "width": 357,
+    "height": 473,
+    "avif": [],
+    "webp": []
+  },
+  "current/youversion-bible-icon.webp": {
+    "width": 120,
+    "height": 120,
+    "avif": [],
+    "webp": []
+  }
+}

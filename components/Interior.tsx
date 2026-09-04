@@ -1,5 +1,6 @@
 import type { ReactNode } from 'react';
 import Link from 'next/link';
+import { ResponsiveImage } from '@/components/ResponsiveImage';
 
 export function InteriorHero({
   title,
@@ -23,8 +24,12 @@ export function InteriorHero({
         </div>
         {image && (
           <div className="interior-hero-media">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={`/assets/${image}`} alt={imageAlt} fetchPriority="high" />
+            <ResponsiveImage
+              image={image}
+              alt={imageAlt}
+              sizes={imageLayout === 'background' ? '100vw' : imageLayout === 'wide' ? '92vw' : '(max-width: 700px) 88vw, 46vw'}
+              fetchPriority="high"
+            />
           </div>
         )}
       </div>
@@ -52,8 +57,7 @@ export function StorySection({
       <div className={`shell ${image ? 'story-grid' : 'story-narrow'}`}>
         {image && (
           <div className="story-media">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={`/assets/${image}`} alt={imageAlt} loading="lazy" />
+            <ResponsiveImage image={image} alt={imageAlt} sizes="(max-width: 700px) 88vw, 46vw" loading="lazy" />
           </div>
         )}
         <div className="story-copy">
@@ -101,8 +105,7 @@ export function PublicationCard({
   return (
     <article className="publication-item">
       <div className="publication-cover">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={`/assets/${image}`} alt={title} loading="lazy" />
+        <ResponsiveImage image={image} alt={title} sizes="(max-width: 700px) 75vw, (max-width: 960px) 230px, 30vw" loading="lazy" />
       </div>
       <div>
         <h3>{title}</h3>

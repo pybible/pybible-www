@@ -4,6 +4,7 @@ import {
   PublicationCard,
   StorySection,
 } from '@/components/Interior';
+import { ResponsiveImage } from '@/components/ResponsiveImage';
 
 export function PublicationsPage() {
   return (
@@ -94,10 +95,10 @@ export function PublicationsPage() {
 
       <section className="rights-note">
         <div className="shell rights-note-grid">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="/assets/current/publications-cherry-blossoms.webp"
+          <ResponsiveImage
+            image="current/publications-cherry-blossoms.webp"
             alt="Cherry blossoms beside an open Bible"
+            sizes="(max-width: 700px) 88vw, 384px"
             loading="lazy"
           />
           <p>
@@ -141,7 +142,6 @@ export function TeensPage() {
             src="https://fast.wistia.net/embed/iframe/h5wa9okarf?wmode=opaque"
             title="Bible Stories: South and North Together video"
             allow="autoplay; fullscreen"
-            allowFullScreen
             loading="lazy"
           />
         </div>
@@ -221,7 +221,6 @@ export function InProgressPage() {
             src="https://fast.wistia.net/embed/iframe/h5wa9okarf?wmode=opaque"
             title="PBI Bible story video"
             allow="autoplay; fullscreen"
-            allowFullScreen
             loading="lazy"
           />
         </div>

@@ -1,7 +1,8 @@
 'use client';
 
 import Link from 'next/link';
-import { useCallback, useRef, type MouseEvent } from 'react';
+import { useCallback, useEffect, useRef, type MouseEvent } from 'react';
+import { ResponsiveImage } from '@/components/ResponsiveImage';
 
 const navGroups = [
   {
@@ -38,17 +39,52 @@ const navGroups = [
 export function SiteHeader() {
   const desktopNavigation = useRef<HTMLElement>(null);
   const mobileNavigation = useRef<HTMLDetailsElement>(null);
+  const lastMenuTrigger = useRef<HTMLElement>(null);
 
-  const closeNavigation = useCallback(() => {
+  const closeNavigation = useCallback((restoreFocus = false) => {
     desktopNavigation.current
       ?.querySelectorAll<HTMLDetailsElement>('details.nav-group[open]')
       .forEach((menu) => { menu.open = false; });
 
     if (mobileNavigation.current) mobileNavigation.current.open = false;
+    if (restoreFocus) lastMenuTrigger.current?.focus();
   }, []);
+
+  useEffect(() => {
+    const handlePointerDown = (event: PointerEvent) => {
+      const target = event.target as Node;
+      const isInsideDesktop = desktopNavigation.current?.contains(target);
+      const isInsideMobile = mobileNavigation.current?.contains(target);
+
+      if (!isInsideDesktop && !isInsideMobile) closeNavigation();
+    };
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key !== 'Escape') return;
+
+      const hasOpenMenu = Boolean(
+        desktopNavigation.current?.querySelector('details.nav-group[open]')
+        || mobileNavigation.current?.open,
+      );
+
+      if (hasOpenMenu) {
+        event.preventDefault();
+        closeNavigation(true);
+      }
+    };
+
+    document.addEventListener('pointerdown', handlePointerDown);
+    document.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      document.removeEventListener('pointerdown', handlePointerDown);
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [closeNavigation]);
 
   const handleDesktopSummaryClick = (event: MouseEvent<HTMLElement>) => {
     const selectedMenu = event.currentTarget.parentElement as HTMLDetailsElement;
+    lastMenuTrigger.current = event.currentTarget;
 
     desktopNavigation.current
       ?.querySelectorAll<HTMLDetailsElement>('details.nav-group[open]')
@@ -60,12 +96,10 @@ export function SiteHeader() {
   return (
     <header className="site-header">
       <div className="header-inner">
-        <Link className="brand" href="/" aria-label="Pyongyang Bible Institute home" onClick={closeNavigation}>
+        <Link className="brand" href="/" aria-label="Pyongyang Bible Institute home" onClick={() => closeNavigation()}>
           {/* The supplied logo is the visual source of truth for the wordmark. */}
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img className="brand-desktop-logo" src="/assets/PBI logo.png" alt="Pyongyang Bible Institute" />
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img className="brand-mobile-logo" src="/assets/PBI logo - mobile.png" alt="Pyongyang Bible Institute" />
+          <ResponsiveImage className="brand-desktop-logo" image="PBI logo.png" alt="Pyongyang Bible Institute" sizes="462px" />
+          <ResponsiveImage className="brand-mobile-logo" image="PBI logo - mobile.png" alt="Pyongyang Bible Institute" sizes="68vw" />
         </Link>
 
         <nav className="desktop-nav" aria-label="Primary navigation" ref={desktopNavigation}>
@@ -79,11 +113,11 @@ export function SiteHeader() {
               <div className="nav-popover">
                 {group.links.map((link) =>
                   link.external ? (
-                    <a key={link.label} href={link.href} target="_blank" rel="noreferrer" onClick={closeNavigation}>
+                    <a key={link.label} href={link.href} target="_blank" rel="noreferrer" onClick={() => closeNavigation()}>
                       {link.label}<span aria-hidden="true"> ↗</span>
                     </a>
                   ) : (
-                    <Link key={link.label} href={link.href} onClick={closeNavigation}>{link.label}</Link>
+                    <Link key={link.label} href={link.href} onClick={() => closeNavigation()}>{link.label}</Link>
                   ),
                 )}
               </div>
@@ -92,18 +126,21 @@ export function SiteHeader() {
         </nav>
 
         <details className="mobile-nav" ref={mobileNavigation}>
-          <summary aria-label="Toggle navigation"><span>Menu</span></summary>
+          <summary
+            aria-label="Toggle navigation"
+            onClick={(event) => { lastMenuTrigger.current = event.currentTarget; }}
+          ><span>Menu</span></summary>
           <nav aria-label="Mobile navigation">
             {navGroups.map((group) => (
               <div className="mobile-nav-group" key={group.label}>
                 <p>{group.label}</p>
                 {group.links.map((link) =>
                   link.external ? (
-                    <a key={link.label} href={link.href} target="_blank" rel="noreferrer" onClick={closeNavigation}>
+                    <a key={link.label} href={link.href} target="_blank" rel="noreferrer" onClick={() => closeNavigation()}>
                       {link.label}<span aria-hidden="true"> ↗</span>
                     </a>
                   ) : (
-                    <Link key={link.label} href={link.href} onClick={closeNavigation}>{link.label}</Link>
+                    <Link key={link.label} href={link.href} onClick={() => closeNavigation()}>{link.label}</Link>
                   ),
                 )}
               </div>

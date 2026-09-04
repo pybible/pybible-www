@@ -1,12 +1,12 @@
 import Link from 'next/link';
+import { ResponsiveImage } from '@/components/ResponsiveImage';
 
 export function SiteFooter() {
   return (
     <footer className="site-footer">
       <div className="footer-main shell">
         <div className="footer-brand">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/assets/PBI logo - mobile.png" alt="Pyongyang Bible Institute" loading="lazy" />
+          <ResponsiveImage image="PBI logo - mobile.png" alt="Pyongyang Bible Institute" sizes="360px" loading="lazy" />
           <p>Making Scripture clear in the language North Korean readers use today.</p>
         </div>
 

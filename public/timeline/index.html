@@ -4,27 +4,101 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Notable Events in Our History</title>
+    <link rel="icon" href="/assets/PBI%20favicon.png" />
     <link rel="stylesheet" href="/assets/timeline/timeline.css" />
     <style>
       html,
       body,
+      #timeline-document,
       #timeline-embed {
         width: 100%;
         height: 100%;
         min-height: 650px;
         margin: 0;
       }
+
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+
+      .tl-timeline .tl-slidenav-previous .tl-slidenav-title,
+      .tl-timeline .tl-slidenav-next .tl-slidenav-title {
+        filter: none;
+        opacity: 1;
+      }
+
+      .tl-timeline .tl-attribution a {
+        color: #596267;
+      }
+
+      .tl-timeline .tl-attribution .tl-knightlab-logo {
+        background-color: #596267;
+      }
+
+      .tl-timeline
+        .tl-timemarker:not(.tl-timemarker-active)
+        .tl-timemarker-text
+        h2.tl-headline,
+      .tl-timeline
+        .tl-timemarker:not(.tl-timemarker-active)
+        .tl-timemarker-text
+        h2.tl-headline
+        p {
+        color: #596267;
+      }
+
+      @media (pointer: coarse) {
+        .tl-timeline .tl-menubar-button {
+          min-width: 44px;
+          min-height: 44px;
+        }
+
+        .tl-timeline .tl-slidenav-previous,
+        .tl-timeline .tl-slidenav-next {
+          min-width: 44px;
+          min-height: 44px;
+        }
+      }
     </style>
   </head>
   <body>
-    <div id="timeline-embed"></div>
+    <main id="timeline-document">
+      <h1 class="sr-only">Notable Events in Our History</h1>
+      <div id="timeline-embed"></div>
+    </main>
     <script src="/assets/timeline/timeline.js"></script>
     <script>
+      const timelineRoot = document.getElementById('timeline-embed');
+
+      function cleanGeneratedMarkup() {
+        timelineRoot.querySelectorAll('.tl-headline-date').forEach((heading) => {
+          if (!heading.textContent.trim()) {
+            heading.remove();
+          }
+        });
+      }
+
+      new MutationObserver(cleanGeneratedMarkup).observe(timelineRoot, {
+        childList: true,
+        subtree: true
+      });
+
       new TL.Timeline('timeline-embed', '/assets/timeline/data.json', {
         language: 'en',
         initial_zoom: 2,
-        height: 650
+        height: 650,
+        font: null
       });
+
+      cleanGeneratedMarkup();
     </script>
   </body>
 </html>

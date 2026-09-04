@@ -1,60 +1,163 @@
 'use client';
 
-import type { FormEvent } from 'react';
+import { useState, type FormEvent } from 'react';
 
-function openMail(subject: string, body: string) {
-  window.location.href = `mailto:contact@pybible.org?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+const FORM_ENDPOINT = 'https://formsubmit.co/ajax/contact@pybible.org';
+
+type SubmitState =
+  | { kind: 'idle'; message: '' }
+  | { kind: 'sending'; message: string }
+  | { kind: 'success'; message: string }
+  | { kind: 'error'; message: string };
+
+const initialState: SubmitState = { kind: 'idle', message: '' };
+
+async function deliver(form: HTMLFormElement, subject: string) {
+  const data = new FormData(form);
+  const payload = Object.fromEntries(data.entries());
+
+  if (String(payload._honey || '').trim()) return;
+
+  const response = await fetch(FORM_ENDPOINT, {
+    method: 'POST',
+    headers: {
+      Accept: 'application/json',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      ...payload,
+      _subject: subject,
+      _template: 'table',
+      _url: window.location.href,
+    }),
+  });
+
+  const result = (await response.json().catch(() => null)) as
+    | { success?: boolean | string; message?: string }
+    | null;
+  const wasSuccessful = response.ok && (result?.success === true || result?.success === 'true');
+
+  if (!wasSuccessful) {
+    throw new Error(result?.message || 'The message could not be delivered.');
+  }
+}
+
+function Honeypot() {
+  return (
+    <div className="form-honeypot" aria-hidden="true">
+      <label htmlFor="form-company">Leave this field empty</label>
+      <input id="form-company" name="_honey" tabIndex={-1} autoComplete="off" />
+    </div>
+  );
+}
+
+function FormStatus({ state }: { state: SubmitState }) {
+  if (state.kind === 'idle') return null;
+
+  return (
+    <p
+      className={`form-status form-status-${state.kind}`}
+      role={state.kind === 'error' ? 'alert' : 'status'}
+      aria-live={state.kind === 'error' ? 'assertive' : 'polite'}
+    >
+      {state.message}
+    </p>
+  );
 }
 
 export function NewsletterRequestForm() {
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  const [state, setState] = useState<SubmitState>(initialState);
+
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    const email = String(data.get('email') || '').trim();
-    openMail('Prayer newsletter request', `Please add ${email} to the PBI prayer newsletter.`);
+    const form = event.currentTarget;
+    setState({ kind: 'sending', message: 'Sending your request…' });
+
+    try {
+      await deliver(form, 'Prayer newsletter request');
+      form.reset();
+      setState({ kind: 'success', message: 'Your request was sent to PBI. Thank you.' });
+    } catch {
+      setState({
+        kind: 'error',
+        message: 'We could not send your request. Your email is still here—please try again shortly.',
+      });
+    }
   }
 
+  const isSending = state.kind === 'sending';
+
   return (
-    <form className="mail-form" onSubmit={handleSubmit}>
+    <form className="mail-form" onSubmit={handleSubmit} aria-busy={isSending}>
+      <Honeypot />
+      <input type="hidden" name="request" value="Prayer newsletter signup" />
       <label htmlFor="newsletter-email">Email address</label>
       <div className="field-row">
-        <input id="newsletter-email" name="email" type="email" autoComplete="email" required placeholder="you@example.com" />
-        <button className="button button-dark" type="submit">Request updates</button>
+        <input
+          id="newsletter-email"
+          name="email"
+          type="email"
+          autoComplete="email"
+          maxLength={254}
+          required
+          placeholder="you@example.com"
+        />
+        <button className="button button-dark" type="submit" disabled={isSending}>
+          {isSending ? 'Sending…' : 'Request updates'}
+        </button>
       </div>
-      <p className="form-note">This opens your email app so you can send the request directly to PBI.</p>
+      <FormStatus state={state} />
+      <p className="form-note">Your request is sent directly to contact@pybible.org.</p>
     </form>
   );
 }
 
 export function ContactForm() {
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  const [state, setState] = useState<SubmitState>(initialState);
+
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    const name = String(data.get('name') || '').trim();
-    const email = String(data.get('email') || '').trim();
+    const form = event.currentTarget;
+    const data = new FormData(form);
     const subject = String(data.get('subject') || '').trim();
-    const message = String(data.get('message') || '').trim();
-    openMail(subject || 'Message from pybible.org', `From: ${name} <${email}>\n\n${message}`);
+    setState({ kind: 'sending', message: 'Sending your message…' });
+
+    try {
+      await deliver(form, `PBI website: ${subject}`);
+      form.reset();
+      setState({ kind: 'success', message: 'Your message was sent to PBI. Thank you.' });
+    } catch {
+      setState({
+        kind: 'error',
+        message: 'We could not send your message. Your entries are still here—please try again shortly.',
+      });
+    }
   }
 
+  const isSending = state.kind === 'sending';
+
   return (
-    <form className="contact-form" onSubmit={handleSubmit}>
+    <form className="contact-form" onSubmit={handleSubmit} aria-busy={isSending}>
+      <Honeypot />
       <div className="form-pair">
         <div>
           <label htmlFor="contact-name">Name</label>
-          <input id="contact-name" name="name" autoComplete="name" required />
+          <input id="contact-name" name="name" autoComplete="name" maxLength={120} required />
         </div>
         <div>
           <label htmlFor="contact-email">Email</label>
-          <input id="contact-email" name="email" type="email" autoComplete="email" required />
+          <input id="contact-email" name="email" type="email" autoComplete="email" maxLength={254} required />
         </div>
       </div>
       <label htmlFor="contact-subject">Subject</label>
-      <input id="contact-subject" name="subject" required />
+      <input id="contact-subject" name="subject" maxLength={180} required />
       <label htmlFor="contact-message">Message</label>
-      <textarea id="contact-message" name="message" rows={7} required />
-      <button className="button button-dark" type="submit">Open email to send</button>
-      <p className="form-note">Your email app will open with this message addressed to contact@pybible.org.</p>
+      <textarea id="contact-message" name="message" rows={7} minLength={2} maxLength={5000} required />
+      <button className="button button-dark" type="submit" disabled={isSending}>
+        {isSending ? 'Sending…' : 'Send message'}
+      </button>
+      <FormStatus state={state} />
+      <p className="form-note">Your message is sent directly to contact@pybible.org.</p>
     </form>
   );
 }

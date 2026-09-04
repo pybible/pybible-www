@@ -63,6 +63,18 @@
   --line: #d9e3e7;
   --paper: #ffffff;
   --blue-black: #0b252e;
+  --source-verse-ink: #202020;
+  --source-citation: #555555;
+  --source-youversion-copy: #37474d;
+  --source-intro-copy: #3f535b;
+  --source-story-copy: #3f484c;
+  --source-link: #786f69;
+  --section-wash: #f7f9f9;
+  --field-line: #aebdc3;
+  --footer-ink: #101415;
+  --danger: #9e2f24;
+  --danger-wash: #fff2f0;
+  --media-black: #000000;
   --font-copy: "SF Pro Display", "SF Pro Text", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, "Apple SD Gothic Neo", sans-serif;
   --font-body: "Poppins", "Helvetica Neue", Arial, "Apple SD Gothic Neo", sans-serif;
   --font-nav: "Ubuntu Condensed", "Arial Narrow", Arial, sans-serif;
@@ -154,6 +166,18 @@ li {
 .shell {
   width: min(1400px, 92vw);
   margin-inline: auto;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 .site-header {
@@ -248,7 +272,7 @@ li {
 .nav-popover a {
   display: block;
   padding: 0.7rem 0.8rem;
-  color: #fff;
+  color: var(--paper);
   font-family: var(--font-nav);
   font-size: 1.05rem;
   letter-spacing: 0.03em;
@@ -285,14 +309,14 @@ li {
 }
 
 .button-light {
-  background: #fff;
+  background: var(--paper);
   color: var(--ink);
   box-shadow: 0 9px 22px rgb(0 0 0 / 12%);
 }
 
 .button-dark {
   background: var(--ink);
-  color: #fff;
+  color: var(--paper);
   box-shadow: 0 9px 22px rgb(11 37 46 / 15%);
 }
 
@@ -308,7 +332,7 @@ li {
 }
 
 .light-link {
-  color: #fff;
+  color: var(--paper);
 }
 
 .home-hero {
@@ -318,7 +342,7 @@ li {
   align-items: end;
   overflow: hidden;
   background: var(--blue-black);
-  color: #fff;
+  color: var(--paper);
 }
 
 .home-hero-video,
@@ -348,7 +372,7 @@ li {
   border: 1px solid rgb(255 255 255 / 55%);
   border-radius: 2px;
   background: rgb(4 18 23 / 70%);
-  color: #fff;
+  color: var(--paper);
   cursor: pointer;
   font-size: 0.78rem;
   font-weight: 500;
@@ -387,7 +411,7 @@ li {
 
 .scripture-pair {
   background: var(--blue-black);
-  color: #fff;
+  color: var(--paper);
 }
 
 .scripture-grid {
@@ -423,7 +447,14 @@ li {
 
 .source-home-verse {
   padding: clamp(6rem, 12.8vw, 11.55rem) 0 clamp(5.5rem, 11vw, 9.9rem);
-  background: url('/assets/current/page-texture.webp') center / cover;
+  background-color: var(--paper);
+  background-image: url('/assets/current/page-texture.webp');
+  background-image: image-set(
+    url('/assets/optimized/current-page-texture-1440.avif') type('image/avif'),
+    url('/assets/optimized/current-page-texture-1440.webp') type('image/webp')
+  );
+  background-position: center;
+  background-size: cover;
 }
 
 .source-verse-grid {
@@ -439,7 +470,7 @@ li {
 
 .source-verse-grid p {
   margin-bottom: 1.5rem;
-  color: #202020;
+  color: var(--source-verse-ink);
   font-size: clamp(1.5rem, 1.86vw, 1.672rem);
   font-weight: 500;
   line-height: 1.36;
@@ -447,7 +478,7 @@ li {
 
 .source-verse-grid cite {
   display: block;
-  color: #555;
+  color: var(--source-citation);
   font-family: var(--font-copy);
   font-size: clamp(1.1rem, 1.51vw, 1.357rem);
   font-style: normal;
@@ -458,7 +489,7 @@ li {
 
 .source-youversion {
   padding-block: clamp(5rem, 9.1vw, 8.2rem);
-  background: #fff;
+  background: var(--paper);
 }
 
 .source-youversion-grid {
@@ -561,7 +592,7 @@ li {
 
 .youversion-copy p {
   margin-bottom: 2rem;
-  color: #37474d;
+  color: var(--source-youversion-copy);
   font-size: 1.18rem;
 }
 
@@ -598,7 +629,7 @@ li {
   position: relative;
   overflow: hidden;
   background: var(--blue-black);
-  color: #fff;
+  color: var(--paper);
   text-decoration: none;
 }
 
@@ -642,7 +673,7 @@ li {
 
 .newsletter-cta {
   background: var(--sky-deep);
-  color: #fff;
+  color: var(--paper);
 }
 
 .newsletter-inner {
@@ -696,7 +727,7 @@ li {
 
 .interior-hero p {
   margin-bottom: 0;
-  color: #3f535b;
+  color: var(--source-intro-copy);
   font-size: clamp(1.1rem, 2vw, 1.35rem);
 }
 
@@ -766,7 +797,7 @@ li {
   position: relative;
   min-height: 410px;
   background: var(--blue-black);
-  color: #fff;
+  color: var(--paper);
 }
 
 .interior-hero-background .interior-hero-grid {
@@ -807,7 +838,7 @@ li {
 }
 
 .story-section:nth-of-type(odd) {
-  background: #f7f9f9;
+  background: var(--section-wash);
 }
 
 .story-grid,
@@ -888,7 +919,7 @@ li {
 
 .story-copy > p,
 .story-copy > ul {
-  color: #3f484c;
+  color: var(--source-story-copy);
   font-size: var(--type-body);
 }
 
@@ -909,13 +940,27 @@ li {
 .timeline-section,
 .past-work,
 .newsletter-page,
-.contact-section {
+.contact-section,
+.not-found-section {
   padding-block: clamp(5rem, 10vw, 9rem);
+}
+
+.not-found-section {
+  min-height: 55svh;
+}
+
+.not-found-section h1 {
+  margin-bottom: 1.5rem;
+}
+
+.not-found-section p:not(.source-kicker) {
+  margin-bottom: 2rem;
+  color: var(--muted);
 }
 
 .reference-section,
 .past-work {
-  background: #f7f9f9;
+  background: var(--section-wash);
 }
 
 .publication-list {
@@ -931,7 +976,7 @@ li {
   align-items: center;
   gap: clamp(2rem, 6vw, 6rem);
   padding: clamp(2rem, 5vw, 4rem);
-  background: #fff;
+  background: var(--paper);
 }
 
 .publication-cover img {
@@ -978,7 +1023,7 @@ li {
 
 .rights-note {
   padding-block: clamp(4rem, 7vw, 6rem);
-  background: #fff;
+  background: var(--paper);
   color: var(--ink);
 }
 
@@ -1005,7 +1050,7 @@ li {
 .prayer-excerpt {
   padding-block: clamp(5rem, 10vw, 9rem);
   background: var(--blue-black);
-  color: #fff;
+  color: var(--paper);
 }
 
 .prayer-excerpt .section-heading p {
@@ -1071,7 +1116,7 @@ li {
 }
 
 .about-story-copy a {
-  color: #786f69;
+  color: var(--source-link);
   text-underline-offset: 0.16em;
 }
 
@@ -1161,12 +1206,12 @@ li {
   width: min(1203px, 100%);
   min-height: 650px;
   border: 1px solid var(--line);
-  background: #fff;
+  background: var(--paper);
 }
 
 .team-section {
   padding-block: clamp(5rem, 10vw, 9rem);
-  background: #fff;
+  background: var(--paper);
 }
 
 .team-section > .shell {
@@ -1222,7 +1267,7 @@ li {
 .profile-section,
 .video-section {
   padding-block: clamp(5rem, 10vw, 9rem);
-  background: #f7f9f9;
+  background: var(--section-wash);
 }
 
 .profile-image img {
@@ -1247,17 +1292,28 @@ li {
   grid-template-columns: minmax(280px, 0.7fr) minmax(500px, 1.3fr);
 }
 
+.video-player {
+  margin: 0;
+}
+
 .video-grid video {
   width: 100%;
-  background: #000;
+  background: var(--media-black);
   box-shadow: 18px 24px 40px rgb(11 37 46 / 18%);
+}
+
+.video-player figcaption {
+  margin-top: 0.8rem;
+  color: var(--muted);
+  font-size: 0.82rem;
+  line-height: 1.5;
 }
 
 .video-frame {
   width: 100%;
   aspect-ratio: 16 / 9;
   border: 0;
-  background: #000;
+  background: var(--media-black);
   box-shadow: 18px 24px 40px rgb(11 37 46 / 18%);
 }
 
@@ -1331,9 +1387,9 @@ li {
   width: 100%;
   min-height: 52px;
   padding: 0.8rem 0.9rem;
-  border: 1px solid #aebdc3;
+  border: 1px solid var(--field-line);
   border-radius: 0;
-  background: #fff;
+  background: var(--paper);
   color: var(--ink);
 }
 
@@ -1365,6 +1421,36 @@ li {
   font-size: 0.82rem;
 }
 
+.form-honeypot {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.form-status {
+  margin: 1rem 0 0;
+  padding: 0.75rem 0.9rem;
+  border: 1px solid var(--sky-deep);
+  background: var(--mist);
+  color: var(--ink);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.form-status-error {
+  border-color: var(--danger);
+  background: var(--danger-wash);
+}
+
+.button:disabled {
+  cursor: wait;
+  opacity: 0.68;
+  transform: none;
+}
+
 .contact-details address {
   margin-bottom: 1.5rem;
   font-style: normal;
@@ -1377,8 +1463,8 @@ li {
 }
 
 .site-footer {
-  background: #101415;
-  color: #fff;
+  background: var(--footer-ink);
+  color: var(--paper);
 }
 
 .footer-main {
@@ -1417,7 +1503,7 @@ li {
 }
 
 .footer-links a:hover {
-  color: #fff;
+  color: var(--paper);
   text-decoration: underline;
   text-underline-offset: 0.2em;
 }
@@ -1482,7 +1568,7 @@ li {
 
   .mobile-nav[open] > summary {
     background: var(--ink);
-    color: #fff;
+    color: var(--paper);
   }
 
   .mobile-nav > nav {
@@ -1513,7 +1599,7 @@ li {
   .mobile-nav-group a {
     display: block;
     padding-block: 0.45rem;
-    color: #fff;
+    color: var(--paper);
     font-family: var(--font-nav);
     font-size: 1rem;
     text-decoration: none;
@@ -1630,8 +1716,8 @@ li {
 
   .mobile-nav[open] > summary {
     background:
-      linear-gradient(45deg, transparent 48%, #fff 49%, #fff 51%, transparent 52%) center / 32px 32px no-repeat,
-      linear-gradient(-45deg, transparent 48%, #fff 49%, #fff 51%, transparent 52%) center / 32px 32px no-repeat,
+      linear-gradient(45deg, transparent 48%, var(--paper) 49%, var(--paper) 51%, transparent 52%) center / 32px 32px no-repeat,
+      linear-gradient(-45deg, transparent 48%, var(--paper) 49%, var(--paper) 51%, transparent 52%) center / 32px 32px no-repeat,
       var(--ink);
   }
 
@@ -1643,7 +1729,14 @@ li {
 
   .home-hero {
     min-height: calc(100svh - 72px);
-    background: var(--blue-black) url('/assets/current/page-texture.webp') center / cover;
+    background-color: var(--blue-black);
+    background-image: url('/assets/current/page-texture.webp');
+    background-image: image-set(
+      url('/assets/optimized/current-page-texture-960.avif') type('image/avif'),
+      url('/assets/optimized/current-page-texture-960.webp') type('image/webp')
+    );
+    background-position: center;
+    background-size: cover;
   }
 
   .home-hero-video,
@@ -1834,6 +1927,22 @@ li {
   }
 }
 
+@media (pointer: coarse) {
+  .brand,
+  .nav-group summary,
+  .mobile-nav-group a,
+  .footer-links a,
+  .text-link {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+
+  .button {
+    min-height: 48px;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -1844,7 +1953,14 @@ li {
   }
 
   .home-hero {
-    background: var(--blue-black) url('/assets/current/page-texture.webp') center / cover;
+    background-color: var(--blue-black);
+    background-image: url('/assets/current/page-texture.webp');
+    background-image: image-set(
+      url('/assets/optimized/current-page-texture-960.avif') type('image/avif'),
+      url('/assets/optimized/current-page-texture-960.webp') type('image/webp')
+    );
+    background-position: center;
+    background-size: cover;
   }
 
   .feature-tile img,
