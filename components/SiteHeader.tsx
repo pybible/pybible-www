@@ -1,152 +1,64 @@
 'use client';
-
 import Link from 'next/link';
-import { useCallback, useEffect, useRef, type MouseEvent } from 'react';
+import { useState } from 'react';
+import * as NavigationMenu from '@radix-ui/react-navigation-menu';
+import * as Dialog from '@radix-ui/react-dialog';
 import { ResponsiveImage } from '@/components/ResponsiveImage';
 
-const navGroups = [
-  {
-    label: 'Our Bibles',
-    links: [
-      { label: 'Bible Publications', href: '/en/publications/' },
-      { label: 'Children and Teens', href: '/en/teens/' },
-      { label: 'Currently In Progress', href: '/en/inprogress/' },
-      {
-        label: 'Read PBI Bible at Bible.com',
-        href: 'https://www.bible.com/bible/3502/JHN.1.NLTNK',
-        external: true,
-      },
-    ],
-  },
-  {
-    label: 'Learn',
-    links: [
-      { label: 'Why a North Korean Bible?', href: '/en/whynkbible/' },
-      { label: 'Why Make It Bilingual?', href: '/en/whybilingual/' },
-      { label: 'About Us', href: '/en/about/' },
-    ],
-  },
-  {
-    label: 'Get Involved',
-    links: [
-      { label: 'Prayer Newsletter', href: '/en/prayer-newsletter/' },
-      { label: 'Support Us with Prayers', href: '/en/support/' },
-      { label: 'Contact Us / Feedback', href: '/en/contactus/' },
-    ],
-  },
+const groups = [
+  { label: 'Our Bibles', links: [ ['Bible Publications', '/en/publications/'], ['Children and Teens', '/en/teens/'], ['Currently In Progress', '/en/inprogress/'], ['Read PBI Bible at Bible.com', 'https://www.bible.com/bible/3502/JHN.1.NLTNK'] ] },
+  { label: 'Learn', links: [ ['Why a North Korean Bible?', '/en/whynkbible/'], ['Why Make It Bilingual?', '/en/whybilingual/'], ['About Us', '/en/about/'] ] },
+  { label: 'Get Involved', links: [ ['Prayer Newsletter', '/en/prayer-newsletter/'], ['Support Us with Prayers', '/en/support/'], ['Contact Us / Feedback', '/en/contactus/'] ] },
 ];
 
+function NavLink({ label, href }: { label: string; href: string }) {
+  const external = href.startsWith('https:');
+  return <Link href={href} target={external ? '_blank' : undefined} rel={external ? 'noreferrer' : undefined}>{label}{external && <span aria-hidden="true"> ↗</span>}</Link>;
+}
+
 export function SiteHeader() {
-  const desktopNavigation = useRef<HTMLElement>(null);
-  const mobileNavigation = useRef<HTMLDetailsElement>(null);
-  const lastMenuTrigger = useRef<HTMLElement>(null);
-
-  const closeNavigation = useCallback((restoreFocus = false) => {
-    desktopNavigation.current
-      ?.querySelectorAll<HTMLDetailsElement>('details.nav-group[open]')
-      .forEach((menu) => { menu.open = false; });
-
-    if (mobileNavigation.current) mobileNavigation.current.open = false;
-    if (restoreFocus) lastMenuTrigger.current?.focus();
-  }, []);
-
-  useEffect(() => {
-    const handlePointerDown = (event: PointerEvent) => {
-      const target = event.target as Node;
-      const isInsideDesktop = desktopNavigation.current?.contains(target);
-      const isInsideMobile = mobileNavigation.current?.contains(target);
-
-      if (!isInsideDesktop && !isInsideMobile) closeNavigation();
-    };
-
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key !== 'Escape') return;
-
-      const hasOpenMenu = Boolean(
-        desktopNavigation.current?.querySelector('details.nav-group[open]')
-        || mobileNavigation.current?.open,
-      );
-
-      if (hasOpenMenu) {
-        event.preventDefault();
-        closeNavigation(true);
-      }
-    };
-
-    document.addEventListener('pointerdown', handlePointerDown);
-    document.addEventListener('keydown', handleKeyDown);
-
-    return () => {
-      document.removeEventListener('pointerdown', handlePointerDown);
-      document.removeEventListener('keydown', handleKeyDown);
-    };
-  }, [closeNavigation]);
-
-  const handleDesktopSummaryClick = (event: MouseEvent<HTMLElement>) => {
-    const selectedMenu = event.currentTarget.parentElement as HTMLDetailsElement;
-    lastMenuTrigger.current = event.currentTarget;
-
-    desktopNavigation.current
-      ?.querySelectorAll<HTMLDetailsElement>('details.nav-group[open]')
-      .forEach((menu) => {
-        if (menu !== selectedMenu) menu.open = false;
-      });
-  };
-
+  const [activeMenu, setActiveMenu] = useState('');
+  const [mobileOpen, setMobileOpen] = useState(false);
   return (
     <header className="site-header">
       <div className="header-inner">
-        <Link className="brand" href="/" aria-label="Pyongyang Bible Institute home" onClick={() => closeNavigation()}>
-          {/* The supplied logo is the visual source of truth for the wordmark. */}
-          <ResponsiveImage className="brand-desktop-logo" image="PBI logo.png" alt="Pyongyang Bible Institute" sizes="462px" />
+        <Link className="brand" href="/" aria-label="Pyongyang Bible Institute home" onClick={() => { setActiveMenu(''); setMobileOpen(false); }}>
+          <ResponsiveImage className="brand-desktop-logo" image="PBI logo.png" alt="Pyongyang Bible Institute" sizes="380px" />
           <ResponsiveImage className="brand-mobile-logo" image="PBI logo - mobile.png" alt="Pyongyang Bible Institute" sizes="68vw" />
         </Link>
-
-        <nav className="desktop-nav" aria-label="Primary navigation" ref={desktopNavigation}>
-          {navGroups.map((group) => (
-            <details
-              className="nav-group"
-              name="primary-navigation"
-              key={group.label}
-            >
-              <summary onClick={handleDesktopSummaryClick}>{group.label}</summary>
-              <div className="nav-popover">
-                {group.links.map((link) =>
-                  link.external ? (
-                    <a key={link.label} href={link.href} target="_blank" rel="noreferrer" onClick={() => closeNavigation()}>
-                      {link.label}<span aria-hidden="true"> ↗</span>
-                    </a>
-                  ) : (
-                    <Link key={link.label} href={link.href} onClick={() => closeNavigation()}>{link.label}</Link>
-                  ),
-                )}
-              </div>
-            </details>
-          ))}
-        </nav>
-
-        <details className="mobile-nav" ref={mobileNavigation}>
-          <summary
-            aria-label="Toggle navigation"
-            onClick={(event) => { lastMenuTrigger.current = event.currentTarget; }}
-          ><span>Menu</span></summary>
-          <nav aria-label="Mobile navigation">
-            {navGroups.map((group) => (
-              <div className="mobile-nav-group" key={group.label}>
-                <p>{group.label}</p>
-                {group.links.map((link) =>
-                  link.external ? (
-                    <a key={link.label} href={link.href} target="_blank" rel="noreferrer" onClick={() => closeNavigation()}>
-                      {link.label}<span aria-hidden="true"> ↗</span>
-                    </a>
-                  ) : (
-                    <Link key={link.label} href={link.href} onClick={() => closeNavigation()}>{link.label}</Link>
-                  ),
-                )}
-              </div>
+        <NavigationMenu.Root className="modern-desktop-nav" aria-label="Primary navigation" value={activeMenu} onValueChange={setActiveMenu} delayDuration={150}>
+          <NavigationMenu.List className="modern-nav-list">
+            {groups.map(group => (
+              <NavigationMenu.Item className="modern-nav-item" key={group.label} value={group.label}>
+                <NavigationMenu.Trigger className="modern-nav-trigger">{group.label}<span aria-hidden="true">⌄</span></NavigationMenu.Trigger>
+                <NavigationMenu.Content className="modern-nav-content">
+                  {group.links.map(([label, href]) => (
+                    <NavigationMenu.Link asChild key={href} onSelect={() => setActiveMenu('')}>
+                      <Link href={href} target={href.startsWith('https:') ? '_blank' : undefined} rel={href.startsWith('https:') ? 'noreferrer' : undefined}>{label}</Link>
+                    </NavigationMenu.Link>
+                  ))}
+                </NavigationMenu.Content>
+              </NavigationMenu.Item>
             ))}
-          </nav>
-        </details>
+          </NavigationMenu.List>
+        </NavigationMenu.Root>
+        <Dialog.Root open={mobileOpen} onOpenChange={setMobileOpen}>
+          <Dialog.Trigger className="modern-mobile-trigger">Menu <span aria-hidden="true">☰</span></Dialog.Trigger>
+          <Dialog.Portal>
+            <Dialog.Overlay className="mobile-menu-overlay" />
+            <Dialog.Content className="mobile-menu-sheet" aria-describedby={undefined}>
+              <div className="mobile-sheet-heading"><Dialog.Title>Explore PBI</Dialog.Title><Dialog.Close aria-label="Close navigation">×</Dialog.Close></div>
+              <nav aria-label="Mobile navigation">
+                {groups.map(group => (
+                  <div className="mobile-sheet-group" key={group.label}>
+                    <h3>{group.label}</h3>
+                    {group.links.map(([label, href]) => <div key={href} onClick={() => setMobileOpen(false)}><NavLink label={label} href={href} /></div>)}
+                  </div>
+                ))}
+              </nav>
+            </Dialog.Content>
+          </Dialog.Portal>
+        </Dialog.Root>
       </div>
     </header>
   );

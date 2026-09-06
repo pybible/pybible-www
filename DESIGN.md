@@ -22,7 +22,14 @@ colors:
   danger: "#9e2f24"
   danger-wash: "#fff2f0"
   media-black: "#000000"
+  reverse-citation: "#c1d6dd"
 typography:
+  translation-display:
+    fontFamily: "SF Pro Display, SF Pro Text, -apple-system, BlinkMacSystemFont, Helvetica Neue, Arial, Apple SD Gothic Neo, sans-serif"
+    fontSize: "clamp(2.8rem, 4.6vw, 4.6rem)"
+    fontWeight: 500
+    lineHeight: 1.08
+    letterSpacing: "-0.035em"
   display:
     fontFamily: "SF Pro Display, SF Pro Text, -apple-system, BlinkMacSystemFont, Helvetica Neue, Arial, Apple SD Gothic Neo, sans-serif"
     fontSize: "clamp(2.5rem, 4.45vw, 4rem)"
@@ -55,9 +62,9 @@ typography:
     letterSpacing: "0.05em"
   verse:
     fontFamily: "SF Pro Display, SF Pro Text, -apple-system, BlinkMacSystemFont, Helvetica Neue, Arial, Apple SD Gothic Neo, sans-serif"
-    fontSize: "clamp(1.5rem, 1.86vw, 1.672rem)"
+    fontSize: "clamp(1.25rem, 1.8vw, 1.6rem)"
     fontWeight: 500
-    lineHeight: 1.36
+    lineHeight: 1.55
     letterSpacing: "normal"
   citation:
     fontFamily: "SF Pro Display, SF Pro Text, -apple-system, BlinkMacSystemFont, Helvetica Neue, Arial, Apple SD Gothic Neo, sans-serif"
@@ -96,11 +103,11 @@ typography:
     lineHeight: 1.5
     letterSpacing: "normal"
   navigation-link:
-    fontFamily: "Ubuntu Condensed, Arial Narrow, Arial, sans-serif"
-    fontSize: "1.05rem"
-    fontWeight: 400
-    lineHeight: 1.3
-    letterSpacing: "0.03em"
+    fontFamily: "Poppins, Helvetica Neue, Arial, Apple SD Gothic Neo, sans-serif"
+    fontSize: "0.95rem"
+    fontWeight: 300
+    lineHeight: 1.5
+    letterSpacing: "normal"
   lead:
     fontFamily: "Poppins, Helvetica Neue, Arial, Apple SD Gothic Neo, sans-serif"
     fontSize: "1.18rem"
@@ -176,8 +183,8 @@ components:
     backgroundColor: "{colors.blue-black}"
     textColor: "{colors.paper}"
     rounded: "{rounded.square}"
-    padding: "0.75rem"
-    width: "270px"
+    padding: "0.7rem"
+    width: "300px"
   info-card:
     backgroundColor: "{colors.mist}"
     textColor: "{colors.ink}"
@@ -187,7 +194,7 @@ components:
     backgroundColor: "{colors.blue-black}"
     textColor: "{colors.paper}"
     rounded: "{rounded.square}"
-    padding: "clamp(3rem, 7vw, 6rem) clamp(2rem, 5vw, 5rem)"
+    padding: "clamp(3rem, 5vw, 5rem) 0"
 ---
 
 # Design System: Pyongyang Bible Institute
@@ -199,6 +206,8 @@ components:
 The interface feels like an archival field guide for living translation work: documentary, precise, and grounded rather than campaign-polished. The translation leads, with real photographs, book-cover silhouettes, and side-by-side English/Korean passages carrying proof before any invitation to support.
 
 White paper, blue-black fields, sky-blue panels, and crisp rules build a clear editorial hierarchy. Density is generous but purposeful: long-form reading has room to breathe, while navigation, labels, and citations stay compact and exact.
+
+The modernization extends this established world. `app/globals.css` preserves the source-derived foundation; `app/modern.css`, imported afterward, governs the current homepage and shared navigation. Prefer the later, surface-specific values when the two differ. The direction contract in `components/PageShell.tsx` connects the translation introduction, actual publication cover, and primary reading action without changing the institute's identity.
 
 **Key Characteristics:**
 
@@ -224,8 +233,8 @@ The palette pairs open-sky optimism with deep archival ink, using mist and paper
 - **Archive Rule** (`#d9e3e7`): Separates specifications, timelines, profiles, and publication rows with crisp one-pixel rules.
 - **Paper** (`#ffffff`): Is the reading surface, light-button surface, and reverse text color.
 - **Deep Archive** (`#0b252e`): Anchors Scripture panels, navigation popovers, mission fields, and image-backed fallbacks.
-- **Source Verse Ink** (`#202020`): Preserves the archived homepage Scripture color without weakening the global Proof Ink token.
-- **Source Citation** (`#555555`): Preserves the archived homepage citation tone.
+- **Source Verse Ink** and **Source Citation**: Remain source-derived base tokens; the modern homepage overrides them with Paper/Open Sky Scripture and Reverse Citation on Deep Archive.
+- **Reverse Citation**: Keeps both language citations legible on the shared dark Scripture field.
 - **Source YouVersion Copy** (`#37474d`), **Source Intro Copy** (`#3f535b`), and **Source Story Copy** (`#3f484c`): Retain three subtly different source-derived reading grays only in their original content roles.
 - **Source Link** (`#786f69`): Preserves the archived About-page link treatment.
 - **Section Wash** (`#f7f9f9`): Alternates long-form story and record sections without introducing elevation.
@@ -245,22 +254,23 @@ The palette pairs open-sky optimism with deep archival ink, using mist and paper
 **Display and Copy Font:** SF Pro Display/Text where available, with the source site's Apple system, Helvetica, Arial, and Korean system fallbacks
 
 **Body and UI Font:** Poppins, locally bundled at the source weights
-**Navigation Font:** Ubuntu Condensed, locally bundled at weight 400
+**Navigation Font:** Poppins for current desktop and mobile navigation; locally bundled Ubuntu Condensed remains available to source-derived labels.
 
-**Character:** The original site pairs neutral SF-compatible editorial copy with Poppins UI text and narrow uppercase Ubuntu Condensed navigation. English and Korean Scripture use the same copy stack and equal visual authority.
+**Character:** Neutral SF-compatible editorial copy pairs with Poppins UI text. Modern navigation uses sentence-case Poppins, while the retained source label scale uses Ubuntu Condensed. English and Korean Scripture use the same copy stack and equal visual authority.
 
 ### Hierarchy
 
 - **Display** (500, `clamp(2.5rem, 4.45vw, 4rem)`, 1.3): Leads interior heroes within a 16-character measure (`16ch`).
+- **Translation Display**: The homepage introduction uses the larger, tighter frontmatter scale with a balanced 15-character measure, widening to 16 characters on mobile.
 - **Headline** (500, `clamp(2.05rem, 3.45vw, 3.1rem)`, 1.3): Opens major sections within a 22-character measure (`22ch`).
 - **Title** (500, `clamp(1.7rem, 2.55vw, 2.3rem)`, 1.3): Names subsections and publication records; compact team names use the Source Copy scale.
 - **Body** (300, `clamp(1rem, calc(1rem + 0.36vw), 1.325rem)`, 1.8): Reproduces the source's fluid 20–21px desktop reading size.
-- **Verse** (500, `clamp(1.5rem, 1.86vw, 1.672rem)`, 1.36): Preserves the archived bilingual homepage measure and line count.
-- **Label** (400, `1.1rem`, `0.05em`, uppercase): Identifies desktop navigation groups in Ubuntu Condensed.
+- **Verse**: The modern homepage retains source Scripture wording with the shared frontmatter verse scale and a more open line height on dark ink.
+- **Label** (400, `1.1rem`, `0.05em`, uppercase): Retains the source-derived Ubuntu Condensed label role; it does not govern modern navigation.
 - **Source Copy** (300, `clamp(1rem, 1.4vw, 1.252rem)`, 1.8): Preserves the archived About-page paragraph and caption scale.
 - **Support** (300, `0.82rem`, 1.5): Handles captions, delivery notes, and other compact explanatory text.
 - **Overline / Metadata / Status** (`0.78rem` / `0.86rem` / `0.9rem`): Preserve the compact source-derived label, field, timeline, and feedback steps.
-- **Navigation Link** (400, `1.05rem`, `0.03em`): Keeps dropdown and mobile navigation legible in Ubuntu Condensed.
+- **Navigation Link**: Dropdown and mobile links use the Poppins frontmatter scale; desktop triggers use the same size at weight 400.
 - **Lead and Hero Support** (300, `1.18rem` or `clamp(1.05rem, 2vw, 1.3rem)`): Give hero and contextual introductions one restrained step above body copy.
 - **Scripture Display** (500, `clamp(1.35rem, 2.7vw, 2.45rem)`, 1.28): Gives bilingual Scripture equal, prominent authority.
 - **Feature Title** (500, `clamp(1.15rem, 2vw, 1.65rem)`, 1.15): Labels photographic homepage tiles without competing with section headings.
@@ -277,15 +287,15 @@ The palette pairs open-sky optimism with deep archival ink, using mist and paper
 
 The core reading shell follows the Squarespace source: a 1400px cap with 4vw desktop side gutters (`width: min(1400px, 92vw)`). Full-bleed color and media fields wrap this shell, producing an editorial rhythm of expansive backgrounds and disciplined content columns.
 
-Primary storytelling uses two-column grids with source-specific photo widths and intrinsic proportions. The homepage gallery is three 4:3 columns with a 1.05vw gutter; team photography uses a 3:4 crop in a source-derived 3:2:2:2:2 track ratio; publication entries use portrait covers without stretching them beyond their source geometry. Major sections retain the established fluid block rhythm (`clamp(5rem, 10vw, 9rem)`).
+Primary storytelling uses two-column grids with source-specific photo widths and intrinsic proportions. The homepage introduction uses 1.2:1 columns and a 5% gap, pairing copy with an uncropped publication cover. The gallery is three columns of 4:3 photographs with 2rem gaps and real text captions underneath. Team photography retains its 3:4 crop and source-derived 3:2:2:2:2 track ratio; publication entries keep their source geometry. Major interior sections retain the established fluid block rhythm (`clamp(5rem, 10vw, 9rem)`).
 
-At 960px, the desktop navigation becomes a compact menu and complex layouts simplify. At 700px, content becomes single-column, shell gutters become 6vw, the source text-only mobile wordmark replaces the desktop logo, homepage gallery photography becomes two columns, and reversed stories return to reading order.
+At 960px, desktop navigation becomes a compact menu opening a right-hand sheet. At 700px, content and homepage gallery become single-column, shell gutters become 6vw, the source text-only mobile wordmark replaces the desktop logo, and reversed stories return to reading order. The homepage cover is contained within a 360px height on desktop and 260px on mobile.
 
 Coarse-pointer controls use a minimum 44px hit area; primary buttons and the compact menu trigger remain 48px. Inline prose links retain the platform exemption, while standalone directional and footer links expand their hit area without enlarging their type.
 
 ## Elevation & Depth
 
-The system is flat by default and uses elevation only to clarify a floating control, navigational layer, book object, or documentary frame. Light buttons use a soft neutral lift (`0 9px 22px rgb(0 0 0 / 12%)`); dark buttons use a blue-black lift (`0 9px 22px rgb(11 37 46 / 15%)`); navigation popovers use a broader ambient shadow (`0 18px 40px rgb(11 37 46 / 20%)`, strengthening to 24% in the mobile menu). Interior photographs use a directional frame shadow (`20px 24px 42px rgb(11 37 46 / 14%)`), while book covers use object-shaped drop shadows (`14px 18px 12px rgb(11 37 46 / 18%)`).
+The system is flat by default and uses elevation only to clarify a floating control, navigational layer, book object, or documentary frame. Light buttons use a soft neutral lift (`0 9px 22px rgb(0 0 0 / 12%)`); dark buttons use a blue-black lift (`0 9px 22px rgb(11 37 46 / 15%)`); desktop navigation popovers use a broader ambient shadow (`0 18px 40px rgb(11 37 46 / 20%)`). The mobile sheet separates from content through its dark backdrop. Interior photographs use a directional frame shadow (`20px 24px 42px rgb(11 37 46 / 14%)`), while book covers use object-shaped drop shadows (`14px 18px 12px rgb(11 37 46 / 18%)`). The homepage book uses a softer silhouette shadow (`16px 22px 16px rgb(11 37 46 / 15%)`) and multiply blending to seat the source image on Translation Mist.
 
 ### Shadow Vocabulary
 
@@ -301,7 +311,7 @@ The system is flat by default and uses elevation only to clarify a floating cont
 
 ## Shapes
 
-The form language is deliberately rectangular. Inputs and content cards use square corners (`0`), buttons and floating motion controls use a nearly square two-pixel corner (`2px`), and one-pixel dividers do most of the structural work. The only recurring organic shape is the blurred oval beneath the staged book; it belongs to object lighting, not interface chrome.
+The form language is deliberately rectangular. Inputs and content cards use square corners (`0`), buttons use a nearly square two-pixel corner (`2px`), and one-pixel dividers do most of the structural work. Publication silhouettes supply the object geometry; preserve their intrinsic proportions.
 
 **The No-Pill Rule.** Do not introduce pill-shaped buttons, badges, or navigation when the incumbent system communicates action with crisp rectangular silhouettes.
 
@@ -315,7 +325,6 @@ Buttons are compact, sturdy, and lightly lifted rather than oversized or rounded
 - **Primary:** Proof Ink on Paper with the dark action lift.
 - **Light:** Paper on Proof Ink with the light action lift for dark, blue, and photographic fields.
 - **Hover / Focus:** Hover translates upward by two pixels over `180ms ease-out`; keyboard focus uses a three-pixel River Blue outline with a four-pixel offset.
-- **Motion control:** Uses a translucent deep-archive field, a 55%-white border, and the same crisp corner. It disappears with the background video on small or reduced-motion surfaces.
 
 ### Cards / Containers
 
@@ -336,7 +345,11 @@ Cards feel like pages, records, or photographic plates rather than floating dash
 
 ### Navigation
 
-The sticky header is a compact white wordmark bar with thin separation. Desktop group labels are uppercase Ubuntu Condensed (`1.1rem`, 400, `0.05em`) and reveal a 270px Deep Archive popover; links remain white until hover brings in Open Sky and a 14%-sky background. At 960px the menu becomes a 48px hamburger target and a full-width, three-column dark panel; at 700px that panel becomes one column.
+The sticky header is a compact white wordmark bar with thin separation and 1rem vertical padding. Sentence-case Poppins group triggers reveal a Deep Archive popover; active triggers use Translation Mist and River Blue. Radix Navigation Menu manages mutually exclusive desktop groups and keyboard interaction. At 960px, a 48px menu trigger opens a white right-hand sheet (`min(420px, 94vw)`) over a 45%-Deep-Archive backdrop. Radix Dialog provides focus containment, Escape dismissal, overlay dismissal, and focus restoration; selecting a destination closes the sheet. Group links have at least 44px touch height, and the close control is 48px square.
+
+### Documentary Gallery
+
+Use source photographs with visible, selectable captions beneath each image. Captions use Poppins at 1rem and weight 500, with a River Blue directional mark. Keep imagery at 4:3 without stretching, preserve the full caption, and use the whole photograph-and-caption unit as the link.
 
 ### Text Links
 
@@ -344,7 +357,11 @@ Inline links use River Blue and a 500 weight with a visibly offset underline (`0
 
 ### Bilingual Scripture Pair
 
-The signature Scripture component gives English and Korean equal columns and generous paired padding (`clamp(3rem, 7vw, 6rem) clamp(2rem, 5vw, 5rem)`). The English panel is Deep Archive on Paper; the Korean panel is Open Sky on Proof Ink. At 700px the pair stacks while the Korean field extends full-bleed, preserving both equality and reading order.
+The homepage Scripture component gives English and Korean equal typographic prominence on one Deep Archive field. English uses Paper; Korean uses Open Sky; citations share Reverse Citation. Source-derived column proportions (`657fr 545.5fr`), 4.63vw gap, and right-aligned citations remain intact. The pair stacks at 700px in English-then-Korean reading order.
+
+### Historical Timeline and Contact
+
+The About timeline remains the local TimelineJS widget at `/timeline/`, with readable marker contrast and touch controls. The historical video retains its local optimized media and English captions. Contact retains in-page delivery, loading, success, and recoverable error states; modernization must preserve these working behaviors.
 
 ## Do's and Don'ts
 
@@ -354,7 +371,7 @@ The signature Scripture component gives English and Korean equal columns and gen
 - **Do** preserve the Open Sky, River Blue, Deep Archive, Paper, and Proof Ink relationships across new surfaces.
 - **Do** keep English and Korean passages equally prominent when they appear together.
 - **Do** use broad fluid section spacing and short headline measures to make long-form content easy to scan.
-- **Do** honor reduced-motion preferences by removing nonessential transitions and substituting the still hero image.
+- **Do** honor reduced-motion preferences by removing nonessential transitions; the homepage uses a still publication image.
 
 ### Don't:
 

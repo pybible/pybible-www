@@ -3,18 +3,33 @@ import { PageShell } from '@/components/PageShell';
 import { ResponsiveImage } from '@/components/ResponsiveImage';
 
 const features = [
-  ['Why a North Korean Bible?', 'Why North Korean Bible.png', '/en/whynkbible/'],
-  ['God’s Promises: New Testament', 'Gods Promises New Testament.png', '/en/publications/'],
-  ['Behind the Translation', 'Behind the Scenes.png', '/en/about/#translation-session'],
-  ['Looking Back', 'Looking Back.png', '/en/about/#timeline'],
-  ['Prayer Group Signup', 'Prayer Group Signup.png', '/en/prayer-newsletter/'],
-  ['Donate', 'Donate.png', '/en/support/'],
+  ['Why a North Korean Bible?', 'current/korean-language-divide.webp', '/en/whynkbible/'],
+  ['God’s Promises: New Testament', 'current/publications-cherry-blossoms.webp', '/en/publications/'],
+  ['Behind the Translation', 'ProfKimDuringLecture.png', '/en/about/#translation-session'],
+  ['Looking Back', 'PBI founding members.jpg', '/en/about/#timeline'],
+  ['Prayer Group Signup', 'current/prayer-newsletter.webp', '/en/prayer-newsletter/'],
+  ['Support Our Work', 'current/support-prayer.webp', '/en/support/'],
 ] as const;
 
 export default function Home() {
   return (
     <PageShell>
-      <h1 className="sr-only">Pyongyang Bible Institute</h1>
+      <section className="translation-intro">
+        <div className="shell translation-intro-grid">
+          <div className="translation-intro-copy">
+            <h1>Scripture in the language of North Korea.</h1>
+            <p>Discover <em>God’s Promises</em> — an English–North Korean bilingual Bible, bringing Scripture into modern North Korean diction.</p>
+            <div className="translation-actions">
+              <a className="button button-dark" href="https://www.bible.com/bible/3502/JHN.1.NLTNK" target="_blank" rel="noreferrer">Read the Bible <span aria-hidden="true">↗</span></a>
+              <Link className="text-link" href="/en/whynkbible/">Why this translation matters <span aria-hidden="true">→</span></Link>
+            </div>
+          </div>
+          <figure className="translation-book">
+            <ResponsiveImage image="Gods Promises Side.png" alt="God’s Promises: English–North Korean New Testament" sizes="(max-width: 700px) 76vw, 36vw" fetchPriority="high" />
+            <figcaption>God’s Promises <span>English · North Korean</span></figcaption>
+          </figure>
+        </div>
+      </section>
       <section className="source-home-verse">
         <div className="shell source-verse-grid">
           <blockquote lang="en">
@@ -48,7 +63,8 @@ export default function Home() {
       <section className="source-gallery shell" aria-label="Explore Pyongyang Bible Institute">
         {features.map(([title, image, href]) => (
           <Link href={href} key={title} aria-label={title}>
-            <ResponsiveImage image={image} alt="" sizes="(max-width: 700px) 44vw, 30vw" loading="lazy" />
+            <ResponsiveImage image={image} alt="" className={image === 'ProfKimDuringLecture.png' ? 'photo-focus-top' : undefined} sizes="(max-width: 700px) 88vw, 30vw" loading="lazy" />
+            <span className="feature-caption">{title}<span aria-hidden="true">↗</span></span>
           </Link>
         ))}
       </section>
